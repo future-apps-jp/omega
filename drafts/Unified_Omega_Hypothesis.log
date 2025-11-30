@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.1)  1 DEC 2025 00:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.1)  1 DEC 2025 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -379,11 +379,11 @@ d.
 (rerunfilecheck)             Checksum: 60C25CB8A616F076C5E5C0FB837A61B7;2005.
  ) 
 Here is how much of TeX's memory you used:
- 9088 strings out of 480247
- 140475 string characters out of 5896151
- 432847 words of memory out of 5000000
- 26922 multiletter control sequences out of 15000+600000
- 481769 words of font info for 76 fonts, out of 8000000 for 9000
+ 9117 strings out of 480247
+ 140885 string characters out of 5896151
+ 433281 words of memory out of 5000000
+ 26936 multiletter control sequences out of 15000+600000
+ 482116 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,6n,63p,359b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/hkohashi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.
@@ -395,11 +395,12 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
 dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb>
-Output written on Unified_Omega_Hypothesis.pdf (5 pages, 116499 bytes).
+lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti12.pfb>
+Output written on Unified_Omega_Hypothesis.pdf (5 pages, 140387 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 153 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
