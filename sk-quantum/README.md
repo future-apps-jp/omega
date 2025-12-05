@@ -9,16 +9,27 @@
 ```
 sk-quantum/
 ├── README.md
-├── phase0/                    # 初期実験（Python）
-│   ├── sk_parser.py          # ✅ Day 1: SK式パーサ
-│   ├── test_parser.py        # ✅ Day 1: パーサテスト
-│   ├── reduction.py          # 🔲 Day 2: β簡約
-│   ├── redex.py              # 🔲 Day 3: Redex探索
-│   ├── multiway.py           # 🔲 Day 4: Multiway graph
-│   ├── probability.py        # 🔲 Day 5: 確率定義
-│   ├── sorkin.py             # 🔲 Day 6: Sorkin公式
+├── phase0/                    # ✅ Phase 0 完了
+│   ├── sk_parser.py          # ✅ SK式パーサ (37 tests)
+│   ├── reduction.py          # ✅ β簡約 + Redex探索 (31 tests)
+│   ├── multiway.py           # ✅ Multiway graph (21 tests)
+│   ├── probability.py        # ✅ 確率定義 (4モデル)
+│   ├── sorkin.py             # ✅ Sorkin公式 I₂, I₃
 │   └── experiments/
-│       └── experiment_001.ipynb  # 🔲 Day 7: 最初の実験
+│       └── experiment_001.py # ✅ Sorkin公式検証
+├── phase1/                    # ✅ Phase 1 完了
+│   ├── algebra/              # ✅ Phase 1A 代数的構造 (21 tests)
+│   │   └── operators.py      # ✅ 書き換え演算子代数
+│   ├── geometry/             # ✅ Phase 1B 幾何学的構造 (19 tests)
+│   │   └── holonomy.py       # ✅ ホロノミー解析
+│   └── experiments/
+│       ├── RESULTS_001.md    # ✅ Phase 1A 結果
+│       └── RESULTS_002_holonomy.md # ✅ Phase 1B 結果
+├── phase2/                    # ✅ Phase 2 完了
+│   ├── information/          # ✅ 情報理論的アプローチ (15 tests)
+│   │   └── complexity.py     # ✅ Kolmogorov複雑性・位相計算
+│   └── experiments/
+│       └── RESULTS_003_information.md # ✅ Phase 2 結果
 └── src/                       # 本格実装（Haskell）予定
 ```
 
@@ -69,20 +80,61 @@ S x y z → x z (y z)
 K x y → x
 ```
 
-## Phase 0 実験結果（Day 7）
+## 実験結果
 
-### Sorkin公式による量子性検証
+### Phase 0: Sorkin公式による量子性検証 ✅
 
 | Expression | Paths | I₂≠0 | Status |
 |------------|-------|------|--------|
 | `(K a b) (K c d)` | 2 | 0 | ✓ Classical |
 | `S (K a) (K b) c` | 2 | 0 | ✓ Classical |
-| `(K a b) (K c d) (K e f)` | 6 | 15 | 🔔 Quantum* |
+| `(K a b) (K c d) (K e f)` | 6 | 15 | 🔔 見かけの非加法性* |
 
-**結論**: 現在の確率定義では、2パスのケースは全て古典的（I₂ = 0）。
-多パスのケースで I₂ ≠ 0 が観測されたが、これは P(A∪B) の定義に起因する見かけの非加法性。
+**結論**: 現在の確率定義では古典的。I₂ ≠ 0 は P(A∪B) 定義に起因。
 
-**次のステップ**: アプローチ A-D を探求し、真の複素振幅の導出を試みる。
+### Phase 1A: 代数的構造からの複素数導出 ✅
+
+| 検証項目 | 結果 |
+|----------|------|
+| J² = -I の候補 | 1250個（全て自明解） |
+| Clifford構造 | なし |
+| Pauli構造 | なし |
+
+**結論**: J² = -I の候補は全て `J = -iI + ...` の形で、複素係数を最初から導入した自明解。
+
+### Phase 1B: パス空間のホロノミー解析 ✅
+
+| Expression | ループ数 | U(1) 候補 |
+|------------|----------|-----------|
+| `S (K a) (K b) c` | 1 | いいえ |
+| `(K a b) (K c d) (K e f)` | 15 | いいえ |
+| `S (K a) (K b) (S c d e)` | **120** | **はい** |
+
+**結論**: U(1) 構造は見つかったが、**接続の定義に依存**。位相を「仮定」しており「導出」ではない。
+
+### Phase 2: 情報理論的アプローチ ✅
+
+| Expression | パス数 | 位相差 | 計算式 |
+|------------|--------|--------|--------|
+| `S (K a) (K b) c` | 2 | 0 | 全て |
+| `(K a b) (K c d) (K e f)` | 6 | 0 | 全て |
+| `S (K a) (K b) (S c d e)` | 16 | **≠0** | **linear** |
+
+**結論**: 情報量から位相を「計算」することは可能だが、計算式の選択に任意性が残る。
+
+---
+
+## 全体総括
+
+| Phase | 目標 | 結果 | 位相の由来 |
+|-------|------|------|------------|
+| Phase 0 | Sorkin公式検証 | 古典的 | N/A |
+| Phase 1A | 代数的導出 | 自明解のみ | 複素係数を仮定 |
+| Phase 1B | 幾何学的導出 | 接続依存 | 接続で仮定 |
+| Phase 2 | 情報理論的導出 | 部分的成功 | 演算数から計算 |
+
+> **SK計算から複素数構造を「完全に導出」することはできなかった。**
+> ただし、情報量から位相を「計算」する方法を発見。
 
 ## 研究目標
 

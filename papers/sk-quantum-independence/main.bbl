@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+
+\bibitem{abramsky2004}
+Samson Abramsky and Bob Coecke.
+\newblock A categorical semantics of quantum protocols.
+\newblock In {\em Proceedings of the 19th Annual IEEE Symposium on Logic in
+  Computer Science (LICS 2004)}, pages 415--425. IEEE, 2004.
+
+\bibitem{chiribella2011}
+Giulio Chiribella, Giacomo~Mauro D'Ariano, and Paolo Perinotti.
+\newblock Informational derivation of quantum theory.
+\newblock {\em Physical Review A}, 84(1):012311, 2011.
+
+\bibitem{curry1958}
+Haskell~Brooks Curry and Robert Feys.
+\newblock {\em Combinatory Logic, Vol. I}.
+\newblock North-Holland, 1958.
+
+\bibitem{fanelli2012}
+Daniele Fanelli.
+\newblock Negative results are disappearing from most disciplines and
+  countries.
+\newblock {\em Scientometrics}, 90(3):891--904, 2012.
+
+\bibitem{hardy2001}
+Lucien Hardy.
+\newblock Quantum theory from five reasonable axioms.
+\newblock {\em arXiv preprint quant-ph/0101012}, 2001.
+
+\bibitem{landauer1961}
+Rolf Landauer.
+\newblock Irreversibility and heat generation in the computing process.
+\newblock {\em IBM Journal of Research and Development}, 5(3):183--191, 1961.
+
+\bibitem{sorkin1994}
+Rafael~D Sorkin.
+\newblock Quantum mechanics as quantum measure theory.
+\newblock {\em Modern Physics Letters A}, 9(33):3119--3127, 1994.
+
+\bibitem{wolfram2020}
+Stephen Wolfram.
+\newblock {\em A Project to Find the Fundamental Theory of Physics}.
+\newblock Wolfram Media, 2020.
+
+\end{thebibliography}
