@@ -17,16 +17,20 @@ This research project investigates **whether complex number structure (fundament
 - **Paper**: Published as "On the Independence of Quantum Structure from SK Combinatory Logic"
 - **Key Insight**: SK computation is fundamentally classical; phase can be computed but formula choice is arbitrary
 
-**Phase 4-7 (Planned)**: Investigating reversible computation and quantum structure
-- **New Focus**: Whether reversibility (not just any computation) leads to quantum structure
-- **Critical Stance**: "Reversibility ≠ Quantum" — classical Hamiltonian mechanics is also reversible
-- **Core Question**: What is the boundary between classical (symplectic) and quantum (complex/Kähler) structure?
+**Phase 4 (Completed)**: Investigated reversible logic gates (Toffoli/Fredkin)
+- **Main Finding**: Reversible gates are also classical — they embed into Sp(2n,ℝ), not U(n)
+- **Key Result**: H1 SUPPORTED — "Reversible computation is classical"
+- **Key Insight**: Permutation matrices have real eigenvalues (roots of unity), no ±i, thus no non-trivial J² = -I
+
+**Phase 5-7 (Next)**: Investigating continuous-time evolution and non-commutativity
+- **Focus Shift**: Discrete systems are classical; continuous-time (quantum walk) may be key
+- **Critical Question**: Does non-commutativity bridge the classical-quantum gap?
 
 ## Important Documents
 
 ### Research Plans
 - `docs/research_plan.md` — Original research plan (v1, Phase 0-3, completed)
-- `docs/research_plan_v2.md` — **Current research plan** (Phase 4-7, reversible computation focus)
+- `docs/research_plan_v2.md` — **Current research plan** (Phase 4-7, with Phase 4 results)
 
 ### Papers
 - `papers/sk-quantum-independence/main.tex` — Main paper (LaTeX source)
@@ -39,41 +43,47 @@ This research project investigates **whether complex number structure (fundament
 - `sk-quantum/phase1/algebra/` — Phase 1A: Algebraic structure analysis
 - `sk-quantum/phase1/geometry/` — Phase 1B: Path space holonomy
 - `sk-quantum/phase2/information/` — Phase 2: Information-theoretic approach
+- `sk-quantum/phase4/reversible/` — **Phase 4: Reversible gates (18 tests)**
 
 ### Experiment Results
 - `sk-quantum/phase1/experiments/RESULTS_001.md` — Algebraic structure results
 - `sk-quantum/phase1/experiments/RESULTS_002_holonomy.md` — Holonomy analysis results
 - `sk-quantum/phase2/experiments/RESULTS_003_information.md` — Information-theoretic results
+- `sk-quantum/phase4/experiments/RESULTS_004_algebra.md` — **Reversible computation results (H1 supported)**
 
-## Current Phase: Phase 4-7 Planning
+## Current Phase: Phase 5 (Next)
 
-### Phase 4: Algebraic Structure of Reversible Computation (Weeks 1-3)
-- Analyze Toffoli/Fredkin gates instead of history-based SK
-- Check if generated group is Sp(2n,ℝ) (classical) or U(n) (quantum)
-- Search for complex structure J² = -I
+### Phase 4: Algebraic Structure of Reversible Computation ✅ COMPLETED
+- **Result**: Toffoli/Fredkin gates generate finite permutation groups
+- **Result**: All embeddable in Sp(2n,ℝ) (classical symplectic)
+- **Result**: No non-trivial J² = -I exists
+- **Conclusion**: H1 SUPPORTED — Reversible computation is classical
 
-### Phase 5: Hamiltonian and Interference (Weeks 4-5)
+### Phase 5: Hamiltonian and Interference (Weeks 4-5) 🔄 NEXT
 - Define Hamiltonian H = A (adjacency matrix of computation graph)
-- Spectral analysis and quantum walk approach
-- Check for interference patterns
+- **Key Focus**: Continuous-time evolution U(t) = exp(-iAt) introduces complex exponentials
+- Check for interference patterns in quantum walk
+- Compare discrete (classical) vs continuous (potentially quantum)
 
 ### Phase 6: Three-Model Comparison (Weeks 6-7)
 - Compare: SK (irreversible) vs RCA (reversible cellular automata) vs Quantum circuits
-- Identify boundary conditions for quantum structure
+- **Prediction after Phase 4**: RCA will also be classical (permutation-based)
+- Identify what makes quantum circuits different
 
 ### Phase 7: Non-commutativity and Quantization (Weeks 8-10)
 - Analyze commutator [Ŝ, K̂]
+- Non-commutativity is **the remaining candidate** for quantum structure
 - Formulate "computational quantization"
 - Write paper v2
 
-## Key Hypotheses to Test
+## Key Hypotheses Status
 
-| Hypothesis | Prediction | Falsification |
-|------------|------------|---------------|
-| H1: Reversible computation is classical | Closes in Sp(2n,ℝ) | Extends to U(n) |
-| H2: Interference requires non-commutativity | [X,Y]=0 implies no interference | Interference with commutative structure |
-| H3: RCA is equivalent to SK | Both classical | Only RCA is quantum-like |
-| H4: Quantization needs extra axioms | Computation alone insufficient | Quantum structure derived |
+| Hypothesis | Prediction | Status | Notes |
+|------------|------------|--------|-------|
+| H1: Reversible computation is classical | Closes in Sp(2n,ℝ) | ✅ **SUPPORTED** | Phase 4 confirmed |
+| H2: Interference requires non-commutativity | [X,Y]=0 implies no interference | Pending | Phase 5-7 |
+| H3: RCA is equivalent to SK | Both classical | Pending | Phase 6 |
+| H4: Quantization needs extra axioms | Computation alone insufficient | **Suggested** | Phase 4 supports |
 
 ## Technical Notes
 
@@ -84,11 +94,11 @@ This research project investigates **whether complex number structure (fundament
 
 ### Testing
 - All implementations should have comprehensive tests
-- Current test count: 123 passing tests (Phase 0-2)
+- Current test count: **162 passing tests** (Phase 0-2: 144, Phase 4: 18)
 
 ### Negative Results Are Valuable
 This project values negative results equally:
-- "Reversibility alone is insufficient" = valid academic contribution
+- "Reversibility alone is insufficient" = **confirmed in Phase 4**
 - "Computation is fundamentally classical" = important constraint
 - Always document what doesn't work and why
 
@@ -96,12 +106,12 @@ This project values negative results equally:
 
 1. **Always respond in Japanese** (user preference)
 2. When discussing theory, distinguish clearly between:
-   - Symplectic structure (classical)
-   - Complex/Kähler structure (quantum)
-   - Reversibility vs. unitarity
+   - Symplectic structure (classical) — Phase 4 confirmed reversible gates are here
+   - Complex/Kähler structure (quantum) — NOT achieved by reversibility alone
+   - Discrete vs. continuous — key distinction identified in Phase 4
 3. Reference specific documents when discussing plans or results
 4. For implementation tasks, follow existing code style in `sk-quantum/`
-5. Keep the critical stance: avoid assuming "reversible = quantum"
+5. Keep the critical stance: "reversible ≠ quantum" is now experimentally confirmed
 
 ## Shortcuts
 
@@ -110,4 +120,3 @@ This project values negative results equally:
 - `/debug` — Bug investigation (5-7 hypotheses → narrow to 1-2)
 - `/cmt` — Add comments/documentation
 - `/log` — Add appropriate logging
-
