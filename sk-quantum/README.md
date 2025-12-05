@@ -288,6 +288,12 @@ K x y → x
 
 **結論**: 結果は**計算モデル非依存**（SK, RCA, λ計算で確認）
 
+### Phase 12: 論文執筆 ✅
+
+第3論文 "Minimal Axioms for Quantum Structure: What Computation Cannot Derive" を執筆完了。
+
+**成果物**: `papers/minimal-axioms/main.tex`
+
 ## 総テスト数
 
 - Phase 0: 89 tests
