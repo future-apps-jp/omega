@@ -294,6 +294,18 @@ K x y → x
 
 **成果物**: `papers/minimal-axioms/main.tex`
 
+### Phase 11: 形式的検証 (Coq) ✅
+
+Theorem 1（置換行列 → Sp埋め込み）の形式化を実施。
+
+| 項目 | 状態 |
+|------|------|
+| 定理ステートメント | ✅ 型チェック完了 |
+| 証明骨格 | ✅ 完成 |
+| 完全証明 | ⚠️ 一部Admitted |
+
+**成果物**: `sk-quantum/phase11/coq/PermSymplectic.v`
+
 ## 総テスト数
 
 - Phase 0: 89 tests
