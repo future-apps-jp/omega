@@ -52,6 +52,13 @@ sk-quantum/
 │   │   └── model_comparison.py # ✅ SK/RCA/Quantum比較
 │   └── experiments/
 │       └── RESULTS_006_comparison.md # ✅ Phase 6 結果
+├── phase7/                    # ✅ Phase 7 完了
+│   ├── noncommutative/       # ✅ 非可換性解析 (15 tests)
+│   │   ├── operators.py      # ✅ SK演算子代数
+│   │   ├── commutator.py     # ✅ 交換子解析
+│   │   └── superposition.py  # ✅ 重ね合わせ解析
+│   └── experiments/
+│       └── RESULTS_007_noncommutative.md # ✅ Phase 7 結果
 └── src/                       # 本格実装（Haskell）予定
 ```
 
@@ -159,6 +166,28 @@ sk-quantum/
 - 離散計算（SK/RCA）は本質的に古典的だが、連続時間化で干渉が出現
 - 真の量子性（重ね合わせ・もつれ）は量子回路のみ
 
+### Phase 7: 非可換性と量子化 ✅
+
+| 検証項目 | 結果 | 判定 |
+|----------|------|------|
+| 交換子 [Ŝ, K̂] | **= 0** | 可換（この定義では） |
+| 重ね合わせ要件 | 0/4 満たす | 生成不可 |
+| H2 Status | INCONCLUSIVE | 関係は定義依存 |
+
+**重ね合わせ要件の検証**:
+
+| 要件 | 量子力学 | SK計算 | 満たす？ |
+|------|----------|--------|----------|
+| 連続的振幅 | α, β ∈ ℂ | 0 or 1 | ✗ |
+| 位相コヒーレンス | e^{iφ} | なし | ✗ |
+| ユニタリ性 | UU† = I | 非ユニタリ | ✗ |
+| 規格化 | |α|² + |β|² = 1 | なし | ✗ |
+
+**結論**:
+- 「左からの適用」演算子では [Ŝ, K̂] = 0（アプリケーションの結合性による）
+- 重ね合わせの4要件をいずれも満たさない
+- **量子性は計算から自動的に導出できない** → 追加公理が必要
+
 ---
 
 ## 使用方法
@@ -204,7 +233,7 @@ K x y → x
 ## 研究計画
 
 - **v1** (Phase 0-3): SK計算と量子構造 → 完了、論文化
-- **v2** (Phase 4-7): 可逆計算と量子構造 → Phase 6 完了
+- **v2** (Phase 4-7): 可逆計算と量子構造 → ✅ **完了**
 
 詳細: `docs/research_plan_v2.md`
 
@@ -216,7 +245,8 @@ K x y → x
 - Phase 4: 18 tests
 - Phase 5: 13 tests
 - Phase 6: 31 tests (RCA: 17, Comparison: 14)
-- **合計: 206 tests**
+- Phase 7: 15 tests
+- **合計: 221 tests**
 
 ## 参考文献
 
