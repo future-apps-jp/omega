@@ -57,6 +57,8 @@ A fundamental question in the foundations of physics and computation is: \textit
 
 The Wolfram Physics Project \cite{wolfram2020} and related digital physics approaches suggest that physical reality might emerge from computational processes. However, these approaches typically \textit{assume} or \textit{interpret} complex amplitudes rather than deriving them from computational structure.
 
+This work is motivated by the ``Unified Omega Hypothesis'' \cite{kohashiguchi2025}, which proposes a philosophical framework linking Chaitin's halting probability $\Omega$, Teilhard de Chardin's Omega Point, and computational cosmology. That hypothesis raises a natural question: if the universe is fundamentally computational, what is the minimal computational substrate from which physical laws---including quantum mechanics---could emerge?
+
 In this paper, we systematically investigate whether complex number structure can be \textbf{derived} (not assumed) from SK combinatory logic—one of the simplest Turing-complete computational systems.
 
 \subsection{Why SK Combinatory Logic?}
@@ -468,7 +470,21 @@ ZX-calculus \cite{coecke2011} & Graphical quantum reasoning & Built-in \\
 
 \section*{Acknowledgments}
 
-[To be added]
+This work stands on the shoulders of giants in multiple fields. We are deeply indebted to the foundational contributions of:
+
+\textbf{In combinatory logic}: Haskell Curry and Moses Sch\"onfinkel, whose minimal computational formalism provided the substrate for this investigation; and to the lambda calculus tradition established by Alonzo Church.
+
+\textbf{In quantum foundations}: Lucien Hardy, whose axiomatic derivation of quantum theory from reasonable postulates inspired our approach; Rafael Sorkin, whose quantum measure theory provided the key experimental criterion ($I_2 \neq 0$, $I_3 = 0$); and Giulio Chiribella, Giacomo Mauro D'Ariano, and Paolo Perinotti for their information-theoretic perspective.
+
+\textbf{In the physics of computation}: Rolf Landauer, whose principle connecting information erasure to thermodynamics motivated our analysis of the K combinator; Charles Bennett for reversible computation; and Gregory Chaitin, whose work on algorithmic information theory and the halting probability $\Omega$ provided the philosophical motivation for this research program.
+
+\textbf{In digital physics}: Stephen Wolfram, whose ambitious Physics Project rekindled interest in computational approaches to fundamental physics and highlighted the challenge of deriving complex amplitudes that this paper addresses.
+
+\textbf{In geometric phase}: Michael Berry and Yakir Aharonov, whose work on geometric phases in quantum mechanics inspired our holonomy-based approach.
+
+We also acknowledge the intellectual heritage of Pierre Teilhard de Chardin, whose concept of the Omega Point, though theological in origin, suggested deep connections between computation, consciousness, and cosmological finality that motivated the broader research program within which this investigation is situated.
+
+Finally, we thank the open-source community for providing the computational tools that made this systematic investigation possible.
 
 \bibliographystyle{plain}
 \bibliography{references}
@@ -513,47 +529,15 @@ $S\, (K\, a)\, (K\, b)\, (S\, c\, d\, e)$ & 11 & 16 \\
 
 \begin{figure}[h]
 \centering
-\begin{tikzpicture}[
-    node distance=1.5cm and 2.5cm,
-    state/.style={rectangle, draw, rounded corners, minimum width=2cm, minimum height=0.6cm, font=\small},
-    arrow/.style={->, >=stealth, thick}
-]
-% Simple two-path example: (K a b) (K c d)
-\node[state] (root) {$(K\,a\,b)\,(K\,c\,d)$};
-\node[state, below left=of root] (left) {$a\,(K\,c\,d)$};
-\node[state, below right=of root] (right) {$(K\,a\,b)\,c$};
-\node[state, below=3cm of root] (final) {$a\,c$};
-
-\draw[arrow] (root) -- node[left, font=\scriptsize] {K-red (left)} (left);
-\draw[arrow] (root) -- node[right, font=\scriptsize] {K-red (right)} (right);
-\draw[arrow] (left) -- node[left, font=\scriptsize] {K-red} (final);
-\draw[arrow] (right) -- node[right, font=\scriptsize] {K-red} (final);
-\end{tikzpicture}
-\caption{Multiway graph for $(K\,a\,b)\,(K\,c\,d)$. Two paths exist: left-first and right-first K-reductions. Both terminate at $a\,c$. This creates a loop structure where holonomy can be computed.}
+\includegraphics[width=0.85\textwidth]{figures/figure1_diamond.pdf}
+\caption{Multiway graph for $(K\,a\,b)\,(K\,c\,d)$. Two paths exist: left-first and right-first K-reductions. Both terminate at $a\,c$. This creates a loop structure where holonomy can be computed. Blue boxes indicate the initial expression, green boxes indicate normal forms (terminal states), and edge colors distinguish K-reductions.}
 \label{fig:multiway-simple}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\begin{tikzpicture}[
-    node distance=1.2cm and 1.8cm,
-    state/.style={rectangle, draw, rounded corners, minimum width=1.8cm, minimum height=0.5cm, font=\scriptsize},
-    arrow/.style={->, >=stealth}
-]
-% More complex: S (K a) (K b) c
-\node[state] (root) {$S\,(K\,a)\,(K\,b)\,c$};
-\node[state, below=of root] (s1) {$((K\,a)\,c)\,((K\,b)\,c)$};
-\node[state, below left=of s1] (k1) {$(a)\,((K\,b)\,c)$};
-\node[state, below right=of s1] (k2) {$((K\,a)\,c)\,(b)$};
-\node[state, below=3cm of s1] (final) {$a\,b$};
-
-\draw[arrow] (root) -- node[right, font=\tiny] {S-red} (s1);
-\draw[arrow] (s1) -- node[left, font=\tiny] {K-red (L)} (k1);
-\draw[arrow] (s1) -- node[right, font=\tiny] {K-red (R)} (k2);
-\draw[arrow] (k1) -- node[left, font=\tiny] {K-red} (final);
-\draw[arrow] (k2) -- node[right, font=\tiny] {K-red} (final);
-\end{tikzpicture}
-\caption{Multiway graph for $S\,(K\,a)\,(K\,b)\,c$. After the initial S-reduction, two K-reductions are possible in either order. The path space has a diamond structure: both paths share the same number of reductions (1 S + 2 K), yielding zero holonomy under the ``linear'' formula.}
+\includegraphics[width=0.85\textwidth]{figures/figure2_s_combinator.pdf}
+\caption{Multiway graph for $S\,(K\,a)\,(K\,b)\,c$. After the initial S-reduction (blue edge), two K-reductions are possible in either order. The path space has a diamond structure: both paths share the same number of reductions (1 S + 2 K), yielding zero holonomy under the ``linear'' formula. This structure is characteristic of confluent rewriting systems.}
 \label{fig:multiway-s}
 \end{figure}
 

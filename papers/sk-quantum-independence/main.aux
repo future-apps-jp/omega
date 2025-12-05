@@ -21,6 +21,7 @@
 \citation{wolfram2020}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
+\citation{kohashiguchi2025}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Why SK Combinatory Logic?}{2}{subsection.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Overview of Approaches}{2}{subsection.1.2}\protected@file@percent }
 \citation{curry1958}
@@ -91,25 +92,28 @@
 \bibstyle{plain}
 \bibdata{references}
 \bibcite{abramsky2004}{1}
-\bibcite{chiribella2011}{2}
-\bibcite{curry1958}{3}
-\bibcite{fanelli2012}{4}
-\bibcite{hardy2001}{5}
-\bibcite{landauer1961}{6}
-\bibcite{sorkin1994}{7}
-\bibcite{wolfram2020}{8}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Implementation Details}{13}{appendix.A}\protected@file@percent }
-\newlabel{app:implementation}{{A}{13}{Implementation Details}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Test Expressions}{14}{appendix.B}\protected@file@percent }
-\newlabel{app:expressions}{{B}{14}{Test Expressions}{appendix.B}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Test expressions and their multiway graph statistics\relax }}{14}{table.caption.9}\protected@file@percent }
-\newlabel{tab:expressions}{{7}{14}{Test expressions and their multiway graph statistics\relax }{table.caption.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Example Multiway Graphs}{14}{appendix.C}\protected@file@percent }
-\newlabel{app:multiway-figures}{{C}{14}{Example Multiway Graphs}{appendix.C}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Multiway graph for $(K\,a\,b)\,(K\,c\,d)$. Two paths exist: left-first and right-first K-reductions. Both terminate at $a\,c$. This creates a loop structure where holonomy can be computed.\relax }}{14}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:multiway-simple}{{1}{14}{Multiway graph for $(K\,a\,b)\,(K\,c\,d)$. Two paths exist: left-first and right-first K-reductions. Both terminate at $a\,c$. This creates a loop structure where holonomy can be computed.\relax }{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Multiway graph for $S\,(K\,a)\,(K\,b)\,c$. After the initial S-reduction, two K-reductions are possible in either order. The path space has a diamond structure: both paths share the same number of reductions (1 S + 2 K), yielding zero holonomy under the ``linear'' formula.\relax }}{14}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:multiway-s}{{2}{14}{Multiway graph for $S\,(K\,a)\,(K\,b)\,c$. After the initial S-reduction, two K-reductions are possible in either order. The path space has a diamond structure: both paths share the same number of reductions (1 S + 2 K), yielding zero holonomy under the ``linear'' formula.\relax }{figure.caption.11}{}}
+\bibcite{bennett1973}{2}
+\bibcite{chiribella2011}{3}
+\bibcite{coecke2011}{4}
+\bibcite{curry1958}{5}
+\bibcite{fanelli2012}{6}
+\bibcite{hardy2001}{7}
+\bibcite{kohashiguchi2025}{8}
+\bibcite{landauer1961}{9}
+\bibcite{sorkin1994}{10}
+\bibcite{wolfram2020}{11}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Implementation Details}{14}{appendix.A}\protected@file@percent }
+\newlabel{app:implementation}{{A}{14}{Implementation Details}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Test Expressions}{15}{appendix.B}\protected@file@percent }
+\newlabel{app:expressions}{{B}{15}{Test Expressions}{appendix.B}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Test expressions and their multiway graph statistics\relax }}{15}{table.caption.9}\protected@file@percent }
+\newlabel{tab:expressions}{{7}{15}{Test expressions and their multiway graph statistics\relax }{table.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Example Multiway Graphs}{15}{appendix.C}\protected@file@percent }
+\newlabel{app:multiway-figures}{{C}{15}{Example Multiway Graphs}{appendix.C}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {D}Glossary of Terms}{15}{appendix.D}\protected@file@percent }
 \newlabel{app:glossary}{{D}{15}{Glossary of Terms}{appendix.D}{}}
-\gdef \@abspage@last{15}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Multiway graph for $(K\,a\,b)\,(K\,c\,d)$. Two paths exist: left-first and right-first K-reductions. Both terminate at $a\,c$. This creates a loop structure where holonomy can be computed. Blue boxes indicate the initial expression, green boxes indicate normal forms (terminal states), and edge colors distinguish K-reductions.\relax }}{16}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:multiway-simple}{{1}{16}{Multiway graph for $(K\,a\,b)\,(K\,c\,d)$. Two paths exist: left-first and right-first K-reductions. Both terminate at $a\,c$. This creates a loop structure where holonomy can be computed. Blue boxes indicate the initial expression, green boxes indicate normal forms (terminal states), and edge colors distinguish K-reductions.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Multiway graph for $S\,(K\,a)\,(K\,b)\,c$. After the initial S-reduction (blue edge), two K-reductions are possible in either order. The path space has a diamond structure: both paths share the same number of reductions (1 S + 2 K), yielding zero holonomy under the ``linear'' formula. This structure is characteristic of confluent rewriting systems.\relax }}{17}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:multiway-s}{{2}{17}{Multiway graph for $S\,(K\,a)\,(K\,b)\,c$. After the initial S-reduction (blue edge), two K-reductions are possible in either order. The path space has a diamond structure: both paths share the same number of reductions (1 S + 2 K), yielding zero holonomy under the ``linear'' formula. This structure is characteristic of confluent rewriting systems.\relax }{figure.caption.11}{}}
+\gdef \@abspage@last{17}

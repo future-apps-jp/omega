@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{abramsky2004}
 Samson Abramsky and Bob Coecke.
@@ -6,10 +6,21 @@ Samson Abramsky and Bob Coecke.
 \newblock In {\em Proceedings of the 19th Annual IEEE Symposium on Logic in
   Computer Science (LICS 2004)}, pages 415--425. IEEE, 2004.
 
+\bibitem{bennett1973}
+Charles~H Bennett.
+\newblock Logical reversibility of computation.
+\newblock {\em IBM Journal of Research and Development}, 17(6):525--532, 1973.
+
 \bibitem{chiribella2011}
 Giulio Chiribella, Giacomo~Mauro D'Ariano, and Paolo Perinotti.
 \newblock Informational derivation of quantum theory.
 \newblock {\em Physical Review A}, 84(1):012311, 2011.
+
+\bibitem{coecke2011}
+Bob Coecke and Ross Duncan.
+\newblock Interacting quantum observables: categorical algebra and
+  diagrammatics.
+\newblock In {\em New Journal of Physics}, volume~13, page 043016, 2011.
 
 \bibitem{curry1958}
 Haskell~Brooks Curry and Robert Feys.
@@ -26,6 +37,13 @@ Daniele Fanelli.
 Lucien Hardy.
 \newblock Quantum theory from five reasonable axioms.
 \newblock {\em arXiv preprint quant-ph/0101012}, 2001.
+
+\bibitem{kohashiguchi2025}
+Hiroshi Kohashiguchi.
+\newblock The halting of the last mind: Chaitin's $\omega$ as the
+  eschatological limit of a simulated universe.
+\newblock {\em PhilArchive}, 2025.
+\newblock Available at: \url{https://philarchive.org/rec/KOHTAU}.
 
 \bibitem{landauer1961}
 Rolf Landauer.
