@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.1)  1 DEC 2025 00:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.1)  1 DEC 2025 03:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,42 +350,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 78.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 78.
+(hyperref)                removing `\Omega' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 78.
+(hyperref)                removing `math shift' on input line 93.
 
-[2]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 145.
-
+[2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 145.
+(hyperref)                removing `math shift' on input line 195.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 145.
+(hyperref)                removing `\Omega' on input line 195.
 
-[3] [4] [5] (./Unified_Omega_Hypothesis.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 195.
+
+[4] [5]
+Overfull \hbox (2.52452pt too wide) in paragraph at lines 285--288
+[]\OT1/cmr/m/n/12 Second, the ``weight'' of ex-is-tence ($2[]$) as-sumes a spe-
+cific val-u-a-tion based on Chaitin's
+ []
+
+[6] [7] [8] (./Unified_Omega_Hypothesis.aux)
 Package rerunfilecheck Info: File `Unified_Omega_Hypothesis.out' has not change
 d.
-(rerunfilecheck)             Checksum: 60C25CB8A616F076C5E5C0FB837A61B7;2005.
+(rerunfilecheck)             Checksum: 75DEDF1EE9E5114B3D643A23B1EF66F7;2659.
  ) 
 Here is how much of TeX's memory you used:
- 9117 strings out of 480247
- 140885 string characters out of 5896151
- 433281 words of memory out of 5000000
- 26936 multiletter control sequences out of 15000+600000
- 482116 words of font info for 77 fonts, out of 8000000 for 9000
+ 9130 strings out of 480247
+ 141029 string characters out of 5896151
+ 434340 words of memory out of 5000000
+ 26941 multiletter control sequences out of 15000+600000
+ 482462 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,6n,63p,359b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,393b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/hkohashi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.
 600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
@@ -396,11 +402,12 @@ dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti12.pfb>
-Output written on Unified_Omega_Hypothesis.pdf (5 pages, 140387 bytes).
+fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on Unified_Omega_Hypothesis.pdf (8 pages, 169719 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
