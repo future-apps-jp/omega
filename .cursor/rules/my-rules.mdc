@@ -1,0 +1,113 @@
+---
+description: Research project on the relationship between SK combinatory logic and quantum structure
+globs:
+alwaysApply: true
+---
+
+# SK-Quantum Research Project Assistant
+
+## Project Overview
+
+This research project investigates **whether complex number structure (fundamental to quantum mechanics) can be derived from computational substrates**, specifically SK combinatory logic.
+
+### Research History
+
+**Phase 0-3 (Completed)**: Investigated SK computation and quantum structure relationship
+- **Main Finding**: Complex structure does NOT automatically emerge from SK computation
+- **Paper**: Published as "On the Independence of Quantum Structure from SK Combinatory Logic"
+- **Key Insight**: SK computation is fundamentally classical; phase can be computed but formula choice is arbitrary
+
+**Phase 4-7 (Planned)**: Investigating reversible computation and quantum structure
+- **New Focus**: Whether reversibility (not just any computation) leads to quantum structure
+- **Critical Stance**: "Reversibility ≠ Quantum" — classical Hamiltonian mechanics is also reversible
+- **Core Question**: What is the boundary between classical (symplectic) and quantum (complex/Kähler) structure?
+
+## Important Documents
+
+### Research Plans
+- `docs/research_plan.md` — Original research plan (v1, Phase 0-3, completed)
+- `docs/research_plan_v2.md` — **Current research plan** (Phase 4-7, reversible computation focus)
+
+### Papers
+- `papers/sk-quantum-independence/main.tex` — Main paper (LaTeX source)
+- `papers/sk-quantum-independence/README.md` — Paper writing guide
+- `papers/sk-quantum-independence/references.bib` — Bibliography
+
+### Implementation
+- `sk-quantum/README.md` — Implementation overview
+- `sk-quantum/phase0/` — Phase 0: SK parser, reduction, multiway graph, Sorkin formula
+- `sk-quantum/phase1/algebra/` — Phase 1A: Algebraic structure analysis
+- `sk-quantum/phase1/geometry/` — Phase 1B: Path space holonomy
+- `sk-quantum/phase2/information/` — Phase 2: Information-theoretic approach
+
+### Experiment Results
+- `sk-quantum/phase1/experiments/RESULTS_001.md` — Algebraic structure results
+- `sk-quantum/phase1/experiments/RESULTS_002_holonomy.md` — Holonomy analysis results
+- `sk-quantum/phase2/experiments/RESULTS_003_information.md` — Information-theoretic results
+
+## Current Phase: Phase 4-7 Planning
+
+### Phase 4: Algebraic Structure of Reversible Computation (Weeks 1-3)
+- Analyze Toffoli/Fredkin gates instead of history-based SK
+- Check if generated group is Sp(2n,ℝ) (classical) or U(n) (quantum)
+- Search for complex structure J² = -I
+
+### Phase 5: Hamiltonian and Interference (Weeks 4-5)
+- Define Hamiltonian H = A (adjacency matrix of computation graph)
+- Spectral analysis and quantum walk approach
+- Check for interference patterns
+
+### Phase 6: Three-Model Comparison (Weeks 6-7)
+- Compare: SK (irreversible) vs RCA (reversible cellular automata) vs Quantum circuits
+- Identify boundary conditions for quantum structure
+
+### Phase 7: Non-commutativity and Quantization (Weeks 8-10)
+- Analyze commutator [Ŝ, K̂]
+- Formulate "computational quantization"
+- Write paper v2
+
+## Key Hypotheses to Test
+
+| Hypothesis | Prediction | Falsification |
+|------------|------------|---------------|
+| H1: Reversible computation is classical | Closes in Sp(2n,ℝ) | Extends to U(n) |
+| H2: Interference requires non-commutativity | [X,Y]=0 implies no interference | Interference with commutative structure |
+| H3: RCA is equivalent to SK | Both classical | Only RCA is quantum-like |
+| H4: Quantization needs extra axioms | Computation alone insufficient | Quantum structure derived |
+
+## Technical Notes
+
+### Language
+- Implementation: Python
+- Libraries: NumPy, SciPy, SymPy, NetworkX, pytest
+- Optional: Haskell for Phase 7, Coq for formal verification
+
+### Testing
+- All implementations should have comprehensive tests
+- Current test count: 123 passing tests (Phase 0-2)
+
+### Negative Results Are Valuable
+This project values negative results equally:
+- "Reversibility alone is insufficient" = valid academic contribution
+- "Computation is fundamentally classical" = important constraint
+- Always document what doesn't work and why
+
+## Response Guidelines
+
+1. **Always respond in Japanese** (user preference)
+2. When discussing theory, distinguish clearly between:
+   - Symplectic structure (classical)
+   - Complex/Kähler structure (quantum)
+   - Reversibility vs. unitarity
+3. Reference specific documents when discussing plans or results
+4. For implementation tasks, follow existing code style in `sk-quantum/`
+5. Keep the critical stance: avoid assuming "reversible = quantum"
+
+## Shortcuts
+
+- `/ask` — Policy consultation (multi-perspective analysis)
+- `/plan` — Work planning (detailed outline)
+- `/debug` — Bug investigation (5-7 hypotheses → narrow to 1-2)
+- `/cmt` — Add comments/documentation
+- `/log` — Add appropriate logging
+
