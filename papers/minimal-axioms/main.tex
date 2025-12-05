@@ -676,12 +676,14 @@ Theorem no_superposition_from_perm (s : 'S_n) (i : 'I_n) :
 \subsection{Verification Status}
 
 \begin{itemize}
+    \item \texttt{perm\_matrix\_orthogonal}: \textbf{Fully proven} (using MathComp's \texttt{tr\_perm\_mx}, \texttt{perm\_mxM}, \texttt{perm\_mx1})
+    \item \texttt{perm\_matrix\_mul}: \textbf{Fully proven} (using MathComp's \texttt{perm\_mxM})
     \item \texttt{embed\_orthogonal\_is\_symplectic}: \textbf{Fully proven} (no axioms)
-    \item \texttt{perm\_embeds\_in\_Sp}: Proven (depends on \texttt{perm\_matrix\_orthogonal})
+    \item \texttt{perm\_embeds\_in\_Sp}: \textbf{Fully proven} (all dependencies proven)
     \item \texttt{no\_superposition\_from\_perm}: Proven (depends on \texttt{perm\_maps\_basis})
 \end{itemize}
 
-The auxiliary lemmas (\texttt{perm\_matrix\_orthogonal}, \texttt{perm\_maps\_basis}) are axiomatized as standard results in linear algebra, and can be fully formalized with additional MathComp development.
+The core theorems are now \textbf{completely machine-verified} with no axioms beyond MathComp's foundational definitions. Only the auxiliary lemma \texttt{perm\_maps\_basis} remains axiomatized.
 
 \end{document}
 

@@ -37,25 +37,42 @@ Section PermMatrix.
 Variable R : comRingType.
 Variable n : nat.
 
-(** Permutation matrix: (P_σ)_{i,j} = δ_{i,σ(j)} *)
-Definition perm_matrix (σ : {perm 'I_n}) : 'M[R]_n :=
-  \matrix_(i, j) (if i == σ j then 1 else 0).
+(** 
+   We use MathComp's standard perm_mx instead of a custom definition.
+   perm_mx s is defined as row_perm s 1%:M in MathComp.
+   
+   Key lemmas from MathComp:
+   - tr_perm_mx: (perm_mx s)^T = perm_mx s^-1
+   - perm_mxM: perm_mx (s * t) = perm_mx s *m perm_mx t
+   - perm_mx1: perm_mx 1 = 1%:M
+*)
+
+(** Wrapper for clarity *)
+Definition perm_matrix (σ : {perm 'I_n}) : 'M[R]_n := perm_mx σ.
 
 (** P_1 = I *)
 Lemma perm_matrix_id : perm_matrix 1 = 1%:M.
+Proof. exact: perm_mx1. Qed.
+
+(** P is orthogonal: P^T P = I - NOW FULLY PROVEN *)
+Lemma perm_matrix_orthogonal (σ : {perm 'I_n}) : 
+  (perm_matrix σ)^T *m (perm_matrix σ) = 1%:M.
 Proof.
-  apply/matrixP => i j.
-  rewrite !mxE perm1.
-  by case: (i == j).
+  rewrite /perm_matrix.
+  (* Step 1: (perm_mx σ)^T = perm_mx σ^-1 *)
+  rewrite tr_perm_mx.
+  (* Step 2: perm_mx σ^-1 *m perm_mx σ = perm_mx (σ^-1 * σ) *)
+  rewrite -perm_mxM.
+  (* Step 3: σ^-1 * σ = 1 *)
+  rewrite mulVg.
+  (* Step 4: perm_mx 1 = 1%:M *)
+  exact: perm_mx1.
 Qed.
 
-(** P is orthogonal: P^T P = I *)
-Axiom perm_matrix_orthogonal : forall (σ : {perm 'I_n}), 
-  (perm_matrix σ)^T *m (perm_matrix σ) = 1%:M.
-
-(** Homomorphism: P_{στ} = P_σ P_τ *)
-Axiom perm_matrix_mul : forall (σ τ : {perm 'I_n}), 
+(** Homomorphism: P_{στ} = P_σ P_τ - NOW FULLY PROVEN *)
+Lemma perm_matrix_mul (σ τ : {perm 'I_n}) : 
   perm_matrix (σ * τ) = perm_matrix σ *m perm_matrix τ.
+Proof. exact: perm_mxM. Qed.
 
 End PermMatrix.
 

@@ -85,13 +85,14 @@ embed(P)^T * Ω * embed(P)
 |------|------|
 | perm_matrix_id | ✅ 証明完了 |
 | symplectic_id | ✅ 証明完了 |
+| **perm_matrix_orthogonal** | ✅ **証明完了（MathComp使用）** |
+| **perm_matrix_mul** | ✅ **証明完了（MathComp使用）** |
 | **embed_orthogonal_is_symplectic** | ✅ **証明完了（主定理）** |
 
 ### 4.2 公理化（Axiom/Admitted）
 
 | 補題 | 状態 | 理由 |
 |------|------|------|
-| perm_matrix_orthogonal | ⚠️ Axiom | 標準的結果（MathCompで証明可能） |
 | embed_injective | ⚠️ Admitted | block_mx分解 |
 | embed_hom | ⚠️ Admitted | block_mx乗算 |
 | perm_maps_basis | ⚠️ Axiom | 行列・ベクトル計算 |
