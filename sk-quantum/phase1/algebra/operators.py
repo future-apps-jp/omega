@@ -666,3 +666,4 @@ def run_algebraic_analysis(verbose: bool = True) -> Dict:
 if __name__ == "__main__":
     results = run_algebraic_analysis(verbose=True)
 
+

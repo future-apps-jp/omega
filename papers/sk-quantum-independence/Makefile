@@ -28,3 +28,4 @@ quick:
 wordcount:
 	@detex $(MAIN).tex | wc -w
 
+

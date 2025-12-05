@@ -204,3 +204,4 @@ erased_size = kolmogorov_size(y)
 
 → サイズ変化は同じだが、S簡約の回数が異なる
 
+
