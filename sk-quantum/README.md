@@ -37,6 +37,11 @@ sk-quantum/
 │   │   └── symplectic.py     # ✅ シンプレクティック解析
 │   └── experiments/
 │       └── RESULTS_004_algebra.md # ✅ Phase 4 結果
+├── phase5/                    # ✅ Phase 5 完了
+│   ├── spectral/             # ✅ ハミルトニアン・量子ウォーク (13 tests)
+│   │   └── hamiltonian.py    # ✅ 連続時間量子ウォーク
+│   └── experiments/
+│       └── RESULTS_005_spectral.md # ✅ Phase 5 結果
 └── src/                       # 本格実装（Haskell）予定
 ```
 
@@ -108,6 +113,20 @@ sk-quantum/
 | Fredkin | 2 | ✓ | なし |
 | Toffoli+Fredkin | 6 | ✓ | なし |
 
+**結論**: 離散的可逆計算は古典的（H1 支持）
+
+### Phase 5: ハミルトニアンと干渉 ✅
+
+| 式 | ノード数 | 干渉あり | Total Variation |
+|----|----------|----------|-----------------|
+| `S (K a) (K b) c` | 5 | ✅ | 0.85 |
+| `(K a b) (K c d)` | 4 | ✅ | 0.85 |
+| `(K a b) (K c d) (K e f)` | 8 | ✅ | 0.74 |
+| `S (K a) (K b) (S c d e)` | 11 | ✅ | 0.58 |
+
+**結論**: 連続時間量子ウォーク U(t) = exp(-iAt) で干渉が生じる！
+→ 「離散→連続」の極限で量子性が現れる可能性
+
 ---
 
 ## 使用方法
@@ -163,7 +182,8 @@ K x y → x
 - Phase 1: 40 tests
 - Phase 2: 15 tests
 - Phase 4: 18 tests
-- **合計: 162 tests**
+- Phase 5: 13 tests
+- **合計: 175 tests**
 
 ## 参考文献
 

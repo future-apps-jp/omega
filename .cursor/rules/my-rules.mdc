@@ -22,9 +22,13 @@ This research project investigates **whether complex number structure (fundament
 - **Key Result**: H1 SUPPORTED — "Reversible computation is classical"
 - **Key Insight**: Permutation matrices have real eigenvalues (roots of unity), no ±i, thus no non-trivial J² = -I
 
-**Phase 5-7 (Next)**: Investigating continuous-time evolution and non-commutativity
-- **Focus Shift**: Discrete systems are classical; continuous-time (quantum walk) may be key
-- **Critical Question**: Does non-commutativity bridge the classical-quantum gap?
+**Phase 5 (Completed)**: Investigated continuous-time quantum walk
+- **Main Finding**: Interference patterns detected in ALL test expressions!
+- **Key Result**: Continuous-time evolution U(t) = exp(-iAt) introduces complex structure
+- **Key Insight**: "Discrete → Continuous" limit is where quantum behavior emerges
+
+**Phase 6-7 (Next)**: Model comparison and non-commutativity
+- **Critical Question**: Is continuous-time sufficient for quantum structure, or is non-commutativity also needed?
 
 ## Important Documents
 
@@ -51,7 +55,7 @@ This research project investigates **whether complex number structure (fundament
 - `sk-quantum/phase2/experiments/RESULTS_003_information.md` — Information-theoretic results
 - `sk-quantum/phase4/experiments/RESULTS_004_algebra.md` — **Reversible computation results (H1 supported)**
 
-## Current Phase: Phase 5 (Next)
+## Current Phase: Phase 6 (Next)
 
 ### Phase 4: Algebraic Structure of Reversible Computation ✅ COMPLETED
 - **Result**: Toffoli/Fredkin gates generate finite permutation groups
@@ -59,11 +63,15 @@ This research project investigates **whether complex number structure (fundament
 - **Result**: No non-trivial J² = -I exists
 - **Conclusion**: H1 SUPPORTED — Reversible computation is classical
 
-### Phase 5: Hamiltonian and Interference (Weeks 4-5) 🔄 NEXT
-- Define Hamiltonian H = A (adjacency matrix of computation graph)
-- **Key Focus**: Continuous-time evolution U(t) = exp(-iAt) introduces complex exponentials
-- Check for interference patterns in quantum walk
-- Compare discrete (classical) vs continuous (potentially quantum)
+### Phase 5: Hamiltonian and Interference ✅ COMPLETED
+- **Result**: Interference detected in ALL test expressions!
+- **Result**: Continuous-time U(t) = exp(-iAt) introduces complex structure
+- **Result**: Quantum walk shows oscillating probability (vs classical monotonic convergence)
+- **Conclusion**: "Discrete → Continuous" is key to quantum behavior
+
+### Phase 6: Three-Model Comparison (Weeks 6-7) 🔄 NEXT
+- Compare: SK (irreversible) vs RCA (reversible cellular automata) vs Quantum circuits
+- Prediction: RCA with continuous-time should also show interference
 
 ### Phase 6: Three-Model Comparison (Weeks 6-7)
 - Compare: SK (irreversible) vs RCA (reversible cellular automata) vs Quantum circuits
@@ -80,10 +88,11 @@ This research project investigates **whether complex number structure (fundament
 
 | Hypothesis | Prediction | Status | Notes |
 |------------|------------|--------|-------|
-| H1: Reversible computation is classical | Closes in Sp(2n,ℝ) | ✅ **SUPPORTED** | Phase 4 confirmed |
-| H2: Interference requires non-commutativity | [X,Y]=0 implies no interference | Pending | Phase 5-7 |
+| H1: Reversible computation is classical | Closes in Sp(2n,ℝ) | ✅ **SUPPORTED** | Phase 4 confirmed (discrete) |
+| H2: Interference requires non-commutativity | [X,Y]=0 implies no interference | **NEEDS REVISION** | Phase 5 shows interference without explicit non-commutativity |
 | H3: RCA is equivalent to SK | Both classical | Pending | Phase 6 |
-| H4: Quantization needs extra axioms | Computation alone insufficient | **Suggested** | Phase 4 supports |
+| H4: Quantization needs extra axioms | Computation alone insufficient | **PARTIAL** | Continuous-time is sufficient for interference |
+| H5 (NEW): Continuous-time introduces quantum | exp(-iAt) brings complex structure | ✅ **SUPPORTED** | Phase 5 confirmed |
 
 ## Technical Notes
 
@@ -94,7 +103,7 @@ This research project investigates **whether complex number structure (fundament
 
 ### Testing
 - All implementations should have comprehensive tests
-- Current test count: **162 passing tests** (Phase 0-2: 144, Phase 4: 18)
+- Current test count: **175 passing tests** (Phase 0-2: 144, Phase 4: 18, Phase 5: 13)
 
 ### Negative Results Are Valuable
 This project values negative results equally:
