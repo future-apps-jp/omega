@@ -189,6 +189,48 @@ A5 (no-cloning) follows from A1 $\land$ A3.
 If A1 holds, non-orthogonal states exist. If A3 holds, evolution is unitary. The standard no-cloning argument then applies: for non-orthogonal $|\psi\rangle, |\phi\rangle$, no unitary $U$ satisfies $U|\psi\rangle|0\rangle = |\psi\rangle|\psi\rangle$ and $U|\phi\rangle|0\rangle = |\phi\rangle|\phi\rangle$ simultaneously.
 \end{proof}
 
+\subsection{Sufficiency of A1: Constructing Quantum Structure}
+
+We now show that A1 is not only necessary but also \emph{sufficient} (together with A3) to construct quantum structure. We demonstrate this for the simplest case: a 2-level system.
+
+\begin{theorem}[Sufficiency of A1]
+\label{thm:a1-sufficient}
+For a 2-level system, A1 (state space extension with transitivity) together with A3 (reversibility) uniquely determines the Bloch ball structure.
+\end{theorem}
+
+\begin{proof}
+\textbf{Step 1: Classical starting point.} 
+The classical 2-state system has state space $\Omega_0 = \Delta^1$, the 1-simplex (line segment) with extreme points $\{e_0, e_1\}$ corresponding to bit values $\{0, 1\}$.
+
+\textbf{Step 2: Apply A1.}
+A1 requires that $\Omega \supsetneq \Delta^1$ with connected boundary and transitivity: for any pure states $\psi, \phi \in \partial\Omega$, there exists $T \in \mathcal{T}$ with $T\psi = \phi$.
+
+\textbf{Step 3: Apply A3.}
+Reversibility requires $\mathcal{T}$ to be a group of invertible transformations preserving $\Omega$.
+
+\textbf{Step 4: Uniqueness argument.}
+Embed $\Omega$ in $\R^3$ (the affine space of $2\times 2$ traceless Hermitian matrices). The constraints imply:
+\begin{itemize}
+    \item $\partial\Omega$ is a compact connected manifold (A1)
+    \item $\mathcal{T}$ acts transitively on $\partial\Omega$ (A1)
+    \item $\mathcal{T} \subset \mathrm{GL}(3,\R)$ preserves convex $\Omega$ (A3)
+\end{itemize}
+The unique (up to isomorphism) solution is $\partial\Omega = S^2$ (2-sphere) and $\mathcal{T} = \mathrm{SO}(3)$, giving the Bloch ball.
+\end{proof}
+
+\begin{corollary}
+\label{cor:qubit}
+A classical bit $+ $ A1 $+ $ A3 $=$ qubit.
+\end{corollary}
+
+\begin{remark}[Explicit Construction]
+The construction can be made explicit. Starting from the classical basis $\{|0\rangle, |1\rangle\}$, A1 adds states of the form:
+\[
+|\psi(\theta,\phi)\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle
+\]
+The parameter space $(\theta,\phi) \in [0,\pi]\times[0,2\pi)$ is precisely $S^2$, the Bloch sphere. The group $\mathrm{SO}(3)$ acts transitively on this sphere, and lifts to $\mathrm{SU}(2)$ acting on the state vectors.
+\end{remark}
+
 \subsection{Implication Graph}
 
 The axiom implications form the following structure:
