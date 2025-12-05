@@ -597,7 +597,9 @@ Total: 221 passing tests across all phases.
 
 \subsection{RCA Interference Results}
 
-\begin{table}[h]
+Table~\ref{tab:rca-detailed} shows the detailed results for RCA interference analysis.
+
+\begin{table}[ht!]
 \centering
 \begin{tabular}{lccccc}
 \toprule
@@ -610,13 +612,16 @@ Rule & Size & Group Order & Interference & Q. Osc. & C. Osc. \\
 \bottomrule
 \end{tabular}
 \caption{Detailed RCA results. Q. Osc. = Quantum oscillations, C. Osc. = Classical oscillations.}
+\label{tab:rca-detailed}
 \end{table}
 
 \subsection{Quantum Circuit Comparison}
 
-\begin{table}[h]
+Table~\ref{tab:qc-comparison} compares different quantum circuit types.
+
+\begin{table}[ht!]
 \centering
-\begin{tabular}{lcccc}
+\begin{tabular}{lccc}
 \toprule
 Circuit & Permutation & Complex & Superposition \\
 \midrule
@@ -627,6 +632,7 @@ Phase gate & $\times$ & \checkmark & \checkmark \\
 \bottomrule
 \end{tabular}
 \caption{Quantum circuit properties}
+\label{tab:qc-comparison}
 \end{table}
 
 \section{Symplectic Embedding of Permutation Matrices}
@@ -674,31 +680,35 @@ The following diagram illustrates the relationship between classical computation
 \begin{center}
 \begin{tikzpicture}[scale=1.0, every node/.style={font=\small}]
 % Classical computation
-\node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm] (CC) at (-4, 0) {Classical Computation};
-\node[below=0.1cm of CC, font=\scriptsize] {Permutation matrices $P$};
+\node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm] (CC) at (-5, 0) {Classical Computation};
+\node[below=0.3cm of CC, font=\scriptsize] {Permutation matrices $P$};
 
 % Classical mechanics
 \node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm] (CM) at (0, 0) {Classical Mechanics};
-\node[below=0.1cm of CM, font=\scriptsize] {Symplectic $\Sp(2N, \R)$};
+\node[below=0.3cm of CM, font=\scriptsize] {Symplectic $\Sp(2N, \R)$};
 
 % Quantum mechanics
-\node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm, fill=blue!10] (QM) at (4, 0) {Quantum Mechanics};
-\node[below=0.1cm of QM, font=\scriptsize] {Unitary $\Un(N)$};
+\node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm, fill=blue!10] (QM) at (5, 0) {Quantum Mechanics};
+\node[below=0.3cm of QM, font=\scriptsize] {Unitary $\Un(N)$};
 
-% Arrows
-\draw[->, thick] (CC) -- (CM) node[midway, above, font=\scriptsize] {embed};
-\draw[->, thick, dashed, red] (CM) -- (QM) node[midway, above, font=\scriptsize] {quantize};
-\draw[->, thick, dashed, red] (CC) to[bend left=30] node[midway, above, font=\scriptsize] {?} (QM);
+% Arrows with labels positioned higher
+\draw[->, thick] (CC.east) -- (CM.west);
+\node[font=\scriptsize] at (-2.5, 0.8) {embed};
+
+\draw[->, thick, dashed, red] (CM.east) -- (QM.west);
+\node[font=\scriptsize, red] at (2.5, 0.8) {quantize ($+\hbar$)};
+
+\draw[->, thick, dashed, red] (CC.north) to[bend left=35] node[midway, above, font=\scriptsize] {no direct path} (QM.north);
 
 % Additional axioms box
-\node[draw, dashed, rounded corners, minimum width=2.5cm, minimum height=0.8cm, fill=yellow!20] (AX) at (2, -2) {Additional Axioms};
-\node[below=0.05cm of AX, font=\scriptsize] {$\C$, Born rule, $\hbar$};
+\node[draw, dashed, rounded corners, minimum width=2.8cm, minimum height=0.8cm, fill=yellow!20] (AX) at (2.5, -2.2) {Additional Axioms};
+\node[below=0.2cm of AX, font=\scriptsize] {$\C$, Born rule, $\hbar$};
 
-\draw[->, thick] (AX) -- (2, -0.6);
+\draw[->, thick] (AX.north) -- (2.5, -0.7);
 
 % Legend
-\node[font=\scriptsize] at (-4, -2.5) {$\longrightarrow$ : derivable};
-\node[font=\scriptsize, red] at (-4, -3) {$\dashrightarrow$ : requires extra axioms};
+\node[font=\scriptsize, anchor=west] at (-5.5, -2.5) {$\longrightarrow$ : derivable};
+\node[font=\scriptsize, red, anchor=west] at (-5.5, -3.0) {$\color{red}\dashrightarrow$ : requires extra axioms};
 \end{tikzpicture}
 \end{center}
 
