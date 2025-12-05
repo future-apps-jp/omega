@@ -8,7 +8,7 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'phase0'))
 
-from hamiltonian import (
+from .hamiltonian import (
     build_hamiltonian_from_expression,
     ComputationHamiltonian,
     SpectralAnalysis,

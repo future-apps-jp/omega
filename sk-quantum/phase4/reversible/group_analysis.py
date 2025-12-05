@@ -25,7 +25,7 @@ from itertools import product, combinations
 from functools import reduce
 from math import factorial, gcd
 
-from gates import (
+from .gates import (
     ReversibleGate, CompositeGate, GateGroup,
     NOT, CNOT, TOFFOLI, FREDKIN, SWAP,
     ToffoliGate, FredkinGate, EmbeddedGate, IdentityGate,

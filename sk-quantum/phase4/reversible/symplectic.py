@@ -34,7 +34,7 @@ import numpy as np
 from numpy.linalg import det, eigvals, matrix_rank
 from scipy.linalg import expm, logm
 
-from gates import (
+from .gates import (
     ReversibleGate, GateGroup,
     TOFFOLI, FREDKIN, CNOT, SWAP, NOT,
     matrix_properties

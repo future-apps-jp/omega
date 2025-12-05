@@ -44,9 +44,9 @@ This research project investigates **whether complex number structure (fundament
 - `docs/research_plan_v2.md` — **Current research plan** (Phase 4-7, with Phase 4 results)
 
 ### Papers
-- `papers/sk-quantum-independence/main.tex` — Main paper (LaTeX source)
-- `papers/sk-quantum-independence/README.md` — Paper writing guide
-- `papers/sk-quantum-independence/references.bib` — Bibliography
+- `papers/sk-quantum-independence/main.tex` — Paper 1: SK計算と量子構造の独立性 (Phase 0-3)
+- `papers/computational-quantum-limits/main.tex` — **Paper 2: 可逆計算から量子構造導出の限界 (Phase 4-7)**
+- `papers/computational-quantum-limits/README.md` — Paper 2 概要
 
 ### Implementation
 - `sk-quantum/README.md` — Implementation overview

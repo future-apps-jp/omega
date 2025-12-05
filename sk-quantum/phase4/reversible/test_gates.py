@@ -4,7 +4,7 @@ Tests for Reversible Logic Gates
 
 import pytest
 import numpy as np
-from gates import (
+from .gates import (
     NOT, CNOT, TOFFOLI, FREDKIN, SWAP,
     NOTGate, CNOTGate, ToffoliGate, FredkinGate, SWAPGate,
     IdentityGate, CompositeGate, EmbeddedGate, GateGroup,
