@@ -4,12 +4,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usetikzlibrary{positioning}
 \usepackage{subcaption}
 \usepackage{multirow}
 
@@ -294,6 +296,10 @@ All permutation matrices from reversible gates have eigenvalues that are roots o
 Permutation matrices have characteristic polynomials that factor over $\Z$. Their eigenvalues are $n$-th roots of unity for some $n$. For real matrices, complex eigenvalues come in conjugate pairs. The value $i$ would require $-i$ as well, but $i \cdot (-i) = 1 \neq -1$, contradicting the determinant constraint.
 \end{proof}
 
+\begin{remark}[Generalization to Arbitrary Bit Size]
+While our experiments use small systems (3-4 bits) for computational tractability, the results generalize to arbitrary $n$-bit systems. The key observation is structural: any $n$-bit reversible gate is a permutation on $2^n$ elements, hence an element of $S_{2^n}$. Permutation matrices are always orthogonal and embed into $\Sp(2 \cdot 2^n, \R)$ via the canonical embedding (see Appendix~\ref{app:symplectic}). Since this embedding preserves the algebraic structure, the absence of $J^2 = -I$ holds for all finite $n$.
+\end{remark}
+
 \textbf{Conclusion}: Hypothesis H1 (``Reversible computation is classical'') is \textbf{supported}.
 
 \subsection{Phase 5: Continuous-Time Introduces Interference}
@@ -386,6 +392,28 @@ Normalization & $|\alpha|^2 + |\beta|^2 = 1$ & N/A & $\times$ \\
 \end{table}
 
 \textbf{Conclusion}: SK computation satisfies none of the requirements for quantum superposition.
+
+\subsection{No-Go Lemma for Superposition from Discrete Computation}
+
+We formalize why discrete computation cannot generate quantum superposition:
+
+\begin{lemma}[No Superposition from Permutation Dynamics]
+\label{lem:no-superposition}
+Let $\mathcal{H} = \C^N$ be the Hilbert space of computational basis states, and let $P: \mathcal{H} \to \mathcal{H}$ be a permutation matrix (representing a reversible classical gate). Then for any basis state $\ket{j}$:
+\begin{enumerate}
+    \item $P\ket{j} = \ket{\pi(j)}$ for some permutation $\pi$
+    \item The output is always a single basis state, never a superposition
+    \item No finite composition of permutation matrices creates superposition from basis states
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) By definition of permutation matrix. (2) $P\ket{j}$ has exactly one non-zero entry. (3) The group of permutation matrices is closed under multiplication; if $P_1, \ldots, P_k$ are permutation matrices, then $P_k \cdots P_1 \ket{j} = \ket{\pi_k \circ \cdots \circ \pi_1(j)}$, still a single basis state.
+\end{proof}
+
+\begin{corollary}
+To create superposition $\alpha\ket{0} + \beta\ket{1}$ with $|\alpha|, |\beta| > 0$, one must use a non-permutation unitary (e.g., Hadamard gate $H = \frac{1}{\sqrt{2}}\begin{psmallmatrix} 1 & 1 \\ 1 & -1 \end{psmallmatrix}$). Such gates have no classical reversible analog.
+\end{corollary}
 
 %==============================================================================
 \section{Discussion}
@@ -487,7 +515,7 @@ Several directions remain open:
 \section*{Acknowledgments}
 %==============================================================================
 
-The author thanks the reviewers for their valuable feedback. All implementations are available at [repository URL] for reproducibility.
+The author thanks the reviewers for their valuable feedback. All implementations are available at \url{https://github.com/future-apps-jp/omega/} for reproducibility.
 
 %==============================================================================
 \bibliographystyle{plain}
@@ -600,6 +628,87 @@ Phase gate & $\times$ & \checkmark & \checkmark \\
 \end{tabular}
 \caption{Quantum circuit properties}
 \end{table}
+
+\section{Symplectic Embedding of Permutation Matrices}
+\label{app:symplectic}
+
+We provide a detailed proof that any $N \times N$ permutation matrix $P$ embeds into the symplectic group $\Sp(2N, \R)$.
+
+\subsection{The Canonical Embedding}
+
+\begin{proposition}
+Let $P \in O(N)$ be an orthogonal matrix (including permutation matrices). The map
+\begin{equation}
+\iota: O(N) \to \Sp(2N, \R), \quad P \mapsto \begin{pmatrix} P & 0 \\ 0 & P \end{pmatrix}
+\end{equation}
+is a group homomorphism, and $\iota(P)$ is symplectic.
+\end{proposition}
+
+\begin{proof}
+Let $\Omega = \begin{psmallmatrix} 0 & I_N \\ -I_N & 0 \end{psmallmatrix}$ be the standard symplectic form. We verify:
+\begin{align}
+\iota(P)^T \Omega \iota(P) &= \begin{pmatrix} P^T & 0 \\ 0 & P^T \end{pmatrix} \begin{pmatrix} 0 & I_N \\ -I_N & 0 \end{pmatrix} \begin{pmatrix} P & 0 \\ 0 & P \end{pmatrix} \\
+&= \begin{pmatrix} 0 & P^T \\ -P^T & 0 \end{pmatrix} \begin{pmatrix} P & 0 \\ 0 & P \end{pmatrix} \\
+&= \begin{pmatrix} 0 & P^T P \\ -P^T P & 0 \end{pmatrix} = \begin{pmatrix} 0 & I_N \\ -I_N & 0 \end{pmatrix} = \Omega
+\end{align}
+where we used $P^T P = I_N$ (orthogonality). The homomorphism property follows from block multiplication.
+\end{proof}
+
+\subsection{Physical Interpretation}
+
+The embedding $P \mapsto \begin{psmallmatrix} P & 0 \\ 0 & P \end{psmallmatrix}$ corresponds to a classical canonical transformation that permutes both position and momentum coordinates identically. This is the phase space analog of a classical reversible gate.
+
+The key distinction from unitary structure is:
+\begin{itemize}
+    \item $\Sp(2N, \R)$ preserves the symplectic form $\omega = \sum_i dq_i \wedge dp_i$ (classical)
+    \item $\Un(N)$ preserves the Hermitian inner product $\langle \psi | \phi \rangle$ (quantum)
+\end{itemize}
+
+While $\Un(N) \subset \Sp(2N, \R)$ when we identify $\C^N \cong \R^{2N}$, the converse is false: most symplectic matrices are not unitary. Permutation matrices lie in the intersection $O(N) \cap \Sp(2N, \R)$, which is purely classical.
+
+\section{Quantization Diagram}
+\label{app:quantization}
+
+The following diagram illustrates the relationship between classical computation, classical mechanics, and quantum mechanics, and why computational quantization requires external structure:
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={font=\small}]
+% Classical computation
+\node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm] (CC) at (-4, 0) {Classical Computation};
+\node[below=0.1cm of CC, font=\scriptsize] {Permutation matrices $P$};
+
+% Classical mechanics
+\node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm] (CM) at (0, 0) {Classical Mechanics};
+\node[below=0.1cm of CM, font=\scriptsize] {Symplectic $\Sp(2N, \R)$};
+
+% Quantum mechanics
+\node[draw, rounded corners, minimum width=3.5cm, minimum height=1cm, fill=blue!10] (QM) at (4, 0) {Quantum Mechanics};
+\node[below=0.1cm of QM, font=\scriptsize] {Unitary $\Un(N)$};
+
+% Arrows
+\draw[->, thick] (CC) -- (CM) node[midway, above, font=\scriptsize] {embed};
+\draw[->, thick, dashed, red] (CM) -- (QM) node[midway, above, font=\scriptsize] {quantize};
+\draw[->, thick, dashed, red] (CC) to[bend left=30] node[midway, above, font=\scriptsize] {?} (QM);
+
+% Additional axioms box
+\node[draw, dashed, rounded corners, minimum width=2.5cm, minimum height=0.8cm, fill=yellow!20] (AX) at (2, -2) {Additional Axioms};
+\node[below=0.05cm of AX, font=\scriptsize] {$\C$, Born rule, $\hbar$};
+
+\draw[->, thick] (AX) -- (2, -0.6);
+
+% Legend
+\node[font=\scriptsize] at (-4, -2.5) {$\longrightarrow$ : derivable};
+\node[font=\scriptsize, red] at (-4, -3) {$\dashrightarrow$ : requires extra axioms};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Key insight}: The dashed arrows require external input:
+\begin{enumerate}
+    \item \textbf{Classical $\to$ Quantum} (standard quantization): Requires Planck's constant $\hbar$, the correspondence $\{q, p\} \to \frac{1}{i\hbar}[\hat{q}, \hat{p}]$, and the complex Hilbert space structure.
+    \item \textbf{Computation $\to$ Quantum} (computational quantization): Requires all of the above, plus the Born rule to interpret amplitudes as probabilities.
+\end{enumerate}
+
+This diagram formalizes our main conclusion: no arrow from ``Classical Computation'' to ``Quantum Mechanics'' exists without passing through additional axioms.
 
 \end{document}
 
