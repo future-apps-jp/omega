@@ -27,8 +27,13 @@ This research project investigates **whether complex number structure (fundament
 - **Key Result**: Continuous-time evolution U(t) = exp(-iAt) introduces complex structure
 - **Key Insight**: "Discrete → Continuous" limit is where quantum behavior emerges
 
-**Phase 6-7 (Next)**: Model comparison and non-commutativity
-- **Critical Question**: Is continuous-time sufficient for quantum structure, or is non-commutativity also needed?
+**Phase 6 (Completed)**: Three-model comparison (SK vs RCA vs Quantum circuits)
+- **Main Finding**: RCA also shows interference under continuous-time evolution
+- **Key Result**: H6 SUPPORTED — "RCA + continuous-time shows interference"
+- **Key Insight**: True quantum uniqueness is "superposition", not just interference
+
+**Phase 7 (Next)**: Non-commutativity and quantization
+- **Critical Question**: What generates superposition? Is non-commutativity the key?
 
 ## Important Documents
 
@@ -47,15 +52,20 @@ This research project investigates **whether complex number structure (fundament
 - `sk-quantum/phase1/algebra/` — Phase 1A: Algebraic structure analysis
 - `sk-quantum/phase1/geometry/` — Phase 1B: Path space holonomy
 - `sk-quantum/phase2/information/` — Phase 2: Information-theoretic approach
-- `sk-quantum/phase4/reversible/` — **Phase 4: Reversible gates (18 tests)**
+- `sk-quantum/phase4/reversible/` — Phase 4: Reversible gates (18 tests)
+- `sk-quantum/phase5/spectral/` — Phase 5: Hamiltonian and quantum walk (13 tests)
+- `sk-quantum/phase6/rca/` — **Phase 6: RCA implementation (17 tests)**
+- `sk-quantum/phase6/comparison/` — **Phase 6: Model comparison (14 tests)**
 
 ### Experiment Results
 - `sk-quantum/phase1/experiments/RESULTS_001.md` — Algebraic structure results
 - `sk-quantum/phase1/experiments/RESULTS_002_holonomy.md` — Holonomy analysis results
 - `sk-quantum/phase2/experiments/RESULTS_003_information.md` — Information-theoretic results
-- `sk-quantum/phase4/experiments/RESULTS_004_algebra.md` — **Reversible computation results (H1 supported)**
+- `sk-quantum/phase4/experiments/RESULTS_004_algebra.md` — Reversible computation results (H1 supported)
+- `sk-quantum/phase5/experiments/RESULTS_005_spectral.md` — Spectral analysis results (H5 supported)
+- `sk-quantum/phase6/experiments/RESULTS_006_comparison.md` — **3-model comparison results (H6 supported)**
 
-## Current Phase: Phase 6 (Next)
+## Current Phase: Phase 7 (Next)
 
 ### Phase 4: Algebraic Structure of Reversible Computation ✅ COMPLETED
 - **Result**: Toffoli/Fredkin gates generate finite permutation groups
@@ -67,20 +77,18 @@ This research project investigates **whether complex number structure (fundament
 - **Result**: Interference detected in ALL test expressions!
 - **Result**: Continuous-time U(t) = exp(-iAt) introduces complex structure
 - **Result**: Quantum walk shows oscillating probability (vs classical monotonic convergence)
-- **Conclusion**: "Discrete → Continuous" is key to quantum behavior
+- **Conclusion**: H5 SUPPORTED — "Discrete → Continuous" is key to quantum behavior
 
-### Phase 6: Three-Model Comparison (Weeks 6-7) 🔄 NEXT
-- Compare: SK (irreversible) vs RCA (reversible cellular automata) vs Quantum circuits
-- Prediction: RCA with continuous-time should also show interference
+### Phase 6: Three-Model Comparison ✅ COMPLETED
+- **Result**: RCA also shows interference under continuous-time evolution
+- **Result**: Only quantum circuits create genuine superposition
+- **Result**: Hierarchy identified: Level 0 (irreversible) < Level 1 (reversible) < Level 2 (continuous) < Level 3 (quantum)
+- **Conclusion**: H6 SUPPORTED — True quantum uniqueness is superposition, not interference
 
-### Phase 6: Three-Model Comparison (Weeks 6-7)
-- Compare: SK (irreversible) vs RCA (reversible cellular automata) vs Quantum circuits
-- **Prediction after Phase 4**: RCA will also be classical (permutation-based)
-- Identify what makes quantum circuits different
-
-### Phase 7: Non-commutativity and Quantization (Weeks 8-10)
+### Phase 7: Non-commutativity and Quantization (Weeks 8-10) 🔄 NEXT
 - Analyze commutator [Ŝ, K̂]
-- Non-commutativity is **the remaining candidate** for quantum structure
+- Investigate: Does non-commutativity generate superposition?
+- H2 needs revision: "Interference" ≠ "Superposition"
 - Formulate "computational quantization"
 - Write paper v2
 
@@ -88,11 +96,12 @@ This research project investigates **whether complex number structure (fundament
 
 | Hypothesis | Prediction | Status | Notes |
 |------------|------------|--------|-------|
-| H1: Reversible computation is classical | Closes in Sp(2n,ℝ) | ✅ **SUPPORTED** | Phase 4 confirmed (discrete) |
-| H2: Interference requires non-commutativity | [X,Y]=0 implies no interference | **NEEDS REVISION** | Phase 5 shows interference without explicit non-commutativity |
-| H3: RCA is equivalent to SK | Both classical | Pending | Phase 6 |
-| H4: Quantization needs extra axioms | Computation alone insufficient | **PARTIAL** | Continuous-time is sufficient for interference |
-| H5 (NEW): Continuous-time introduces quantum | exp(-iAt) brings complex structure | ✅ **SUPPORTED** | Phase 5 confirmed |
+| H1: Reversible computation is classical | Closes in Sp(2n,ℝ) | ✅ **SUPPORTED** | Phase 4 confirmed |
+| H5: Continuous-time introduces interference | exp(-iAt) brings complex structure | ✅ **SUPPORTED** | Phase 5 confirmed |
+| H6: RCA + continuous-time shows interference | RCA also interferes | ✅ **SUPPORTED** | Phase 6 confirmed |
+| H2: Superposition requires non-commutativity | [X,Y]=0 implies no superposition | **TESTING** | Phase 7 will verify |
+| H3: RCA is structurally similar to SK | Both classical | **PARTIAL** | Phase 6 confirmed both classical |
+| H4: Quantization needs extra axioms | Computation alone insufficient | **PARTIAL** | Superposition needs extra structure |
 
 ## Technical Notes
 
@@ -103,7 +112,7 @@ This research project investigates **whether complex number structure (fundament
 
 ### Testing
 - All implementations should have comprehensive tests
-- Current test count: **175 passing tests** (Phase 0-2: 144, Phase 4: 18, Phase 5: 13)
+- Current test count: **206 passing tests** (Phase 0-2: 144, Phase 4: 18, Phase 5: 13, Phase 6: 31)
 
 ### Negative Results Are Valuable
 This project values negative results equally:

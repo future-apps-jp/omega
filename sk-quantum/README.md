@@ -42,6 +42,16 @@ sk-quantum/
 │   │   └── hamiltonian.py    # ✅ 連続時間量子ウォーク
 │   └── experiments/
 │       └── RESULTS_005_spectral.md # ✅ Phase 5 結果
+├── phase6/                    # ✅ Phase 6 完了
+│   ├── rca/                  # ✅ 可逆セルオートマトン (17 tests)
+│   │   ├── automata.py       # ✅ Rule 90/150 実装
+│   │   ├── graph.py          # ✅ RCAグラフ
+│   │   └── hamiltonian.py    # ✅ RCAハミルトニアン
+│   ├── comparison/           # ✅ 3モデル比較 (14 tests)
+│   │   ├── quantum_circuit.py # ✅ 量子回路
+│   │   └── model_comparison.py # ✅ SK/RCA/Quantum比較
+│   └── experiments/
+│       └── RESULTS_006_comparison.md # ✅ Phase 6 結果
 └── src/                       # 本格実装（Haskell）予定
 ```
 
@@ -127,6 +137,28 @@ sk-quantum/
 **結論**: 連続時間量子ウォーク U(t) = exp(-iAt) で干渉が生じる！
 → 「離散→連続」の極限で量子性が現れる可能性
 
+### Phase 6: 3モデル比較 ✅
+
+| モデル | 可逆性 | 離散性 | 干渉（連続） | 重ね合わせ |
+|--------|--------|--------|--------------|------------|
+| SK | ✗ | ✓ | ✓ | ✗ |
+| RCA (Rule 90) | ✓ | ✓ | ✓ | ✗ |
+| 量子回路 | ✓ | ✗ | ✓ | ✓ |
+
+**RCA連続時間化結果**:
+
+| Rule | Size | 干渉あり | 量子振動 | 古典振動 | Max TVD |
+|------|------|----------|----------|----------|---------|
+| 90 | 3 | ✅ | 9 | 0 | 0.82 |
+| 90 | 4 | ✅ | 6 | 0 | 0.84 |
+| 150 | 3 | ✅ | 9 | 0 | 0.82 |
+| 150 | 4 | ✅ | 9 | 0 | 0.82 |
+
+**結論**: 
+- 仮説H6「RCAも連続時間化すれば干渉を示す」→ ✅ **SUPPORTED**
+- 離散計算（SK/RCA）は本質的に古典的だが、連続時間化で干渉が出現
+- 真の量子性（重ね合わせ・もつれ）は量子回路のみ
+
 ---
 
 ## 使用方法
@@ -172,7 +204,7 @@ K x y → x
 ## 研究計画
 
 - **v1** (Phase 0-3): SK計算と量子構造 → 完了、論文化
-- **v2** (Phase 4-7): 可逆計算と量子構造 → Phase 4 完了
+- **v2** (Phase 4-7): 可逆計算と量子構造 → Phase 6 完了
 
 詳細: `docs/research_plan_v2.md`
 
@@ -183,7 +215,8 @@ K x y → x
 - Phase 2: 15 tests
 - Phase 4: 18 tests
 - Phase 5: 13 tests
-- **合計: 175 tests**
+- Phase 6: 31 tests (RCA: 17, Comparison: 14)
+- **合計: 206 tests**
 
 ## 参考文献
 
