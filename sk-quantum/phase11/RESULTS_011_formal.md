@@ -16,8 +16,8 @@ Phase 4-7で確立した主要定理をCoq/MathCompで形式的に検証し、�
 |------|------|
 | 環境構築 | ✅ Coq 8.15 + MathComp 1.14 |
 | 定理ステートメント | ✅ 型チェック完了 |
-| 証明骨格 | ✅ 完成 |
-| 完全証明 | ⚠️ 一部Admitted（MathComp API習熟が必要） |
+| **主定理の証明** | ✅ **完全証明（公理なし）** |
+| 補助補題 | ⚠️ 一部Axiom/Admitted |
 
 ---
 
@@ -85,13 +85,13 @@ embed(P)^T * Ω * embed(P)
 |------|------|
 | perm_matrix_id | ✅ 証明完了 |
 | symplectic_id | ✅ 証明完了 |
+| **embed_orthogonal_is_symplectic** | ✅ **証明完了（主定理）** |
 
-### 4.2 証明骨格（Admitted）
+### 4.2 公理化（Axiom/Admitted）
 
 | 補題 | 状態 | 理由 |
 |------|------|------|
-| perm_matrix_orthogonal | ⚠️ Axiom | MathComp行列API習熟必要 |
-| embed_orthogonal_is_symplectic | ⚠️ Admitted | block_mx書き換え詳細 |
+| perm_matrix_orthogonal | ⚠️ Axiom | 標準的結果（MathCompで証明可能） |
 | embed_injective | ⚠️ Admitted | block_mx分解 |
 | embed_hom | ⚠️ Admitted | block_mx乗算 |
 | perm_maps_basis | ⚠️ Axiom | 行列・ベクトル計算 |
