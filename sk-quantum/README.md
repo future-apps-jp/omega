@@ -30,8 +30,8 @@ sk-quantum/
 |-----|--------|-----------|--------|
 | Day 1 | SK式AST定義 + パーサ | ✅ 完了 | `sk_parser.py` |
 | Day 2 | β簡約の実装 | ✅ 完了 | `reduction.py` |
-| Day 3 | Redex探索器 | 🔲 未着手 | `redex.py` |
-| Day 4 | Multiway graph構築 | 🔲 未着手 | `multiway.py` |
+| Day 3 | Redex探索器 | ✅ 完了 | `reduction.py` (統合) |
+| Day 4 | Multiway graph構築 | ✅ 完了 | `multiway.py` |
 | Day 5 | 確率定義の実装 | 🔲 未着手 | `probability.py` |
 | Day 6 | Sorkin公式 I₂, I₃ | 🔲 未着手 | `sorkin.py` |
 | Day 7 | 実験実行 + 分析 | 🔲 未着手 | `experiment_001.ipynb` |
