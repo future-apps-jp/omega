@@ -1,0 +1,21 @@
+; hello_world.a1 - Bell State Generation
+; "Hello Quantum World" in A1
+;
+; This program creates a Bell state: (|00⟩ + |11⟩)/√2
+; demonstrating quantum entanglement with minimal description.
+;
+; A1 tokens: 4 (CNOT, H, 0, 1)
+; Estimated bits: ~20 bits
+;
+; Author: Hiroshi Kohashiguchi
+; Date: December 2025
+
+; Bell state in one line
+(CNOT (H 0) 1)
+
+; Alternative: using a function
+; (DEFINE make-bell
+;     (LAMBDA (q0 q1)
+;         (CNOT (H q0) q1)))
+; (make-bell 0 1)
+

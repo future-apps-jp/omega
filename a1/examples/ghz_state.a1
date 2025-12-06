@@ -1,0 +1,26 @@
+; ghz_state.a1 - GHZ State Generation
+; 
+; Creates a 3-qubit GHZ state: (|000⟩ + |111⟩)/√2
+; Demonstrating multi-qubit entanglement with chained gates.
+;
+; A1 tokens: 7 (CNOT, CNOT, H, 0, 1, 1, 2)
+; Estimated bits: ~35 bits
+;
+; Author: Hiroshi Kohashiguchi
+; Date: December 2025
+
+; GHZ state with chained CNOTs
+(CNOT (CNOT (H 0) 1) 2)
+
+; Alternative: explicit sequencing
+; (BEGIN
+;     (H 0)
+;     (CNOT 0 1)
+;     (CNOT 1 2))
+
+; Alternative: using a function
+; (DEFINE make-ghz
+;     (LAMBDA (q0 q1 q2)
+;         (CNOT (CNOT (H q0) q1) q2)))
+; (make-ghz 0 1 2)
+

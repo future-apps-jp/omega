@@ -1,0 +1,120 @@
+{
+  "generated": "2025-12-06T19:39:10.026449",
+  "statistics": {
+    "n_benchmarks": 9,
+    "mean_token_ratio": 25.137962962962963,
+    "std_token_ratio": 8.953133384111396,
+    "mean_bits_ratio": 40.22074074074074,
+    "all_above_10x": true
+  },
+  "results": [
+    {
+      "benchmark": "bell",
+      "description": "Bell state: (|00\u27e9 + |11\u27e9)/\u221a2",
+      "category": "entanglement",
+      "qubits": 2,
+      "a1_tokens": 4,
+      "a1_bits": 20.0,
+      "classical_tokens": 156,
+      "classical_bits": 1248.0,
+      "token_ratio": 39.0,
+      "bits_ratio": 62.4
+    },
+    {
+      "benchmark": "ghz_3",
+      "description": "GHZ-3 state: (|000\u27e9 + |111\u27e9)/\u221a2",
+      "category": "entanglement",
+      "qubits": 3,
+      "a1_tokens": 6,
+      "a1_bits": 30.0,
+      "classical_tokens": 186,
+      "classical_bits": 1488.0,
+      "token_ratio": 31.0,
+      "bits_ratio": 49.6
+    },
+    {
+      "benchmark": "ghz_4",
+      "description": "GHZ-4 state: 4-qubit GHZ",
+      "category": "entanglement",
+      "qubits": 4,
+      "a1_tokens": 8,
+      "a1_bits": 40.0,
+      "classical_tokens": 229,
+      "classical_bits": 1832.0,
+      "token_ratio": 28.625,
+      "bits_ratio": 45.8
+    },
+    {
+      "benchmark": "hadamard_1",
+      "description": "Single-qubit superposition",
+      "category": "superposition",
+      "qubits": 1,
+      "a1_tokens": 2,
+      "a1_bits": 10.0,
+      "classical_tokens": 73,
+      "classical_bits": 584.0,
+      "token_ratio": 36.5,
+      "bits_ratio": 58.4
+    },
+    {
+      "benchmark": "hadamard_4",
+      "description": "4-qubit uniform superposition",
+      "category": "superposition",
+      "qubits": 4,
+      "a1_tokens": 9,
+      "a1_bits": 45.0,
+      "classical_tokens": 111,
+      "classical_bits": 888.0,
+      "token_ratio": 12.333333333333334,
+      "bits_ratio": 19.733333333333334
+    },
+    {
+      "benchmark": "teleport",
+      "description": "Quantum teleportation protocol",
+      "category": "protocol",
+      "qubits": 3,
+      "a1_tokens": 24,
+      "a1_bits": 120.0,
+      "classical_tokens": 410,
+      "classical_bits": 3280.0,
+      "token_ratio": 17.083333333333332,
+      "bits_ratio": 27.333333333333332
+    },
+    {
+      "benchmark": "superdense",
+      "description": "Superdense coding (encode 10)",
+      "category": "protocol",
+      "qubits": 2,
+      "a1_tokens": 16,
+      "a1_bits": 80.0,
+      "classical_tokens": 280,
+      "classical_bits": 2240.0,
+      "token_ratio": 17.5,
+      "bits_ratio": 28.0
+    },
+    {
+      "benchmark": "phase_kickback",
+      "description": "Phase kickback demonstration",
+      "category": "algorithm",
+      "qubits": 2,
+      "a1_tokens": 10,
+      "a1_bits": 50.0,
+      "classical_tokens": 172,
+      "classical_bits": 1376.0,
+      "token_ratio": 17.2,
+      "bits_ratio": 27.52
+    },
+    {
+      "benchmark": "grover_oracle",
+      "description": "Single Grover diffusion",
+      "category": "algorithm",
+      "qubits": 1,
+      "a1_tokens": 4,
+      "a1_bits": 20.0,
+      "classical_tokens": 108,
+      "classical_bits": 864.0,
+      "token_ratio": 27.0,
+      "bits_ratio": 43.2
+    }
+  ]
+}

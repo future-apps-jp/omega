@@ -1,0 +1,36 @@
+; teleport.a1 - Quantum Teleportation Protocol
+;
+; Teleports a quantum state from qubit 0 to qubit 2 using 
+; qubit 1 as part of the entangled pair.
+;
+; Protocol:
+; 1. Create Bell pair between qubits 1 and 2 (Alice and Bob)
+; 2. Apply Bell measurement on qubits 0 (input) and 1 (Alice)
+; 3. Measure qubits 0 and 1
+; 4. (Classical communication and corrections handled outside)
+;
+; A1 tokens: ~20
+; Estimated bits: ~100 bits
+;
+; Author: Hiroshi Kohashiguchi
+; Date: December 2025
+
+; Define the teleportation circuit
+(DEFINE teleport
+    (LAMBDA (psi alice bob)
+        (BEGIN
+            ; Step 1: Create Bell pair (Alice-Bob)
+            (CNOT (H alice) bob)
+            
+            ; Step 2: Bell measurement (input-Alice)
+            (CNOT psi alice)
+            (H psi)
+            
+            ; Step 3: Measure
+            (MEASURE psi)
+            (MEASURE alice)
+        )))
+
+; Execute teleportation: input on 0, Alice on 1, Bob on 2
+(teleport 0 1 2)
+

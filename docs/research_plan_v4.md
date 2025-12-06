@@ -1,389 +1,463 @@
-# Research Plan v4: Structural Origins of Superposition ✅ COMPLETED
-## 対称性と因果構造からの制約
+# Research Plan v4: Algorithmic Naturalness on a Quantum Substrate
+## 量子基盤上のアルゴリズム的自然性
 
 ---
 
 ## 背景と動機
 
-### これまでの成果（Phase 0-12, v1-v3）
+### これまでの成果（Phase 0-18, v1-v3.1）
 
-決定版論文 "Minimal Axioms for Quantum Structure: What Computation Cannot Derive" において、以下を確立した：
+#### 三部作 "Impossibility Trilogy"
+1. **Paper 1** (SK計算)：SK計算から量子構造は導出できない
+2. **Paper 2** (可逆ゲート)：可逆計算はSp(2N,ℝ)に埋め込まれ、量子構造を生成できない（Coq検証済み）
+3. **Paper 3** (Minimal Axioms)：A1（状態空間拡張/重ね合わせ）が唯一の原始的公理
 
-1. **No-Go定理**：可逆計算はSp(2N,ℝ)に埋め込まれ、量子構造を生成できない（Coq検証済み）
-2. **A1の同定**：状態空間拡張（重ね合わせ）が唯一の原始的公理
-3. **普遍性**：結果はSK、可逆ゲート、RCA、λ計算で成立
+#### 決定版論文
+- **"Minimal Axioms for Quantum Structure"**: 三部作を統合した決定版
+
+#### 対称性と因果構造（v3.1）
+- Phase 13-18: 対称性・Contextuality・因果構造からのA1の必然性を分析
 
 ### 次の問い
 
-決定版論文は「**何が足りないか**」を同定した。次の問いは：
+三部作は「**何が足りないか**」（A1）を同定し、「**なぜ足りないか**」（計算の限界）を解明した。
 
-> **どのような物理的・数学的構造がA1を必然的に要請するか？**
+次の問いは：
 
-この問いは「なぜ自然はA1を選んだか」（形而上学的）ではなく、「**A1がないと回復できない構造は何か**」（構造的必然性）を探る。
+> **我々の宇宙が量子力学的であることは、アルゴリズム的に「自然」なのか？**
 
----
+換言すれば：
 
-## 戦略的焦点
-
-### レビューからの教訓
-
-1. **連続極限の落とし穴**: 離散→連続では$i$は自然に出ない（例：ランダムウォーク→拡散方程式）
-2. **風呂敷を広げすぎない**: 相対論・量子重力全体は扱えない
-3. **既存研究との差別化**: Spekkensモデル等との明確な違いが必要
-
-### 採用する戦略
-
-1. **対称性の表現論**: 計算グラフが物理的対称性を獲得するためにA1が必要か？
-2. **因果集合理論への一点突破**: Sorkinの因果的量子論との比較
-3. **計算論的Contextuality**: Spekkensモデルの計算論的基礎づけ
+> シミュレーション仮説において、「ホストマシン」の仕様を特定できるか？
 
 ---
 
-## Phase 13: 対称性とA1の構造的必然性
-### 期間：4週間
+## 核心的仮説
 
-### 目的
-計算グラフが物理的対称性（回転、Lorentz変換）を持つために、A1が必要条件となるかを検証。
+### Substrate Hypothesis（基盤仮説）
 
-### 理論的背景
+**主張**: 宇宙の計算基盤は「量子ネイティブ」である。
 
-Wigner (1939) は、相対論的粒子を Poincaré群の既約ユニタリ表現として分類した。重要な点：
+**論拠**:
+1. 古典基盤 $U_C$ 上で量子力学を記述するプログラム長は膨大（$\gg 1000$ bits）
+2. 量子基盤 $U_Q$ 上では記述長は最小（$\sim 10$ bits）
+3. Chaitinの定義により、$P = 2^{-|p|}$ なので、$U_Q$ 上の方が生成確率が桁違いに高い
+4. よって、量子力学的宇宙は $U_Q$ 上では「アルゴリズム的に自然」
 
-- **スピン1/2粒子**: SU(2)の2次元表現（スピノル）
-- **スピノルは実数体上で定義できない**: 複素数が本質的
+### Quantum Omega（量子Ω）
 
-この事実から、次の仮説が立てられる：
+**古典的Ω**（Chaitin）:
+$$\Omega_C = \sum_{p \in \text{Halting}} 2^{-|p|}$$
 
-> 計算グラフがSO(3)対称性を持つためには、ノードの状態空間がスピノル表現を許容する必要があり、それにはA1（状態空間拡張）が必要である。
+**量子Ω**（本研究）:
+$$|\Omega_Q\rangle = \sum_p \alpha_p |p\rangle_{\text{state}}$$
 
-### 仮説
+ここで $\alpha_p = 2^{-|p|/2}$（振幅）。
 
-| ID | 仮説 | 検証方法 |
-|----|------|----------|
-| H13.1 | 計算グラフの離散対称性は置換群に限定 | 有限群のシンプレクティック埋め込みを解析 |
-| H13.2 | SO(3)対称性の回復にはA1が必要 | スピノル表現の実現条件を導出 |
-| H13.3 | Lorentz対称性はより強くA1を要請 | SL(2,ℂ)表現の解析 |
-
-### アプローチ
-
-#### 13.1 有限群の表現論
-```
-計算グラフの対称性群 G ⊂ S_n（置換群）
-  → Gの表現 ⊂ 直交表現 O(n,ℝ)
-  → 複素表現への拡張条件は？
-```
-
-**具体的作業**:
-1. Toffoli/Fredkinゲートが生成する群の構造を完全に決定
-2. その群がスピノル表現を持つかを判定
-3. 持たない場合、どのような拡張が必要かを特定
-
-#### 13.2 等方性の回復条件
-```
-離散格子 → 連続空間（等方性）の極限
-  → 格子上の状態空間に課される条件
-  → A1との関係
-```
-
-**具体的作業**:
-1. 2次元正方格子上の古典ウォーク vs 量子ウォーク
-2. 等方的分散関係（$E \propto k^2$）の回復条件
-3. スピノル構造の必要性を数値的に検証
-
-#### 13.3 SL(2,ℂ)とLorentz対称性
-```
-因果構造（因果ダイヤモンド） → Lorentz群 SO(3,1)
-  → 有限次元忠実表現はない
-  → スピノル表現 SL(2,ℂ) が必要
-  → これはA1を含意するか？
-```
-
-### 成功基準
-- [ ] 「計算グラフ + 回転対称性 ⇒ A1」の証明または反証
-- [ ] 具体的な対称性とA1の対応表の作成
+**解釈**: $|\Omega_Q\rangle$ は「アルゴリズム的マルチバース」の波動関数。
 
 ---
 
-## Phase 14: 計算論的Contextuality
-### 期間：3週間
+## 研究フェーズ
 
-### 目的
-Spekkensモデル（認識論的制限）と計算論的制限の関係を明らかにする。
+### Phase 19: A1言語の設計と実装
+### 期間：2週間
 
-### 背景
+#### 目的
+Kolmogorov複雑度を厳密に計測するための最小モデル言語「A1」を設計・実装する。
 
-Spekkens (2007) のトイモデル：
-- 古典的オントロジー（実在する状態）に認識論的制限（知識の制限）を課す
-- 結果として、多くの量子的特徴（干渉、no-cloning類似）が再現される
-- **しかし**: Bell不等式は破れない（局所隠れ変数モデル）
+#### 19.1 言語定義
 
-**核心的問い**: 
-> Spekkensの「認識論的制限」は、計算論的制限（計算不可逆性など）から**導出**できるか？
+A1はAxiom A1（状態空間拡張）をネイティブに実装するScheme方言：
 
-### 仮説
+```scheme
+; bell-state.a1
+(DEFINE make-bell
+  (LAMBDA (q0 q1)
+    (CNOT (H q0) q1)))
 
-| ID | 仮説 | 検証方法 |
-|----|------|----------|
-| H14.1 | 計算不可逆性 → 認識論的制限 | K combinator による情報廃棄のモデル化 |
-| H14.2 | Spekkensモデル ⊂ 計算論的GPT | GPTフレームワークでの比較 |
-| H14.3 | 計算可能だがContextualなモデル存在 | 具体的構成 |
-
-### アプローチ
-
-#### 14.1 SK計算とSpekkensモデルの比較
-```
-SK計算:
-  - 情報廃棄: K x y → x
-  - Multiway graph: 非決定性
-
-Spekkens:
-  - 知識制限: ψ ∈ {ψ_1, ψ_2, ψ_3, ψ_4} だが区別不可能
-  
-対応関係は？
+(make-bell 0 1)  ; 3トークン ≈ 10 bits
 ```
 
-#### 14.2 計算論的Contextualityの構成
-**目標**: 可逆計算だが測定がContextualなモデルを構成
+**設計原則**:
+- ホモイコニック（プログラム自体が量子状態）
+- 量子ゲートはコスト1のアトミックプリミティブ
+- ゲート関数は操作したqubitインデックスを返す（チェイン用）
+
+#### 19.2 形式的意味論
+
+**定理（Evaluation Homomorphism）**: 
+A1インタプリタ `eval` はS式からBraket回路への準同型写像：
+$$\text{eval} : \text{A1-Expression} \to \text{Braket-Circuit}$$
+
+| A1 構文 | 意味論 | Braket対応 |
+|---------|--------|------------|
+| `(H q)` | qubit qにHadamard適用 | `circuit.h(q)` |
+| `(CNOT c t)` | 制御cから標的tへCNOT | `circuit.cnot(c, t)` |
+
+#### 19.3 ディレクトリ構造
+
+```
+# A1言語実装（プロジェクトルート）
+a1/
+├── __init__.py
+├── core.py             # パーサー + インタプリタ
+├── gates.py            # 量子ゲート定義
+├── metrics.py          # 複雑度計測エンジン
+├── tests/
+│   ├── test_core.py
+│   ├── test_gates.py
+│   └── test_metrics.py
+├── examples/
+│   ├── hello_world.a1  # Bell状態生成
+│   ├── ghz_state.a1    # GHZ状態生成
+│   └── teleport.a1     # 量子テレポーテーション
+└── IMPLEMENTATION_PLAN.md
+
+# 実験結果（従来通りsk-quantum配下）
+sk-quantum/
+├── phase19/
+│   └── experiments/
+│       ├── README.md           # 実行手順・環境設定
+│       ├── run_local.py        # ローカルシミュレーション
+│       ├── run_aws.py          # AWS Braket実行
+│       ├── compare.py          # A1 vs 古典 記述長比較
+│       └── RESULTS_019_a1.md   # Phase 19 実験結果
+├── phase20/
+│   └── experiments/
+│       └── RESULTS_020_complexity.md
+├── phase21/
+│   └── experiments/
+│       └── RESULTS_021_braket.md
+├── phase22/
+│   └── experiments/
+│       └── RESULTS_022_theory.md
+└── phase23/
+    └── experiments/
+        └── RESULTS_023_paper.md
+```
+
+#### 19.4 成果物
+- [ ] `a1/core.py`: A1クラス（パーサー + インタプリタ）
+- [ ] `a1/gates.py`: H, CNOT, X, Y, Z, RX, RY, RZ, MEASURE
+- [ ] `a1/tests/test_core.py`: 基本テスト（15+）
+- [ ] `sk-quantum/phase19/experiments/RESULTS_019_a1.md`: 実験結果
+- [ ] Bell状態生成が動作すること
+
+---
+
+### Phase 20: 複雑度計測の形式化
+### 期間：1週間
+
+#### 目的
+A1と古典（NumPy）の記述長を厳密に比較する。
+
+#### 20.1 Kolmogorov複雑度の近似
+
+**定義（A1-Complexity）**:
+$$K_{A1}(p) = |\text{tokens}(p)| \times \log_2(|V_{A1}|)$$
+
+ここで:
+- `tokens(p)`: プログラムのトークン列（括弧除く）
+- $|V_{A1}|$: A1の語彙サイズ（≈32）
+
+#### 20.2 コストモデル
+
+**A1側とNumPy側で共通のルールでカウント**:
+
+| カテゴリ | A1 | NumPy |
+|----------|-----|-------|
+| ゲート/関数 | H, CNOT, ... (コスト1) | np.array, np.dot, ... (コスト1) |
+| リテラル | 数値, シンボル (コスト1) | 数値, 配列要素 (コスト1) |
+| 語彙サイズ | ~32 (~5 bits) | ~256 (~8 bits) |
+
+#### 20.3 ベンチマーク（3種類）
+
+| ベンチマーク | A1 トークン | NumPy トークン | 比率 |
+|--------------|------------|----------------|------|
+| Bell状態 | 4 | 100+ | ~25x |
+| GHZ状態 | 7 | 150+ | ~20x |
+| テレポーテーション | 20 | 300+ | ~15x |
+
+#### 20.4 成果物
+- [ ] `a1/metrics.py`: 記述長計測モジュール
+- [ ] `sk-quantum/phase20/experiments/compare.py`: A1 vs 古典の比較レポート生成
+- [ ] `sk-quantum/phase20/experiments/RESULTS_020_complexity.md`: 実験結果
+- [ ] **3ケース全てで一貫した桁差（10倍以上）**
+
+---
+
+### Phase 21: AWS Braket実証実験
+### 期間：2週間
+
+#### 目的
+A1言語で記述した量子回路を実際の量子プロセッサで実行し、Substrate Hypothesisの工学的検証を行う。
+
+#### 21.1 AWS Braket連携
 
 ```python
-# 疑似コード
-class ComputationalContextuality:
-    def __init__(self, gate_sequence):
-        self.gates = gate_sequence  # 可逆ゲート列
+from braket.circuits import Circuit
+from braket.aws import AwsDevice
+
+class A1:
+    def to_braket_circuit(self) -> Circuit:
+        """A1プログラムをBraket回路に変換"""
+        return self.circuit
     
-    def measure(self, observable, context):
-        # 測定結果が context に依存
-        # しかし状態空間はシンプレックス（A1なし）
+    def run_on_device(self, device_arn: str, shots=100):
+        """実機（IonQ, Rigetti）で実行"""
         pass
 ```
 
-これが可能なら、「ContextualだがA1なし」のモデルとなる。
+#### 21.2 実行対象
 
-#### 14.3 Bell不等式との関係
-- Spekkensモデル: Bell不等式を破れない
-- 計算論的モデル: Bell不等式を破れるか？
-- 破れない場合、それはA1の欠如のせいか？
+| バックエンド | タイプ | 用途 |
+|-------------|--------|------|
+| LocalSimulator | ローカル | 開発・デバッグ |
+| SV1 | AWSシミュレータ | 大規模テスト |
+| IonQ Harmony | イオントラップ | 実機検証 |
+| Rigetti Aspen | 超伝導 | 実機検証 |
 
-### 成功基準
-- [ ] Spekkensモデルと計算モデルの明確な対応または差異の同定
-- [ ] 計算論的Contextualityの具体的構成（または不可能性証明）
+#### 21.3 統計処理プロトコル
+
+| パラメータ | 値 | 理由 |
+|------------|-----|------|
+| ショット数 | 1000 (sim), 100 (real) | コスト/精度バランス |
+| 試行回数 | 5回/バックエンド | 統計的信頼性 |
+| レポート形式 | 平均 ± 標準偏差 | 再現性確保 |
+
+**忠実度推定法**: Total Variation Distance (TVD)
+
+```python
+def estimate_fidelity(counts: dict, shots: int) -> float:
+    ideal = {'00': 0.5, '11': 0.5}
+    tvd = 0.5 * sum(abs(counts.get(k, 0)/shots - ideal.get(k, 0)) 
+                   for k in set(ideal) | set(counts))
+    return 1 - tvd
+```
+
+#### 21.4 成果物
+- [ ] `sk-quantum/phase21/experiments/run_local.py`: ローカル実行スクリプト
+- [ ] `sk-quantum/phase21/experiments/run_aws.py`: AWS実行スクリプト（CLIインターフェイス）
+- [ ] `sk-quantum/phase21/experiments/RESULTS_021_braket.md`: 実験結果（忠実度、統計）
+- [ ] `sk-quantum/phase21/experiments/README.md`: 再現性ドキュメント
+
+#### 21.5 期待される結果
+
+| Backend | A1 Code | Shots | Fidelity (Expected) |
+|---------|---------|-------|---------------------|
+| SV1 | 3 tokens | 1000 | 100% |
+| IonQ | 3 tokens | 100 | > 95% |
+| Rigetti | 3 tokens | 100 | > 85% |
 
 ---
 
-## Phase 15: 因果構造とA1
-### 期間：4週間
-
-### 目的
-因果集合理論（Causal Set Theory）におけるA1の役割を解明。
-
-### 背景
-
-因果集合理論（Sorkin, Bombelli et al.）：
-- 時空を離散的な因果集合（poset）として定義
-- 連続時空は因果集合の「粗視化」として創発
-- **量子性の導入**: 経路積分の段階で振幅（複素数）を手で導入
-
-**核心的問い**:
-> 因果構造のみからA1は出るか？ Sorkinの理論はどこでA1を入れているか？
-
-### 仮説
-
-| ID | 仮説 | 検証方法 |
-|----|------|----------|
-| H15.1 | 因果構造のみではA1は出ない | 因果集合のMultiway解析 |
-| H15.2 | 経路積分の複素振幅がA1に対応 | Sorkin's quantum measure との比較 |
-| H15.3 | 我々のNo-Go定理が因果集合に適用可能 | 形式的な翻訳 |
-
-### アプローチ
-
-#### 15.1 因果集合 vs Multiway Graph
-```
-Multiway Graph (SK計算):
-  - ノード: 計算状態
-  - エッジ: 簡約規則
-  - 古典的（Phase 1で確認済み）
-
-Causal Set:
-  - ノード: 時空点
-  - エッジ: 因果関係
-  - 量子性は？
-```
-
-**作業**: 因果集合の構造をMultiway Graphとして解釈し、No-Go定理を適用
-
-#### 15.2 Sorkinの量子測度理論の再訪
-Phase 1でSorkinの$I_2, I_3$を計算した。因果集合理論でSorkinがどのように$I_2 \neq 0$を実現しているかを精査。
-
-```
-Sorkin's approach:
-  Path integral: ψ(x) = Σ_paths exp(iS/ℏ)
-  
-Where does the 'i' come from?
-  → It is POSTULATED, not derived from causal structure
-```
-
-#### 15.3 因果的閉包とA1
-因果的閉包（causal completion）が状態空間を拡張する条件を探る。
-
-### 成功基準
-- [ ] 因果構造のみからはA1が出ないことの確認
-- [ ] Sorkin理論におけるA1の導入点の同定
-- [ ] 我々の定理と因果集合理論の関係の明確化
-
----
-
-## Phase 16: 総合解析 — A1の構造的必然性
-### 期間：3週間
-
-### 目的
-Phase 13-15の結果を統合し、「A1が必然的となる構造的条件」を定式化。
-
-### 予想される結論パターン
-
-#### パターン A: A1は対称性から必然
-```
-物理的対称性（SO(3), Lorentz）を要請
-  → スピノル表現が必要
-  → 状態空間の複素化（A1）が必然
-```
-
-#### パターン B: A1は因果構造から必然
-```
-因果的閉包条件
-  → 干渉効果の必要性
-  → A1が必然
-```
-
-#### パターン C: A1は独立した基本原理
-```
-対称性からも因果構造からも導出不能
-  → A1は還元不可能な公理
-  → 量子力学の「第一原理」
-```
-
-### 作業
-1. Phase 13-15の結果をまとめた比較表の作成
-2. 各パターンの含意の分析
-3. 最も支持されるパターンの同定
-
----
-
-## Phase 17: 実験的含意
+### Phase 22: 理論的深化
 ### 期間：2週間
 
-### 目的
-理論的結果から検証可能な予測を導出。
+#### 目的
+Quantum Omega $|\Omega_Q\rangle$ の数学的性質を精緻化する。
 
-### アプローチ
+#### 22.1 正規化可能性
 
-#### 17.1 離散系での量子効果の境界
-```
-予測: N ノードの離散系で、量子効果（干渉）が観測されるためには、
-      状態空間が N-simplex を超える必要がある
-      
-検証: 光学実験での discrete-time quantum walk
-```
+**補題**: $|\Omega_Q\rangle$ は正規化可能：$\langle\Omega_Q|\Omega_Q\rangle < \infty$
 
-#### 17.2 Contextualityの検証
-```
-予測: 計算可能だがContextualなシステムは存在しない
-      （H14.3が否定された場合）
-      
-検証: 古典コンピュータ上でContextual振る舞いを再現できるか？
-```
+**証明**: Kraftの不等式より $\sum_p 2^{-|p|} \leq 1$。
+$|\alpha_p|^2 = 2^{-|p|}$ なのでノルムは有界。
 
-### 成功基準
-- [ ] 少なくとも1つの原理的に検証可能な予測
+#### 22.2 Halting と観測
+
+$|\Omega_Q\rangle$ は無限のブランチを含む：
+- **Haltingブランチ**: 安定した物理法則を持つ宇宙
+- **Non-haltingブランチ**: カオス的、法則なし
+
+我々が物理法則を観測するのは、**観測自体がフィルターとして機能**し、
+「Halting」（安定した法則的振る舞い）が生じたブランチを選択するため。
+
+#### 22.3 シミュレーション仮説への含意
+
+**ホストマシン仕様の原理**:
+> 我々の量子力学的宇宙を生成できる「ホストマシン」は、
+> Axiom A1をネイティブに実装していなければならない。
+> 古典的ホストでは、我々の宇宙はアルゴリズム的に不可能である。
+
+これはシミュレーション仮説に具体的かつ検証可能な制約を与える。
 
 ---
 
-## Phase 18: 論文執筆
-### 期間：4週間
+### Phase 23: 論文執筆
+### 期間：3週間
 
-### タイトル（改訂）
-**"Structural Origins of Superposition: Symmetry and Causality Constraints on Quantum Structure"**
+#### タイトル
+**"Algorithmic Naturalness on a Quantum Substrate: From the Impossibility Trilogy to the Native Realization of Axiom A1 in A1"**
 
-### 構成
-1. **Introduction**: A1（重ね合わせ）の構造的必然性という問い
-2. **Background**: 決定版論文の要約、対称性とA1の関係
-3. **Symmetry Analysis**: Phase 13の結果
-4. **Computational Contextuality**: Phase 14の結果
-5. **Causal Structure**: Phase 15の結果
-6. **Synthesis**: A1が必然となる条件（または還元不能性）
-7. **Experimental Implications**: Phase 17
-8. **Conclusion**: A1の究極的地位
+#### 構成
 
-### 投稿先候補
-- **Physical Review A** (量子基礎論)
+1. **Introduction**: アルゴリズム的ファインチューニング問題
+2. **Theory**: Quantum Omega（$|\Omega_Q\rangle$）の定義と性質
+3. **Methodology**: A1言語と記述長計測
+4. **Experiment**: AWS Braket実証結果
+5. **Discussion**: アルゴリズム的マルチバース、シミュレーション仮説への含意
+6. **Conclusion**: 基盤仮説の帰結
+
+#### 投稿先候補
+- **Physical Review X** (高インパクト)
 - **Foundations of Physics** (基礎物理)
-- **New Journal of Physics** (オープンアクセス)
+- **arXiv:quant-ph** (プレプリント)
 
 ---
 
-## タイムライン（改訂）
+## タイムライン
 
 ```
-2025年12月    : 決定版論文投稿
-2026年1月-2月 : Phase 13（対称性とA1）
-2026年2月-3月 : Phase 14（計算論的Contextuality）
-2026年3月-4月 : Phase 15（因果構造）
-2026年4月-5月 : Phase 16（総合解析）
-2026年5月     : Phase 17（実験的含意）
-2026年6月-7月 : Phase 18（論文執筆）
+2025年12月（Week 1-2）: Phase 19（A1言語設計・実装）
+  - Week 1: パーサー + インタプリタ
+  - Week 2: ゲート実装・テスト
+
+2025年12月（Week 3）: Phase 20（複雑度計測）
+  - 3ベンチマークの実装と比較
+
+2026年1月（Week 1-2）: Phase 21（AWS Braket実験）
+  - Week 1: シミュレータ検証
+  - Week 2: 実機実験（IonQ, Rigetti）
+
+2026年1月（Week 3-4）: Phase 22（理論的深化）
+  - Quantum Omega の精緻化
+
+2026年2月（Week 1-3）: Phase 23（論文執筆）
+  - Draft → Review → Submit
 ```
 
 ---
 
-## リソース要件
+## 成功基準
 
-### 計算リソース
-- Python環境（継続使用）
-- Coq/MathComp（必要に応じて）
-- 群論計算用ライブラリ（GAP等）
+### 機能要件
 
-### 重要文献
+| 基準 | 条件 | 検証方法 |
+|------|------|----------|
+| Bell状態 | AWS Braketで実行可能 | run_aws.py |
+| GHZ状態 | AWS Braketで実行可能 | run_aws.py |
+| テレポーテーション | AWS Braketで実行可能 | run_aws.py |
 
-**対称性**:
-- Wigner, "On Unitary Representations of the Inhomogeneous Lorentz Group" (1939)
-- Weinberg, "The Quantum Theory of Fields, Vol. 1" (1995) — Ch.2
+### 記述長基準
 
-**因果集合**:
-- Sorkin, "Causal Sets: Discrete Gravity" (2003)
-- Bombelli et al., "Space-time as a causal set" (1987)
+| 基準 | 条件 | 検証方法 |
+|------|------|----------|
+| A1トークン数 | Bell < 5, GHZ < 10, Teleport < 25 | metrics.py |
+| A1/古典 比率 | > 10倍（全3ケース） | compare.py |
 
-**Contextuality**:
-- Spekkens, "Evidence for the epistemic view of quantum states" (2007)
-- Howard et al., "Contextuality supplies the magic" (2014)
+### 実機検証基準
+
+| 基準 | 条件 | 検証方法 |
+|------|------|----------|
+| IonQ忠実度 | > 90% (5回平均) | run_aws.py |
+| Rigetti忠実度 | > 85% (5回平均) | run_aws.py |
+| 統計レポート | 平均±標準偏差を記録 | compare.py |
+
+### 論文基準
+
+| 基準 | 条件 |
+|------|------|
+| Substrate Hypothesis | 理論的に定式化 |
+| Quantum Omega | 数学的性質を証明 |
+| A1言語 | 完全なリファレンス実装 |
+| 実験的検証 | AWS Braketでの成功 |
 
 ---
 
-## リスクと対策（改訂）
+## 技術仕様
+
+### 依存関係
+
+```
+# requirements.txt
+numpy>=1.21.0
+amazon-braket-sdk>=1.35.0
+pytest>=7.0.0
+matplotlib>=3.5.0
+```
+
+### A1文法（EBNF）
+
+```ebnf
+program     = expression*
+expression  = atom | list
+list        = '(' expression* ')'
+atom        = NUMBER | SYMBOL | STRING
+NUMBER      = [0-9]+
+SYMBOL      = [A-Za-z_][A-Za-z0-9_-]*
+STRING      = '"' [^"]* '"'
+```
+
+### プリミティブ（コスト = 1トークン）
+
+| ゲート | 説明 | A1構文 |
+|--------|------|--------|
+| H | Hadamard | `(H q)` |
+| X | Pauli-X | `(X q)` |
+| Y | Pauli-Y | `(Y q)` |
+| Z | Pauli-Z | `(Z q)` |
+| CNOT | 制御NOT | `(CNOT c t)` |
+| CZ | 制御Z | `(CZ c t)` |
+| SWAP | スワップ | `(SWAP q1 q2)` |
+| RX | X軸回転 | `(RX q theta)` |
+| RY | Y軸回転 | `(RY q theta)` |
+| RZ | Z軸回転 | `(RZ q theta)` |
+| MEASURE | 測定 | `(MEASURE q)` |
+
+---
+
+## リスクと対策
 
 | リスク | 確率 | 対策 |
 |--------|------|------|
-| 対称性からA1が出ない | 中 | 「出ない」も重要な結果。因果構造へ移行 |
-| 因果集合理論の技術的困難 | 高 | Sorkinの論文を丁寧に読み、限定的な主張に留める |
-| Spekkensモデルとの差異が不明確 | 中 | 計算論的制限の独自性を強調 |
-| 実験的予測が困難 | 高 | 原理的な予測に留め、実現可能性は将来課題 |
+| AWS Braketのコスト超過 | 中 | シミュレータ中心、実機は最小限 |
+| 実機での低忠実度 | 中 | 複数試行の統計処理で対応 |
+| 記述長比較の恣意性批判 | 中 | コストモデルを明示的に定義・公開 |
+| Quantum Omega の数学的困難 | 低 | 形式的定義に留め、深い性質は将来課題 |
 
 ---
 
-## 成功指標（改訂）
+## Limitations
 
-### 短期（6ヶ月）
-- [ ] Phase 13-16完了
-- [ ] 「対称性/因果構造 ⇔ A1」の関係を明確化
-- [ ] 1つ以上の新しい定理または具体例
+1. **複雑度近似の限界**: $K_{A1}$はトークンベースの近似であり、
+   真のKolmogorov複雑度ではない。
 
-### 中期（1年）
-- [ ] 統合論文投稿
-- [ ] 量子基礎論コミュニティからのフィードバック
+2. **ノイズモデルの簡略化**: デバイス固有のノイズ特性を完全には
+   モデル化していない。
 
-### 長期
-- [ ] 「計算と物理の関係」の包括的理論への貢献
-- [ ] 因果集合理論・量子基礎論との学際的連携
+3. **スケーラビリティ**: 現在のベンチマークは3量子ビット以下。
+
+4. **Quantum Omega の解釈**: $|\Omega_Q\rangle$ の物理的解釈は
+   形而上学的議論を含み、完全な合意は得られていない。
 
 ---
 
-*Research Plan v4 (Revised) — December 2025*
-*Building on "Minimal Axioms for Quantum Structure: What Computation Cannot Derive"*
+## 三部作との接続
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Impossibility Trilogy                    │
+│  Paper 1: SK ──▶ Paper 2: Reversible ──▶ Paper 3: Minimal  │
+│                                                             │
+│  「古典計算からA1は導出できない」（否定的結論）            │
+└───────────────────────────┬─────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────────┐
+│                         This Work                           │
+│              Algorithmic Naturalness on U_Q                 │
+│                                                             │
+│  「U_Q 上ではA1の記述長が最小化される」（肯定的結論）      │
+│                                                             │
+│   ◆ Quantum Omega: アルゴリズム的マルチバースの波動関数    │
+│   ◆ A1言語: 最小公理のための最小言語                       │
+│   ◆ AWS Braket: 工学的検証                                 │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+*Research Plan v4 — December 2025*
+*「Algorithmic Naturalness on a Quantum Substrate: From the Impossibility Trilogy to the Native Realization of Axiom A1 in A1」*
