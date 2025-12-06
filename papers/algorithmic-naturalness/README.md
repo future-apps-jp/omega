@@ -1,97 +1,102 @@
 # Paper 4: Algorithmic Naturalness on a Quantum Substrate
 
-## タイトル
+**Title**: Algorithmic Naturalness on a Quantum Substrate: From the Impossibility Trilogy to the Native Realization of Axiom A1 in A1
 
-**Algorithmic Naturalness on a Quantum Substrate: From the Impossibility Trilogy to the Native Realization of Axiom A1 in A1**
+**Author**: Hiroshi Kohashiguchi  
+**Date**: December 2025  
+**Status**: ✅ Complete (10 pages)
 
-邦題: 量子基盤上のアルゴリズム的自然さ：不可能性3部作からA1言語によるA1公理のネイティブ実現へ
+---
 
-## 概要
+## Abstract
 
-シミュレーション仮説における「ホストマシンの仕様」をアルゴリズム情報理論（AIT）の観点から特定する試み。
+This paper addresses the "algorithmic fine-tuning problem": why does our universe exhibit quantum mechanics if quantum mechanics is algorithmically improbable on a classical substrate?
 
-### 核心的問い
+Building on our trilogy establishing the impossibility of deriving quantum structure (Axiom A1) from classical computation, we propose the **Substrate Hypothesis**: the universe's computational substrate is "quantum-native."
 
-> もし宇宙が古典計算機上のシミュレーションなら、量子力学を記述するプログラムは極めて長大になる。
-> なぜ「アルゴリズム的に不自然な」量子宇宙が存在するのか？
+---
 
-### 解決策
+## Key Results
 
-1. **Quantum Omega**: チャイティンの $\Omega$ を実数からヒルベルト空間上のベクトル $|\Omega_Q\rangle$ に拡張
-2. **A1言語**: 最小公理のための最小言語 — 記述長を厳密に測定するためのScheme方言
-3. **AWS Braket実証**: 量子ハードウェア上での工学的検証
+### 1. Theoretical Foundation
 
-## A1言語について
+- **Quantum Omega** ($|\Omega_Q\rangle$): Extended Chaitin's Ω from scalar to state vector
+- **Normalizability Theorem**: Proved $\langle\Omega_Q|\Omega_Q\rangle \leq 1$
+- **Halting Connection**: $||P_H|\Omega_Q\rangle||^2 = \Omega_C$
 
-**A1** は「宇宙の最小公理（Axiom A1）を記述するための、最小の言語」です。
+### 2. Quantitative Analysis
 
-```scheme
-; bell-state.a1 - Bell状態生成
-(DEFINE make-bell
-  (LAMBDA (q0 q1)
-    (CNOT (H q0) q1)))
+| Metric | Value |
+|--------|-------|
+| Benchmarks | 9 |
+| Average Token Ratio | **25.1×** |
+| Average Bit Ratio | **40.2×** |
+| Algorithmic Probability Gain | $2^{878}$ |
 
-(make-bell 0 1)  ; わずか3トークン
-```
+### 3. Experimental Validation
 
-### 命名の理由
+| Benchmark | A1 Tokens | Fidelity |
+|-----------|-----------|----------|
+| Bell State | 4 | 98.8% |
+| GHZ State | 6 | 98.8% |
+| Hadamard | 2 | 99.6% |
+| Superposition-2 | 5 | 97.4% |
 
-言語名「A1」は、この言語がネイティブに実装する公理（Axiom A1: 状態空間拡張）に由来します。
-- **Axiom A1** = 量子力学の還元不可能な要件
-- **A1言語** = 量子計算の還元不可能な構文
+All experiments executed on AWS Braket SV1 simulator.
 
-## 主要な結果
+---
 
-### 理論
+## Key Theorems
 
-| 基盤 | Bell状態の記述長 | 生成確率 |
-|------|-----------------|---------|
-| 古典 ($U_C$) | $>1000$ bits | $\approx 2^{-1000} \approx 0$ |
-| 量子 ($U_Q$) | $\approx 10$ bits | $\approx 2^{-10} \approx 0.001$ |
+1. **Theorem 2.1 (Normalizability)**: $|\Omega_Q\rangle$ is normalizable
+2. **Theorem 2.2 (Halting Connection)**: $||P_H|\Omega_Q\rangle||^2 = \Omega_C$
+3. **Theorem 5.1 (Host Machine A1 Requirement)**: Any simulation host must implement A1 natively
 
-**確率比**: $P_{U_Q}/P_{U_C} \approx 2^{990}$ （天文学的に大きい）
+---
 
-### 実験
+## Structure
 
-| バックエンド | A1コード | Bell状態忠実度 |
-|-------------|----------|---------------|
-| SV1 (シミュレータ) | 3トークン | 100% |
-| IonQ Harmony | 3トークン | 97.2% |
-| Rigetti Aspen | 3トークン | 89.5% |
+1. **Introduction**: The Algorithmic Fine-Tuning Problem
+2. **Theory**: Vectorizing Omega
+3. **Methodology**: The A1 Language
+4. **Experiment**: Cloud-based Proof of Concept
+5. **Discussion**: The Algorithmic Multiverse
+6. **Conclusion**
 
-## 結論
+---
 
-1. **否定**: 宇宙が古典計算機上のシミュレーションである確率は、記述長の爆発によりほぼゼロ
-2. **肯定**: 量子基盤上では量子力学の記述長が劇的に短縮され、宇宙生成確率が向上
-3. **展望**: シミュレーション仮説の「ホストマシン」にはA1の実装（量子ネイティブ性）が必須
-
-## ファイル一覧
-
-| ファイル | 説明 |
-|----------|------|
-| `main.tex` | 論文本文 |
-| `main.pdf` | コンパイル済みPDF（8ページ） |
-
-## 関連ファイル
-
-- A1言語実装計画: `../../a1/IMPLEMENTATION_PLAN.md`
-- A1言語README: `../../a1/README.md`
-
-## ビルド
+## Compilation
 
 ```bash
+cd papers/algorithmic-naturalness
 pdflatex main.tex
-pdflatex main.tex  # 参照解決のため2回
 ```
 
-## 4部作の完成
+---
 
-| Paper | タイトル | 主張 |
-|-------|---------|------|
-| 1 | SK Independence | SK計算は量子構造を生成しない |
-| 2 | Reversible Limits | 可逆計算もSp(2N,R)に閉じる |
-| 3 | Minimal Axioms | A1は唯一の原始的公理 |
-| **4** | **Algorithmic Naturalness** | **量子基盤上ではA1言語によりA1公理が「自然」に実現** |
+## Files
+
+- `main.tex` — LaTeX source
+- `main.pdf` — Compiled PDF (10 pages)
+- `README.md` — This file
+
+---
+
+## Related Work
+
+- **Paper 1**: On the Independence of Quantum Structure from SK Combinatory Logic
+- **Paper 2**: On the Limits of Deriving Quantum Structure from Reversible Computation
+- **Paper 3**: Minimal Axioms for Quantum Structure: What Computation Cannot Derive
+
+---
+
+## Implementation
+
+The A1 language implementation is available at:
+- `../../a1/` — A1 interpreter and metrics
+- `../../sk-quantum/phase20/` — Complexity comparison
+- `../../sk-quantum/phase21/` — AWS Braket experiments
+- `../../sk-quantum/phase22/` — Theoretical analysis
 
 ---
 

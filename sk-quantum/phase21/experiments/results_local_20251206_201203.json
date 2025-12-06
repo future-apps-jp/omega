@@ -1,0 +1,159 @@
+{
+  "generated": "2025-12-06T20:12:03.388917",
+  "config": {
+    "region": "us-east-1",
+    "s3_bucket": "amazon-braket-futureapps-a1"
+  },
+  "results": [
+    {
+      "benchmark": "bell",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "11": 474,
+        "00": 526
+      },
+      "fidelity": 0.974,
+      "execution_time": 0.03369903564453125,
+      "timestamp": "2025-12-06T20:12:03.284414"
+    },
+    {
+      "benchmark": "bell",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "00": 523,
+        "11": 477
+      },
+      "fidelity": 0.977,
+      "execution_time": 0.009484529495239258,
+      "timestamp": "2025-12-06T20:12:03.294786"
+    },
+    {
+      "benchmark": "bell",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "11": 518,
+        "00": 482
+      },
+      "fidelity": 0.982,
+      "execution_time": 0.009034395217895508,
+      "timestamp": "2025-12-06T20:12:03.304452"
+    },
+    {
+      "benchmark": "ghz",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "000": 491,
+        "111": 509
+      },
+      "fidelity": 0.991,
+      "execution_time": 0.010434389114379883,
+      "timestamp": "2025-12-06T20:12:03.316034"
+    },
+    {
+      "benchmark": "ghz",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "000": 486,
+        "111": 514
+      },
+      "fidelity": 0.986,
+      "execution_time": 0.01044154167175293,
+      "timestamp": "2025-12-06T20:12:03.327263"
+    },
+    {
+      "benchmark": "ghz",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "111": 509,
+        "000": 491
+      },
+      "fidelity": 0.991,
+      "execution_time": 0.009986639022827148,
+      "timestamp": "2025-12-06T20:12:03.337967"
+    },
+    {
+      "benchmark": "hadamard",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "0": 492,
+        "1": 508
+      },
+      "fidelity": 0.992,
+      "execution_time": 0.0076487064361572266,
+      "timestamp": "2025-12-06T20:12:03.346524"
+    },
+    {
+      "benchmark": "hadamard",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "0": 515,
+        "1": 485
+      },
+      "fidelity": 0.985,
+      "execution_time": 0.007331371307373047,
+      "timestamp": "2025-12-06T20:12:03.354305"
+    },
+    {
+      "benchmark": "hadamard",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "1": 497,
+        "0": 503
+      },
+      "fidelity": 0.997,
+      "execution_time": 0.0071828365325927734,
+      "timestamp": "2025-12-06T20:12:03.361980"
+    },
+    {
+      "benchmark": "superposition_2",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "11": 253,
+        "00": 242,
+        "01": 245,
+        "10": 260
+      },
+      "fidelity": 0.987,
+      "execution_time": 0.008110761642456055,
+      "timestamp": "2025-12-06T20:12:03.370603"
+    },
+    {
+      "benchmark": "superposition_2",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "11": 246,
+        "00": 255,
+        "01": 263,
+        "10": 236
+      },
+      "fidelity": 0.982,
+      "execution_time": 0.008157491683959961,
+      "timestamp": "2025-12-06T20:12:03.379353"
+    },
+    {
+      "benchmark": "superposition_2",
+      "backend": "local",
+      "shots": 1000,
+      "counts": {
+        "01": 259,
+        "11": 245,
+        "10": 251,
+        "00": 245
+      },
+      "fidelity": 0.99,
+      "execution_time": 0.008810281753540039,
+      "timestamp": "2025-12-06T20:12:03.388711"
+    }
+  ]
+}

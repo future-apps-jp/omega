@@ -1,165 +1,354 @@
-「A1 (Axiom 1)」 —— 宇宙の最小公理を記述するための、最小の言語。
+# A1: The Minimal Language for the Minimal Axiom
 
-この哲学に基づき、余計な装飾を削ぎ落とした**Scheme方言「A1」**の実装計画を策定します。Python上で動作するトランスパイラとして実装し、最短で論文用データを生成することを目指します。
+**A1** is a homoiconic Scheme dialect that natively implements **Axiom A1** (state space extension / superposition). It is designed to measure Kolmogorov complexity on a quantum substrate.
 
-Project A1: Implementation Plan
-1. ディレクトリ構成
-シンプルさを徹底します。
+---
 
-Plaintext
+## Overview
 
-omega/
-├── a1/
-│   ├── __init__.py
-│   ├── core.py         # パーサーとインタプリタの核（A1クラス）
-│   ├── gates.py        # 量子ゲート定義 (H, CNOT, etc.)
-│   └── metrics.py      # 記述長(Complexity)計測エンジン
-├── experiments/
-│   ├── hello_world.a1  # ベル状態生成のデモコード
-│   ├── run_local.py    # ローカルシミュレーション実行用
-│   ├── run_aws.py      # AWS Braket実行用
-│   └── compare.py      # A1 vs 古典(NumPy) 記述長比較スクリプト
-└── requirements.txt
-2. フェーズ 1: コア・エンジンの実装 (The A1 Kernel)
-A1の文法は極限まで単純化されたS式（S-expression）です。
+A1 is part of the research project "Algorithmic Naturalness on a Quantum Substrate", which investigates whether quantum mechanics is algorithmically natural on a quantum computational substrate.
 
-目標: 以下のA1コードをパースし、AWS Braketの回路オブジェクトに変換する。
+### Key Features
 
-Scheme
+- **Minimal syntax**: Scheme-like S-expressions
+- **Quantum-native**: Gates are primitives, not library calls
+- **Measurable complexity**: Token count ≈ Kolmogorov complexity
+- **AWS Braket integration**: Execute on real quantum hardware
 
-; bell-state.a1
-(DEFINE make-bell
-  (LAMBDA (q0 q1)
-    (CNOT (H q0) q1)))
+### Description Length Comparison
 
-(make-bell 0 1)
-Step 1.1: パーサー (S式 → Pythonリスト) Python標準の機能だけで実装し、依存関係を減らします。
+| Program | A1 Tokens | NumPy Tokens | Ratio |
+|---------|-----------|--------------|-------|
+| Bell State | 4 | 52 | 13x |
+| GHZ State | 6 | 78 | 13x |
+| Teleportation | 18 | 234 | 13x |
 
-入力: "(CNOT (H 0) 1)"
+---
 
-出力: ['CNOT', ['H', 0], 1]
+## Quick Start
 
-Step 1.2: インタプリタ (Evaluator) AST（抽象構文木）を再帰的に評価します。A1特有の挙動として、**「ゲート関数は、作用した量子ビットのインデックスを返す」**ように設計します。これにより、Lispらしいネスト構造が可能になります。
+### Installation
 
-(H 0) -> 量子ビット0にHゲートを適用し、0 を返す。
+```bash
+cd /home/hkohashi/research
+pip install amazon-braket-sdk  # For AWS execution
+```
 
-(CNOT (H 0) 1) -> (H 0)が0になるので、実質 (CNOT 0 1) として評価される。
+### Hello Quantum World
 
-これにより、「Hゲートをかけてから、それを制御ビットとしてCNOTする」というフローが1行で書けます。
+```scheme
+; bell_state.a1 - Create Bell state (|00⟩ + |11⟩)/√2
+(CNOT (H 0) 1)
+```
 
-Step 1.3: 環境 (Environment) 変数と関数を保持する辞書 env を実装します。
+### Python API
 
-DEFINE: env に値を登録。
+```python
+from a1 import A1
 
-LAMBDA: 引数と本体（body）を持つクロージャを作成。
+# Create interpreter
+interpreter = A1()
 
-3. フェーズ 2: 複雑性計測 (The A1 Metric)
-論文の主張「量子基質上では記述長が最小になる」を証明するためのモジュールです。
+# Run A1 code
+circuit = interpreter.run("(CNOT (H 0) 1)")
+print(circuit)
+```
 
-Step 2.1: A1 Complexity Counter
+---
 
-A1のソースコードをトークン化し、その数をカウントします。
+## Language Reference
 
-(H 0) -> 2トークン（括弧除く）。
+### Quantum Gates (Primitives)
 
-定義済み関数（プリミティブ）はコスト1とみなします。
+| Gate | Syntax | Description |
+|------|--------|-------------|
+| H | `(H q)` | Hadamard gate |
+| X | `(X q)` | Pauli-X (NOT) |
+| Y | `(Y q)` | Pauli-Y |
+| Z | `(Z q)` | Pauli-Z |
+| CNOT | `(CNOT c t)` | Controlled-NOT |
+| CZ | `(CZ c t)` | Controlled-Z |
+| SWAP | `(SWAP q1 q2)` | Swap qubits |
+| RX | `(RX q θ)` | X-rotation |
+| RY | `(RY q θ)` | Y-rotation |
+| RZ | `(RZ q θ)` | Z-rotation |
 
-Step 2.2: Classical Complexity Counter (比較用)
+### Special Forms
 
-同じベル状態生成を、**Python + NumPy（行列演算）**で実装したコードを用意します。
+```scheme
+; Variable definition
+(DEFINE x 5)
 
-複素数行列の定義、行列積（np.dot）、テンソル積（np.kron）などの文字数/トークン数をカウントします。
+; Function definition
+(DEFINE (bell q0 q1)
+    (CNOT (H q0) q1))
 
-期待される結果: A1は数トークン、古典コードは数百トークンとなり、数桁のオーダー差が出ることを示します。
+; Lambda expression
+(LAMBDA (x) (H x))
 
-4. フェーズ 3: クラウド実行 (Proof on Substrate)
-AWS Braket SDKと連携させます。
+; Sequential execution
+(BEGIN (H 0) (CNOT 0 1))
 
-Step 3.1: トランスパイラ出力 インタプリタが最終的に braket.circuits.Circuit オブジェクトを返すようにします。
+; Conditional
+(IF condition then-expr else-expr)
+```
 
-Step 3.2: 実行ランナー
+### Examples
 
-LocalSimulator: 開発用（無料・高速）。
+#### Bell State
+```scheme
+(CNOT (H 0) 1)
+```
 
-AwsDevice: 本番データ取得用（SV1, IonQ, Rigetti）。
+#### GHZ State (3-qubit)
+```scheme
+(CNOT (CNOT (H 0) 1) 2)
+```
 
-開発の第一歩： core.py のプロトタイプ
-まずはこのコードが動くようにします。これがA1の心臓部です。
+#### Quantum Teleportation
+```scheme
+(BEGIN
+  ; Create Bell pair
+  (CNOT (H 1) 2)
+  ; Bell measurement
+  (H 0)
+  (CNOT 0 1)
+  ; Corrections (classical control simulated)
+  (X 2)
+  (Z 2))
+```
 
-Python
+---
 
-# omega/a1/core.py (Concept)
-import shlex
-from braket.circuits import Circuit
+## Complexity Measurement
 
-class A1:
-    def __init__(self):
-        self.circuit = Circuit()
-        self.env = {
-            'H': self._gate_h,
-            'CNOT': self._gate_cnot,
-            # 他のゲートもここで定義
+```python
+from a1.metrics import A1Metrics, ClassicalMetrics, ComplexityComparison
+
+# Measure A1 complexity
+a1_code = "(CNOT (H 0) 1)"
+a1_metrics = A1Metrics(a1_code)
+print(f"Tokens: {a1_metrics.token_count}")
+print(f"Bits: {a1_metrics.bit_length}")
+
+# Compare with classical
+comparison = ComplexityComparison(a1_code, classical_code)
+print(f"Ratio: {comparison.token_ratio}x")
+```
+
+---
+
+## AWS Braket Integration
+
+A1 programs can be executed on AWS Braket quantum hardware and simulators.
+
+### Prerequisites
+
+1. AWS Account with Braket access
+2. IAM user with appropriate permissions
+3. S3 bucket for results
+
+### Setup
+
+#### 1. Environment Configuration
+
+Copy `env.example` to `.env` and configure:
+
+```bash
+cp env.example .env
+```
+
+Edit `.env`:
+```bash
+# AWS Credentials (Method A: Profile - Recommended)
+AWS_PROFILE=your-profile-name
+AWS_DEFAULT_REGION=us-east-1
+
+# OR (Method B: Direct credentials - Less secure)
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+AWS_DEFAULT_REGION=us-east-1
+
+# S3 Bucket for results
+BRAKET_S3_BUCKET=amazon-braket-your-bucket-name
+BRAKET_S3_PREFIX=a1-experiments
+
+# Safety: Disable QPU by default
+ENABLE_QPU_EXECUTION=false
+```
+
+#### 2. Create S3 Bucket
+
+```bash
+aws s3 mb s3://amazon-braket-your-bucket-name --region us-east-1
+```
+
+#### 3. IAM Permissions
+
+Required IAM policy:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "BraketQuantumTaskManagement",
+            "Effect": "Allow",
+            "Action": [
+                "braket:CreateQuantumTask",
+                "braket:GetQuantumTask",
+                "braket:CancelQuantumTask",
+                "braket:SearchDevices"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "BraketS3Access",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::amazon-braket-*",
+                "arn:aws:s3:::amazon-braket-*/*"
+            ]
+        },
+        {
+            "Sid": "S3BucketManagement",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:ListAllMyBuckets",
+                "s3:ListBucket",
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::amazon-braket-*",
+                "arn:aws:s3:::amazon-braket-*/*"
+            ]
+        },
+        {
+            "Sid": "BraketFullAccess",
+            "Effect": "Allow",
+            "Action": [
+                "braket:*"
+            ],
+            "Resource": "*"
         }
+    ]
+}
+```
 
-    def _gate_h(self, q):
-        self.circuit.h(int(q))
-        return q # チェイン用にqubit indexを返す
+#### 4. Verify Configuration
 
-    def _gate_cnot(self, c, t):
-        self.circuit.cnot(int(c), int(t))
-        return t
+```bash
+python3 -c "from a1.config import config; config.print_status()"
+```
 
-    def parse(self, code):
-        # 簡易S式パーサー
-        code = code.replace('(', ' ( ').replace(')', ' ) ')
-        tokens = shlex.split(code)
-        return self._read_from_tokens(tokens)
+### Run Experiments
 
-    def _read_from_tokens(self, tokens):
-        if len(tokens) == 0: raise SyntaxError('unexpected EOF')
-        token = tokens.pop(0)
-        if token == '(':
-            L = []
-            while tokens[0] != ')':
-                L.append(self._read_from_tokens(tokens))
-            tokens.pop(0) # pop ')'
-            return L
-        elif token == ')':
-            raise SyntaxError('unexpected )')
-        else:
-            return self._atom(token)
+```bash
+# Local simulator (free)
+python3 sk-quantum/phase21/experiments/run_aws.py --backend local
 
-    def _atom(self, token):
-        try: return int(token)
-        except ValueError: return str(token)
+# AWS SV1 simulator (~$0.01)
+python3 sk-quantum/phase21/experiments/run_aws.py --backend sv1
 
-    def eval(self, x, env=None):
-        if env is None: env = self.env
-        
-        if isinstance(x, str):      # 変数参照
-            return env[x]
-        elif not isinstance(x, list): # 定数 (数値)
-            return x
-        
-        op_name = x[0]
-        
-        # 特殊形式 (DEFINE, LAMBDA)
-        if op_name == 'DEFINE':
-            (_, var, exp) = x
-            env[var] = self.eval(exp, env)
-            return None
-        elif op_name == 'LAMBDA':
-            (_, vars, body) = x
-            return lambda *args: self.eval(body, {**env, **dict(zip(vars, args))})
-        
-        # 関数適用
-        proc = self.eval(op_name, env)
-        args = [self.eval(arg, env) for arg in x[1:]]
-        return proc(*args)
+# Real QPU (requires ENABLE_QPU_EXECUTION=true)
+python3 sk-quantum/phase21/experiments/run_aws.py --backend ionq
+```
 
-    def run(self, code):
-        ast_list = self.parse(f"({code})") # 全体をリストでラップして処理
-        # 実際にはトップレベルで複数の式を順次評価するロジックが必要
-        for exp in ast_list:
-             self.eval(exp)
-        return self.circuit
+### Pricing
+
+| Backend | Cost |
+|---------|------|
+| Local Simulator | Free |
+| SV1 (Cloud Simulator) | ~$0.01/experiment |
+| IonQ | $0.30/task + $0.01/shot |
+| Rigetti | $0.30/task + $0.00035/shot |
+
+---
+
+## Troubleshooting
+
+### "Unable to locate credentials"
+
+```bash
+# Check profile
+aws configure list --profile your-profile-name
+
+# Or check environment
+echo $AWS_ACCESS_KEY_ID
+```
+
+### "Access Denied"
+
+Ensure IAM user has `braket:*` and `s3:*` permissions for `amazon-braket-*` resources.
+
+### "Bucket does not exist"
+
+```bash
+# List buckets
+aws s3 ls | grep amazon-braket
+
+# Create if missing
+aws s3 mb s3://amazon-braket-your-bucket --region us-east-1
+```
+
+---
+
+## Project Structure
+
+```
+a1/
+├── __init__.py      # Package initialization
+├── core.py          # Parser and interpreter
+├── gates.py         # Quantum gate definitions
+├── metrics.py       # Complexity measurement
+├── config.py        # AWS configuration loader
+├── env.example      # Environment template
+├── examples/        # Example programs
+│   ├── hello_world.a1
+│   ├── ghz_state.a1
+│   └── teleport.a1
+└── tests/           # Test suite
+    ├── test_core.py
+    ├── test_gates.py
+    └── test_metrics.py
+```
+
+---
+
+## Running Tests
+
+```bash
+cd /home/hkohashi/research
+python3 -m pytest a1/tests/ -v
+```
+
+Current status: **96 tests passing** ✅
+
+---
+
+## References
+
+- [Research Plan v4](../docs/research_plan_v4.md)
+- [Phase 20 Results](../sk-quantum/phase20/experiments/RESULTS_020_complexity.md)
+- [Phase 21 Results](../sk-quantum/phase21/experiments/RESULTS_021_aws.md)
+- [AWS Braket Documentation](https://docs.aws.amazon.com/braket/)
+
+---
+
+## Author
+
+**Hiroshi Kohashiguchi**  
+December 2025
+
+---
+
+*A1: The language where quantum is natural.*
+

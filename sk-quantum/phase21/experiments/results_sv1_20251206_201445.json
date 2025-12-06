@@ -1,0 +1,59 @@
+{
+  "generated": "2025-12-06T20:14:45.208841",
+  "config": {
+    "region": "us-east-1",
+    "s3_bucket": "amazon-braket-futureapps-a1"
+  },
+  "results": [
+    {
+      "benchmark": "bell",
+      "backend": "sv1",
+      "shots": 1000,
+      "counts": {
+        "00": 488,
+        "11": 512
+      },
+      "fidelity": 0.988,
+      "execution_time": 3.546546459197998,
+      "timestamp": "2025-12-06T20:14:34.362935"
+    },
+    {
+      "benchmark": "ghz",
+      "backend": "sv1",
+      "shots": 1000,
+      "counts": {
+        "000": 488,
+        "111": 512
+      },
+      "fidelity": 0.988,
+      "execution_time": 3.747994899749756,
+      "timestamp": "2025-12-06T20:14:38.112153"
+    },
+    {
+      "benchmark": "hadamard",
+      "backend": "sv1",
+      "shots": 1000,
+      "counts": {
+        "0": 504,
+        "1": 496
+      },
+      "fidelity": 0.996,
+      "execution_time": 3.461951494216919,
+      "timestamp": "2025-12-06T20:14:41.574888"
+    },
+    {
+      "benchmark": "superposition_2",
+      "backend": "sv1",
+      "shots": 1000,
+      "counts": {
+        "01": 270,
+        "10": 237,
+        "00": 256,
+        "11": 237
+      },
+      "fidelity": 0.974,
+      "execution_time": 3.6327950954437256,
+      "timestamp": "2025-12-06T20:14:45.208677"
+    }
+  ]
+}
