@@ -1,0 +1,23 @@
+[
+  {
+    "seed": 0,
+    "final_success": 1.0,
+    "final_operators": 15,
+    "has_matrix": false,
+    "inventions": 10
+  },
+  {
+    "seed": 1,
+    "final_success": 1.0,
+    "final_operators": 15,
+    "has_matrix": false,
+    "inventions": 10
+  },
+  {
+    "seed": 2,
+    "final_success": 1.0,
+    "final_operators": 15,
+    "has_matrix": false,
+    "inventions": 10
+  }
+]

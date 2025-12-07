@@ -124,7 +124,10 @@ computational resources to \emph{Containers} (child universes).
 \begin{definition}[Localhost]
 A Localhost $\mathcal{L}$ is a tuple $(M, \{C_i\}, \mathcal{A})$ where:
 \begin{itemize}
-    \item $M$ is the total available memory (holographic bound)
+    \item $M$ is the total available memory. This constraint corresponds 
+    to the Bekenstein bound~\cite{bekenstein1981}, which posits a 
+    fundamental upper limit on the entropy (information content) that 
+    can be contained within a finite region of space.
     \item $\{C_i\}$ is the set of Containers
     \item $\mathcal{A}$ is the resource allocation function
 \end{itemize}
@@ -140,10 +143,16 @@ A Container $C$ is a tuple $(P, D, f)$ where:
 \end{definition}
 
 \begin{remark}[Physical Correspondence]
-The Localhost-Container model admits natural physical interpretations.
-These correspondences are suggestive rather than rigorous, and serve 
-primarily as conceptual motivation. Table~\ref{tab:correspondence} 
-summarizes the mapping.
+The Localhost-Container model admits natural physical interpretations, 
+as summarized in Table~\ref{tab:correspondence}. Specifically, we map 
+the Localhost to a Meta-Universe or Quantum Vacuum~\cite{linde1986}, 
+and Containers to Pocket Universes~\cite{guth1981,guth1997} that run 
+specific physical laws. The memory constraint $M$ corresponds to the 
+Bekenstein Bound~\cite{bekenstein1981}, providing a physical limit on 
+information content. These correspondences are suggestive rather than 
+rigorous, but serve as the conceptual motivation for using evolutionary 
+dynamics---akin to Smolin's Cosmological Natural Selection~\cite{smolin1992,smolin1997}---to 
+explain the origin of physical laws.
 \end{remark}
 
 \begin{table}[ht]
@@ -155,9 +164,9 @@ summarizes the mapping.
 \toprule
 \textbf{Component} & \textbf{Computational} & \textbf{Physical} & \textbf{Role / Function} \\
 \midrule
-System & Localhost & Meta-Universe & Resource provider \\
-Unit & Container & Pocket Universe & Isolated spacetime with specific laws \\
-Constraint & Memory ($M$) & Bekenstein Bound & Max.\ information content \\
+System & Localhost & Meta-Universe~\cite{linde1986} & Resource provider \\
+Unit & Container & Pocket Universe~\cite{guth1981,guth1997} & Isolated spacetime with specific laws \\
+Constraint & Memory ($M$) & Bekenstein Bound~\cite{bekenstein1981} & Max.\ information content \\
 Laws & DSL & Physical Laws & Vocabulary of interactions \\
 State & Program ($P$) & Quantum State & Configuration of reality \\
 Selection & $V_{\text{inf}}$ & Cosmological Selection & Expansion mechanism \\
@@ -484,9 +493,12 @@ Several limitations of this study should be noted:
 
 Future work will address these limitations by: (1) testing additional 
 tasks (Markov chains, quantum circuits), (2) exploring richer mutation 
-operators that might enable genuine emergence, and (3) formalizing the 
+operators that might enable genuine emergence, (3) formalizing the 
 connection between the Localhost-Container model and established physics 
-(holographic principle, cosmological natural selection).
+(holographic principle, cosmological natural selection~\cite{smolin1992}), 
+and (4) exploring the connection to Categorical Quantum Mechanics, as 
+our functional perspective on physical laws as DSLs aligns well with 
+the diagrammatic reasoning of process theories.
 
 %==============================================================================
 \section{Conclusion}
@@ -584,6 +596,36 @@ R. E. Lenski, C. Ofria, R. T. Pennock, and C. Adami,
 J. R. Koza,
 \emph{Genetic Programming: On the Programming of Computers by Means of Natural Selection},
 MIT Press, 1992.
+
+\bibitem{smolin1992}
+L. Smolin,
+``Did the Universe Evolve?,''
+\emph{Classical and Quantum Gravity}, vol. 9, no. 1, pp. 173--191, 1992.
+
+\bibitem{smolin1997}
+L. Smolin,
+\emph{The Life of the Cosmos},
+Oxford University Press, 1997.
+
+\bibitem{bekenstein1981}
+J. D. Bekenstein,
+``Universal upper bound on the entropy-to-energy ratio for bounded systems,''
+\emph{Physical Review D}, vol. 23, no. 2, pp. 287--298, 1981.
+
+\bibitem{linde1986}
+A. Linde,
+``Eternally existing self-reproducing chaotic inflationary universe,''
+\emph{Physics Letters B}, vol. 175, no. 4, pp. 395--400, 1986.
+
+\bibitem{guth1981}
+A. H. Guth,
+``Inflationary universe: A possible solution to the horizon and flatness problems,''
+\emph{Physical Review D}, vol. 23, no. 2, pp. 347--356, 1981.
+
+\bibitem{guth1997}
+A. H. Guth,
+\emph{The Inflationary Universe: The Quest for a New Theory of Cosmic Origins},
+Perseus Books, 1997.
 
 \end{thebibliography}
 
