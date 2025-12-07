@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 
@@ -139,14 +140,30 @@ A Container $C$ is a tuple $(P, D, f)$ where:
 \end{definition}
 
 \begin{remark}[Physical Correspondence]
-The Localhost-Container model admits natural physical interpretations:
-Localhost $\leftrightarrow$ meta-universe or quantum gravity vacuum;
-Container $\leftrightarrow$ pocket universe or cosmological bubble;
-Memory bound $M$ $\leftrightarrow$ Bekenstein bound;
-DSL $\leftrightarrow$ physical laws.
+The Localhost-Container model admits natural physical interpretations.
 These correspondences are suggestive rather than rigorous, and serve 
-primarily as conceptual motivation.
+primarily as conceptual motivation. Table~\ref{tab:correspondence} 
+summarizes the mapping.
 \end{remark}
+
+\begin{table}[ht]
+\centering
+\caption{Correspondence between the Localhost-Container Model and Theoretical Physics.}
+\label{tab:correspondence}
+\small
+\begin{tabularx}{\textwidth}{@{}lllX@{}}
+\toprule
+\textbf{Component} & \textbf{Computational} & \textbf{Physical} & \textbf{Role / Function} \\
+\midrule
+System & Localhost & Meta-Universe & Resource provider \\
+Unit & Container & Pocket Universe & Isolated spacetime with specific laws \\
+Constraint & Memory ($M$) & Bekenstein Bound & Max.\ information content \\
+Laws & DSL & Physical Laws & Vocabulary of interactions \\
+State & Program ($P$) & Quantum State & Configuration of reality \\
+Selection & $V_{\text{inf}}$ & Cosmological Selection & Expansion mechanism \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \subsection{Complexity Measures}
 
