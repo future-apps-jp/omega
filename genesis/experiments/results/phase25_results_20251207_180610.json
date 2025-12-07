@@ -1,0 +1,5114 @@
+[
+  {
+    "experiment": "basic",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 0
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 2,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.05030012130737305
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 199.99904633023104,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.36,
+        "scalar_ratio": 0.64
+      },
+      {
+        "generation": 2,
+        "best_fitness": 333.33068425906293,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 3,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "basic",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 1
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 3,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.05280661582946777
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 333.33068425906293,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.8,
+        "scalar_ratio": 0.2
+      },
+      {
+        "generation": 2,
+        "best_fitness": 333.3333333333333,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.76,
+        "scalar_ratio": 0.24
+      },
+      {
+        "generation": 3,
+        "best_fitness": 333.3333333333333,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 333.3333333333333,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 333.3333333333333,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 333.3333333333333,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "basic",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 2
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 2,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.04755568504333496
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.52,
+        "scalar_ratio": 0.48
+      },
+      {
+        "generation": 2,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 3,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "basic",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 3
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 3,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.04902195930480957
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 333.33068425906293,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.54,
+        "scalar_ratio": 0.46
+      },
+      {
+        "generation": 2,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.5,
+        "scalar_ratio": 0.5
+      },
+      {
+        "generation": 3,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "basic",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 4
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 2,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.051328182220458984
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.68,
+        "scalar_ratio": 0.32
+      },
+      {
+        "generation": 2,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 3,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "scaling",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 42
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 2,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.04916238784790039
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 333.33068425906293,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.52,
+        "scalar_ratio": 0.48
+      },
+      {
+        "generation": 2,
+        "best_fitness": 333.3333333333333,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 3,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "scaling",
+    "config": {
+      "n_nodes": 8,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 42
+    },
+    "task": {
+      "target": 0.0
+    },
+    "results": {
+      "convergence_generation": 3,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "0",
+      "elapsed_time": 0.049307823181152344
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 249.99850989276234,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.34,
+        "scalar_ratio": 0.66
+      },
+      {
+        "generation": 2,
+        "best_fitness": 249.99850989276234,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.44,
+        "scalar_ratio": 0.56
+      },
+      {
+        "generation": 3,
+        "best_fitness": 250.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "scaling",
+    "config": {
+      "n_nodes": 10,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 42
+    },
+    "task": {
+      "target": 0.0
+    },
+    "results": {
+      "convergence_generation": 3,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "0",
+      "elapsed_time": 0.05159807205200195
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 249.99850989276234,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.6,
+        "scalar_ratio": 0.4
+      },
+      {
+        "generation": 2,
+        "best_fitness": 249.99850989276234,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.32,
+        "scalar_ratio": 0.68
+      },
+      {
+        "generation": 3,
+        "best_fitness": 250.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 333.33068425906293,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "initial_ratio",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.05,
+      "seed": 42
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": null,
+      "final_matrix_ratio": 0,
+      "final_scalar_ratio": 1.0,
+      "best_species": "Scalar",
+      "best_fitness": 0.0,
+      "best_k": 3,
+      "best_code": "(IF 2 2)",
+      "elapsed_time": 0.08900618553161621
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 249.99254964144106,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0.12,
+        "scalar_ratio": 0.88
+      },
+      {
+        "generation": 2,
+        "best_fitness": 249.99403967762763,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 3,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 249.99403967762763,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 249.99403967762763,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 249.99403967762763,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 249.99403967762763,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 249.99552973157648,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0,
+        "scalar_ratio": 1.0
+      }
+    ]
+  },
+  {
+    "experiment": "initial_ratio",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.1,
+      "seed": 42
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 4,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 4,
+      "best_code": "(GET 2 0 2)",
+      "elapsed_time": 0.10238289833068848
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 166.66335536330217,
+        "best_k": 3,
+        "best_species": "Scalar",
+        "matrix_ratio": 0.28,
+        "scalar_ratio": 0.72
+      },
+      {
+        "generation": 2,
+        "best_fitness": 166.66534212953147,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.18,
+        "scalar_ratio": 0.82
+      },
+      {
+        "generation": 3,
+        "best_fitness": 166.66534212953147,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.52,
+        "scalar_ratio": 0.48
+      },
+      {
+        "generation": 4,
+        "best_fitness": 166.66534212953147,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 166.66534212953147,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 166.66534212953147,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 166.66534212953147,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 166.66534212953147,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 199.99713901797745,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 199.9980926695569,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 199.99904633023104,
+        "best_k": 4,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "initial_ratio",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.2,
+      "seed": 42
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 2,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.051438093185424805
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 250.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.66,
+        "scalar_ratio": 0.34
+      },
+      {
+        "generation": 2,
+        "best_fitness": 250.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 3,
+        "best_fitness": 250.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 333.3333333333333,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 333.33068425906293,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 499.98807935525525,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  },
+  {
+    "experiment": "initial_ratio",
+    "config": {
+      "n_nodes": 5,
+      "steps": 3,
+      "population_size": 50,
+      "generations": 50,
+      "initial_matrix_ratio": 0.5,
+      "seed": 42
+    },
+    "task": {
+      "target": 2.0
+    },
+    "results": {
+      "convergence_generation": 2,
+      "final_matrix_ratio": 1.0,
+      "final_scalar_ratio": 0,
+      "best_species": "Matrix",
+      "best_fitness": 0.0,
+      "best_k": 1,
+      "best_code": "2",
+      "elapsed_time": 0.04883551597595215
+    },
+    "history": [
+      {
+        "generation": 1,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 0.88,
+        "scalar_ratio": 0.12
+      },
+      {
+        "generation": 2,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 3,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 4,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 5,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 6,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 7,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 8,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 9,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 10,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 11,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 12,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 13,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 14,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 15,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 16,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 17,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 18,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 19,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 20,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 21,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 22,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 23,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 24,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 25,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 26,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 27,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 28,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 29,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 30,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 31,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 32,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 33,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 34,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 35,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 36,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 37,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 38,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 39,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 40,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 41,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 42,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 43,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 44,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 45,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 46,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 47,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 48,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 49,
+        "best_fitness": 500.0,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      },
+      {
+        "generation": 50,
+        "best_fitness": 499.9940396065759,
+        "best_k": 1,
+        "best_species": "Matrix",
+        "matrix_ratio": 1.0,
+        "scalar_ratio": 0
+      }
+    ]
+  }
+]
