@@ -12,7 +12,7 @@
 % Theorem environments
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{finding}{Finding}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{remark}{Remark}[section]
 
@@ -38,14 +38,17 @@ quantum-like structures through evolutionary competition of Domain-Specific
 Languages (DSLs) under resource constraints. By simulating the competition 
 between Scalar DSLs (classical operations) and Matrix DSLs (quantum-like 
 operations), we demonstrate that matrix operations naturally dominate when 
-selection pressure favors minimal description length. Our experiments show 
-that Matrix DSLs achieve 91.7\% dominance within 2-4 generations, supporting 
-the \emph{Substrate Hypothesis}: the universe's computational substrate is 
-inherently quantum-native. We further investigate the spontaneous emergence 
-of matrix operations from scalar-only DSLs, finding that while pattern 
-compression is effective, the ``conceptual leap'' to matrix operations 
-requires external facilitation—suggesting that quantum structure is a 
-fundamental feature of the computational substrate, not an emergent property 
+selection pressure favors minimal description length. Our experiments with 
+$N=100$ population size and 10 independent runs show that Matrix DSLs achieve 
+100\% dominance within $2.4 \pm 0.5$ generations (95\% CI: [2.0, 2.8]), providing 
+evidence for the \emph{Substrate Hypothesis}: if the universe's computational 
+substrate is quantum-native, then quantum mechanics emerges as the algorithmically 
+natural description. We further investigate the spontaneous emergence 
+of matrix operations from scalar-only DSLs across 1000 generations with 
+$N=100$ population, finding that while pattern compression creates compound 
+operators, the ``conceptual leap'' to matrix operations does not occur 
+spontaneously---suggesting that quantum structure may be a fundamental 
+feature of the computational substrate, rather than an emergent property 
 of classical computation.
 \end{abstract}
 
@@ -56,14 +59,32 @@ of classical computation.
 The question ``Why is the universe quantum mechanical?'' has puzzled physicists 
 and philosophers since the inception of quantum theory. Previous work has 
 established that quantum structure cannot be derived from classical computational 
-models such as SK combinatory logic or reversible computation 
-\cite{kohashiguchi2024independence, kohashiguchi2024limits}.
+models such as SK combinatory logic \cite{kohashiguchi2024independence} or 
+reversible computation \cite{kohashiguchi2024limits}. Furthermore, 
+\cite{kohashiguchi2024axioms} identified axiom A1 (state space extension / 
+superposition) as the unique primitive axiom required for quantum mechanics, 
+while \cite{kohashiguchi2024naturalness} demonstrated that quantum mechanics 
+has minimal description length on a quantum substrate.
 
-In this paper, we approach the question from a novel perspective: 
-\emph{evolutionary computation}. We model physical laws as Domain-Specific 
+This work builds upon a rich tradition of \emph{digital physics}---the idea 
+that the universe is fundamentally computational. Wolfram's ``A New Kind of 
+Science'' \cite{wolfram2002} and subsequent physics project \cite{wolfram2020} 
+explored cellular automata and hypergraphs as computational substrates. 
+Lloyd's ``Programming the Universe'' \cite{lloyd2006} framed the universe as 
+a quantum computer. In the artificial life community, systems like Avida 
+\cite{lenski2003} and genetic programming \cite{koza1992} have demonstrated 
+how complex structures can emerge through evolutionary pressure.
+
+In this paper, we approach the foundational question from a novel perspective: 
+\emph{evolutionary DSL competition}. We model physical laws as Domain-Specific 
 Languages (DSLs) competing for computational resources in a ``parent universe'' 
-(Localhost). The selection pressure is \emph{algorithmic naturalness}—laws that 
+(Localhost). The selection pressure is \emph{algorithmic naturalness}---laws that 
 provide shorter descriptions (lower Kolmogorov complexity $K$) are favored.
+
+This work provides an \emph{evolutionary complement} to our previous results: 
+while \cite{kohashiguchi2024axioms, kohashiguchi2024naturalness} established 
+the \emph{static} properties of quantum structure (minimality, uniqueness), 
+the present paper demonstrates its \emph{dynamic} emergence through selection.
 
 Our key contributions are:
 
@@ -120,6 +141,31 @@ A Container $C$ is a tuple $(P, D, f)$ where:
 \end{itemize}
 \end{definition}
 
+\begin{remark}[Physical Correspondence]
+The Localhost-Container model admits natural physical interpretations:
+Localhost $\leftrightarrow$ meta-universe or quantum gravity vacuum;
+Container $\leftrightarrow$ pocket universe or cosmological bubble;
+Memory bound $M$ $\leftrightarrow$ Bekenstein bound;
+DSL $\leftrightarrow$ physical laws.
+These correspondences are suggestive rather than rigorous, and serve 
+primarily as conceptual motivation.
+\end{remark}
+
+\subsection{Complexity Measures}
+
+We define operational measures for description length and execution time:
+
+\begin{definition}[Description Length $K$]
+The description length $K(P)$ of a program $P$ is the number of nodes 
+in its Abstract Syntax Tree (AST). This serves as a computable proxy 
+for Kolmogorov complexity.
+\end{definition}
+
+\begin{definition}[Execution Time $T$]
+The execution time $T(P)$ is the wall-clock time (in milliseconds) 
+required to evaluate program $P$ on the target task.
+\end{definition}
+
 \subsection{Inflation Rate and Selection}
 
 The \emph{inflation rate} determines resource acquisition:
@@ -129,6 +175,14 @@ The \emph{inflation rate} determines resource acquisition:
 \end{equation}
 
 where $K(P)$ is the description length and $T(P)$ is execution time.
+
+\begin{remark}[Choice of Inflation Rate]
+We adopt the multiplicative form $V_{\text{inf}} \propto 1/(K \cdot T)$ as the 
+simplest separable model that penalizes both complexity and slowness equally. 
+Alternative forms such as $1/(aK + bT)$ were considered; preliminary experiments 
+suggest that the qualitative conclusions (Matrix DSL dominance) are robust to 
+this choice, though a systematic sensitivity analysis is left for future work.
+\end{remark}
 
 \begin{proposition}[Selection Pressure]
 Containers with lower $K$ have higher fitness and acquire more resources, 
@@ -149,9 +203,15 @@ The ground truth is:
     \text{answer} = (A^k)_{0, N-1}
 \end{equation}
 
+This task naturally exhibits a complexity asymmetry: scalar DSLs must 
+enumerate paths individually ($K = O(N)$ or $O(k)$), while matrix DSLs 
+can compute $A^k$ directly ($K = O(1)$). We expect similar asymmetries 
+in other linear-algebraic tasks (e.g., Markov chain analysis, quantum 
+circuit simulation), though verification is left for future work.
+
 \subsection{DSL Species}
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \begin{tabular}{lll}
 \toprule
@@ -161,91 +221,168 @@ Scalar & ADD, SUB, MUL, IF & $O(N)$ or $O(k)$ \\
 Matrix & MATMUL, MATPOW, GET & $O(1)$ \\
 \bottomrule
 \end{tabular}
-\caption{DSL species and their description lengths for the graph walk task.}
+\caption{DSL species and their description lengths for the graph walk task. 
+Here $O(\cdot)$ denotes scaling with respect to AST node count.}
 \label{tab:dsl}
 \end{table}
 
 \subsection{Evolution Parameters}
 
+The main experiments (Experiment 1) used the following parameters:
 \begin{itemize}
-    \item Population size: 50-100
-    \item Generations: 50-100
+    \item Population size: $N = 100$
+    \item Generations: 50
     \item Mutation rate: 15\%
     \item Crossover rate: 30\%
-    \item Elite preservation: Top 5
+    \item Elite preservation: Top 5 individuals
     \item Survival rate: 20\%
+    \item Graph: 5 nodes, $k=3$ steps
+    \item Initial Matrix ratio: 20\%
+    \item Random seeds: 10 independent runs (seeds 0--9)
 \end{itemize}
+
+Experiment 2 was divided into two conditions to ensure rigorous testing:
+\begin{itemize}
+    \item \textbf{Experiment 2A (Spontaneous Emergence)}: 1000 generations with 
+    NO injection, to test whether matrix operations can emerge de novo 
+    (5 runs, seeds 0--4).
+    \item \textbf{Experiment 2B (Simulated Discovery)}: 1000 generations with 
+    matrix operations injected at generation 300, to observe post-discovery 
+    dynamics (5 runs, seeds 0--4).
+    \item Population size: $N = 100$ for both conditions.
+\end{itemize}
+
+Additional robustness experiments varied graph size ($N \in \{5, 8, 10\}$) 
+and initial Matrix ratio ($\{5\%, 10\%, 20\%, 50\%\}$).
 
 %==============================================================================
 \section{Results}
 %==============================================================================
 
-\subsection{Phase 25: The Quantum Dawn}
+\subsection{Experiment 1: The Quantum Dawn}
 
-\begin{theorem}[Matrix Dominance]
-In the graph walk task, Matrix DSL achieves dominance (>90\% of population) 
-within $O(1)$ generations when starting from 20\% initial ratio.
-\end{theorem}
+\begin{finding}[Matrix Dominance]
+In the graph walk task with $N=100$ population and 10 independent runs, 
+Matrix DSL achieves 100\% dominance within $2.4 \pm 0.5$ generations 
+(95\% CI: $[2.0, 2.8]$) when starting from 20\% initial ratio.
+\end{finding}
 
 \textbf{Experimental Evidence:}
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
-\begin{tabular}{lcccc}
+\begin{tabular}{ccc}
 \toprule
-Run & Convergence Gen & Final Matrix \% \\
+Run & Convergence (Gen) & Final Matrix (\%) \\
 \midrule
-1 & 2 & 100\% \\
-2 & 3 & 100\% \\
-3 & 2 & 100\% \\
-4 & 3 & 100\% \\
-5 & 2 & 100\% \\
+1 & 3 & 100 \\
+2 & 3 & 100 \\
+3 & 2 & 100 \\
+4 & 3 & 100 \\
+5 & 2 & 100 \\
+6 & 3 & 100 \\
+7 & 2 & 100 \\
+8 & 2 & 100 \\
+9 & 2 & 100 \\
+10 & 2 & 100 \\
 \midrule
-\textbf{Avg} & \textbf{2.4 ± 0.5} & \textbf{100\%} \\
+Mean & 2.4 & 100 \\
+SD & 0.52 & -- \\
+95\% CI & {[}2.0, 2.8{]} & -- \\
 \bottomrule
 \end{tabular}
-\caption{Phase 25: Basic competition results (5 runs).}
-\label{tab:phase25}
+\caption{Experiment 1: Matrix DSL dominance results across 10 independent 
+runs with population size $N = 100$ and 50 generations.}
+\label{tab:exp1}
 \end{table}
 
-The convergence is remarkably fast—Matrix DSL dominates within 2-4 generations.
-
-\subsection{Phase 26: Evolution of Operators}
-
-\begin{theorem}[Emergence Difficulty]
-Spontaneous emergence of matrix operations from scalar-only DSLs through 
-pure evolutionary pressure is improbable without external facilitation.
-\end{theorem}
-
-\textbf{Experimental Evidence:}
-
+The convergence is remarkably fast and highly reproducible---all 10 runs 
+achieved 100\% Matrix dominance within 2--3 generations. The 95\% confidence 
+interval for convergence generation is narrow ($[2.0, 2.8]$), indicating 
+strong statistical reliability. Additional robustness experiments confirmed:
 \begin{itemize}
-    \item Pattern compression successfully creates compound operators 
-    (e.g., OP\_0 = ADD + CONST)
-    \item However, the ``conceptual leap'' to matrix operations did not 
-    occur spontaneously
-    \item Matrix operations (MATMUL, MATPOW) were injected at generation 30
-    \item After injection, they were utilized but did not spread without help
+    \item \textbf{Scaling}: Convergence occurred for all tested graph 
+    sizes ($N = 5, 8, 10$).
+    \item \textbf{Initial ratio threshold}: With only 5\% initial Matrix 
+    ratio, convergence failed; with 10\% or higher, convergence succeeded.
 \end{itemize}
 
-\begin{table}[h]
+\subsection{Experiment 2: Evolution of Operators}
+
+\subsubsection{Experiment 2A: Spontaneous Emergence Test}
+
+\begin{finding}[No Spontaneous Emergence]
+In Experiment 2A with $N=100$ population and 1000 generations (5 runs, 
+NO injection), matrix operations did \textbf{not emerge spontaneously 
+in any run} (0/5). Pattern compression created 20 new compound scalar 
+operators per run, but none were matrix-like.
+\end{finding}
+
+\begin{table}[ht]
 \centering
-\begin{tabular}{lcl}
+\begin{tabular}{cccc}
 \toprule
-Generation & Event & Operators \\
+Run & Final Operators & Inventions & Matrix Emerged \\
 \midrule
-1-9 & Scalar evolution & ADD, SUB, MUL \\
-10 & Pattern detection & +OP\_0 \\
-20 & Pattern detection & +OP\_1 \\
-30 & \textbf{Injection} & \textbf{+MATMUL, +MATPOW} \\
-40-60 & Continued evolution & +OP\_5, OP\_6, OP\_7 \\
-\midrule
-Final & & 13 operators \\
+1 & 25 & 20 & No \\
+2 & 25 & 20 & No \\
+3 & 25 & 20 & No \\
+4 & 25 & 20 & No \\
+5 & 25 & 20 & No \\
 \bottomrule
 \end{tabular}
-\caption{Phase 26: DSL evolution timeline.}
-\label{tab:phase26}
+\caption{Experiment 2A: Spontaneous emergence test (NO injection, 
+1000 generations). Matrix operations did not emerge in any of the 5 runs.}
+\label{tab:exp2a}
 \end{table}
+
+This is the central evidence for our claim: despite 1000 generations of 
+evolution and 20 invented compound operators, the ``conceptual leap'' 
+to matrix operations never occurred spontaneously.
+
+\subsubsection{Experiment 2B: Simulated Discovery Test}
+
+\begin{finding}[Post-Discovery Dynamics]
+In Experiment 2B, matrix operations were injected at generation 300 
+to simulate their ``discovery.'' Notably, scalar evolution had already 
+converged to a local optimum (Fitness $\approx 400$) by this point, 
+so no immediate fitness jump was observed.
+\end{finding}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{ccccc}
+\toprule
+Run & Pre-Injection & Post-Injection & Jump & Final Ops \\
+\midrule
+1 & 400.0 & 400.0 & +0.0 & 26 \\
+2 & 400.0 & 400.0 & +0.0 & 26 \\
+3 & 400.0 & 400.0 & +0.0 & 26 \\
+4 & 400.0 & 400.0 & +0.0 & 26 \\
+5 & 400.0 & 400.0 & +0.0 & 26 \\
+\bottomrule
+\end{tabular}
+\caption{Experiment 2B: Simulated discovery test (injection at Gen 300). 
+No fitness jump because scalar DSL had already found a task-specific solution.}
+\label{tab:exp2b}
+\end{table}
+
+\textbf{Interpretation:} The absence of fitness jump in Experiment 2B 
+is \emph{expected} for this specific task: scalar DSLs can find 
+``lucky'' solutions that produce the correct answer for fixed $(N, k)$. 
+The crucial distinction is:
+
+\begin{itemize}
+    \item \textbf{Scalar solutions}: Task-specific, no generalization. 
+    A program that works for $(N=5, k=3)$ will fail for $(N=10, k=5)$.
+    \item \textbf{Matrix solutions}: Structurally general. The program 
+    $\texttt{GET(MATPOW(A, k), 0, N-1)}$ works for \emph{any} $(N, k)$.
+\end{itemize}
+
+This highlights a limitation of fitness-based selection on fixed tasks: 
+it cannot distinguish between ``memorization'' (scalar) and ``understanding'' 
+(matrix). The true advantage of matrix operations manifests in 
+\emph{generalization} across task variants.
 
 %==============================================================================
 \section{Discussion}
@@ -253,31 +390,38 @@ Final & & 13 operators \\
 
 \subsection{Implications for the Substrate Hypothesis}
 
-Our results strongly support the Substrate Hypothesis:
+Our results provide evidence consistent with the Substrate Hypothesis:
 
 \begin{enumerate}
     \item \textbf{Matrix DSL dominance}: When both scalar and matrix 
     operations are available, matrix operations dominate due to their 
-    superior compression.
+    superior compression. This is consistent with quantum mechanics being 
+    ``natural'' on a quantum substrate.
     
-    \item \textbf{Emergence difficulty}: Matrix operations do not 
-    spontaneously emerge from scalar primitives, suggesting they must 
-    be ``built into'' the substrate.
+    \item \textbf{Emergence difficulty}: In Experiment 2A, matrix 
+    operations did not emerge spontaneously in any of 5 runs over 
+    1000 generations (0/5), despite 20 compound operators being invented. 
+    This suggests matrix structure may need to be ``built into'' the substrate.
     
     \item \textbf{Rapid takeover}: Once matrix operations exist, they 
-    quickly dominate—consistent with quantum mechanics being the 
-    ``natural'' description on a quantum substrate.
+    achieve 100\% dominance within 2--3 generations across all 10 runs 
+    (95\% CI: $[2.0, 2.8]$)---consistent with quantum mechanics being the 
+    minimal description on a quantum-native substrate.
 \end{enumerate}
 
 \subsection{Why Is the Universe Quantum?}
 
-Our framework suggests an answer:
+Our framework suggests a conditional answer:
 
 \begin{quote}
-The universe is quantum because its computational substrate is quantum-native. 
-On such a substrate, quantum mechanics provides the shortest description 
-(minimal $K$), and evolution selects for minimal $K$.
+\emph{If} the universe's computational substrate is quantum-native, 
+\emph{then} quantum mechanics provides the shortest description 
+(minimal $K$), and evolutionary selection for minimal $K$ would 
+naturally lead to quantum-like physical laws.
 \end{quote}
+
+This reframes the question from ``Why quantum?'' to ``What properties 
+must the substrate have for quantum mechanics to be minimal?''
 
 \subsection{Artificial Physics}
 
@@ -291,10 +435,38 @@ to minimize description length $K$ on the underlying computational substrate.
 
 This perspective reframes fundamental physics questions:
 \begin{itemize}
-    \item ``Why quantum mechanics?'' → ``What substrate makes QM minimal?''
-    \item ``What is a physical law?'' → ``An optimally compressed DSL''
-    \item ``Why these constants?'' → ``They minimize $K$ on $U_Q$''
+    \item ``Why quantum mechanics?'' $\to$ ``What substrate makes QM minimal?''
+    \item ``What is a physical law?'' $\to$ ``An optimally compressed DSL''
+    \item ``Why these constants?'' $\to$ ``They minimize $K$ on $U_Q$''
 \end{itemize}
+
+\subsection{Limitations and Future Work}
+
+Several limitations of this study should be noted:
+
+\begin{enumerate}
+    \item \textbf{Single task}: Our experiments focus on the graph walk 
+    task. While we expect similar results for other linear-algebraic tasks, 
+    this remains to be verified.
+    
+    \item \textbf{Idealized model}: The Localhost-Container model abstracts 
+    away many physical complexities (noise, decoherence, imperfect observation).
+    
+    \item \textbf{Limited DSL space}: The DSL search space is constrained 
+    by our chosen primitives; richer primitive sets might yield different 
+    emergence dynamics.
+    
+    \item \textbf{Fixed-task limitation}: Experiment 2B showed no fitness 
+    jump because scalar DSLs can find task-specific solutions. Future 
+    work should use \emph{meta-fitness} that rewards generalization 
+    across task variants $(N, k)$.
+\end{enumerate}
+
+Future work will address these limitations by: (1) testing additional 
+tasks (Markov chains, quantum circuits), (2) exploring richer mutation 
+operators that might enable genuine emergence, and (3) formalizing the 
+connection between the Localhost-Container model and established physics 
+(holographic principle, cosmological natural selection).
 
 %==============================================================================
 \section{Conclusion}
@@ -307,17 +479,20 @@ We have demonstrated through simulation that:
     (classical structures) under selection pressure for minimal 
     description length.
     
-    \item The dominance is rapid (2-4 generations) and robust across 
-    different graph sizes and initial conditions.
+    \item The dominance is rapid ($2.4 \pm 0.5$ generations; 95\% CI: 
+    $[2.0, 2.8]$) and robust across different graph sizes, initial 
+    conditions, and 10 independent runs.
     
     \item Spontaneous emergence of matrix operations from scalar 
-    primitives is difficult, suggesting that quantum structure is 
-    fundamental, not emergent.
+    primitives did not occur in any of 5 runs over 1000 generations 
+    (Experiment 2A: 0/5), despite 20 compound operators being invented 
+    per run. This suggests that quantum structure may be fundamental 
+    rather than emergent.
 \end{enumerate}
 
-These results support the \textbf{Substrate Hypothesis}: the universe's 
-computational substrate is quantum-native, and quantum mechanics is the 
-``natural'' physical law on this substrate.
+These results are consistent with the \textbf{Substrate Hypothesis}: 
+if the universe's computational substrate is quantum-native, then quantum 
+mechanics would be the ``natural'' physical law on this substrate.
 
 The \textbf{Artificial Physics} framework provides a new lens for 
 understanding fundamental physics: physical laws as evolutionarily 
@@ -334,7 +509,7 @@ universe paradigm. All implementations are released as open-source software
 under the MIT License at \url{https://github.com/future-apps-jp/omega/}.
 
 %==============================================================================
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 
 \bibitem{kohashiguchi2024independence}
 H. Kohashiguchi,
@@ -366,7 +541,26 @@ S. Wolfram,
 \emph{A New Kind of Science},
 Wolfram Media, 2002.
 
+\bibitem{wolfram2020}
+S. Wolfram,
+``A Class of Models with the Potential to Represent Fundamental Physics,''
+\emph{Complex Systems}, vol. 29, pp. 107--536, 2020.
+
+\bibitem{lloyd2006}
+S. Lloyd,
+\emph{Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos},
+Knopf, 2006.
+
+\bibitem{lenski2003}
+R. E. Lenski, C. Ofria, R. T. Pennock, and C. Adami,
+``The evolutionary origin of complex features,''
+\emph{Nature}, vol. 423, pp. 139--144, 2003.
+
+\bibitem{koza1992}
+J. R. Koza,
+\emph{Genetic Programming: On the Programming of Computers by Means of Natural Selection},
+MIT Press, 1992.
+
 \end{thebibliography}
 
 \end{document}
-
