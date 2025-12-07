@@ -306,3 +306,4 @@ if __name__ == "__main__":
     print(f"Total gates: {len(QUANTUM_GATES)}")
     print(f"Vocabulary size: {VOCABULARY_SIZE}")
 
+

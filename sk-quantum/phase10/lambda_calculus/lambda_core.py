@@ -561,3 +561,4 @@ if __name__ == "__main__":
     print(f"Term: {test_term}")
     print(f"Nodes: {graph.n_nodes}, Edges: {graph.n_edges}")
 
+

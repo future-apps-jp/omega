@@ -121,3 +121,6 @@ Thumbs.db
 tmp/
 temp/
 *.orig
+bin/
+lib/
+lib64/

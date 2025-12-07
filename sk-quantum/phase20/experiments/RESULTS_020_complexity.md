@@ -187,3 +187,4 @@ grover-oracle & 1 & 4 & 108 & 27.0x & 20 & 864 \\
 *Phase 20 Results — December 2025*
 *「複雑度計測の形式化」*
 
+

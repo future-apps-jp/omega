@@ -171,3 +171,4 @@ $$\frac{P(\text{QM} | U_Q)}{P(\text{QM} | U_C)} \approx 2^{10^{32}}$$
 
 *Generated: December 6, 2025*
 
+

@@ -410,3 +410,4 @@ Quantum systems require A1 from the start for coherent evolution.
 This confirms: A1 cannot be derived from discrete → continuous limit.
 """)
 
+
