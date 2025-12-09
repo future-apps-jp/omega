@@ -27,10 +27,11 @@ omega/
 │       └── coq/         # Coq formal verification
 │           └── PermSymplectic.v   # ← Main verification file
 ├── a1/                  # A1 language implementation
-├── papers/              # LaTeX source (available after acceptance)
-├── docs/                # Research plans (available after acceptance)
-└── genesis/             # Experimental genesis environment
+├── genesis/             # Experimental genesis environment
+└── genesis-env/         # Genesis environment configuration
 ```
+
+> **Note**: LaTeX source files and detailed research plans will be made available after paper acceptance.
 
 ## Formal Verification (Coq)
 
@@ -68,7 +69,7 @@ Theorem no_superposition_from_perm (s : 'S_n) (i : 'I_n) :
    [PhilPapers](https://philpapers.org/rec/KOHLOD)
 
 3. **Minimal Axioms for Quantum Structure** (this paper)  
-   Available in `papers/minimal-axioms/`
+   Under review at *Foundations of Physics*
 
 ## License
 
