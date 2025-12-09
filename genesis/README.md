@@ -1,108 +1,102 @@
 # Genesis-Matrix
 
-**量子構造の進化的創発シミュレーションフレームワーク**
+**Evolutionary Emergence of Quantum Structure Simulation Framework**
 
-Genesis-Matrixは、リソース制約下でDSL（ドメイン特化言語）が進化する過程で、行列演算（量子的構造）が自然に支配的になることを実証するシミュレーションフレームワークです。
+Genesis-Matrix is a simulation framework that demonstrates how matrix operations (quantum-like structures) naturally become dominant when Domain-Specific Languages (DSLs) evolve under resource constraints.
 
-## 概要
+## Overview
 
-### 研究仮説
+### Research Hypothesis
 
-> 物理法則（特に量子力学の公理A1）は、計算リソース制約下で「進化的に創発」する。
+> Physical laws (particularly the quantum axiom A1) emerge evolutionarily under computational resource constraints.
 
-### 核心的洞察
+### Core Insight
 
-1. **Scalar DSL (古典)**: スカラー演算のみ。グラフ探索には経路を1つずつ列挙する必要があり、記述長 K = O(N)
-2. **Matrix DSL (量子的)**: 行列演算を持つ。A^k で全経路を一度に計算でき、記述長 K = O(1)
+1. **Scalar DSL (Classical)**: Only scalar operations. Graph traversal requires enumerating paths one by one, with description length K = O(N)
+2. **Matrix DSL (Quantum-like)**: Has matrix operations. A^k computes all paths simultaneously, with description length K = O(1)
 
-この記述長の差が選択圧となり、Matrix DSLが進化的に勝利します。
+This difference in description length creates selection pressure, causing Matrix DSL to win evolutionarily.
 
-## インストール
+## Installation
 
 ```bash
-# 仮想環境の作成
+# Create virtual environment
 python3 -m venv genesis-env
 source genesis-env/bin/activate
 
-# 依存関係のインストール
+# Install dependencies
 pip install numpy jax[cpu] pytest
 ```
 
-## クイックスタート
+## Quick Start
 
 ```bash
-# 環境確認
+# Check environment
 python genesis/check_cpu.py
 
-# テスト実行
+# Run tests
 python -m pytest genesis/tests/ -v
 
-# "The Quantum Dawn" 実験
+# Run "The Quantum Dawn" experiment
 python genesis/experiments/quantum_dawn.py
 ```
 
-## 構造
+## Structure
 
 ```
 genesis/
-├── core/                  # 基盤クラス群
-│   ├── dsl.py            # DSL抽象クラス
-│   ├── localhost.py      # 親宇宙（リソース管理）
-│   ├── container.py      # 子宇宙（DSL + 現象）
-│   └── fitness.py        # 適応度評価
-├── dsl/                   # DSL実装
-│   ├── scalar.py         # Species A: 古典的スカラー演算
-│   └── matrix.py         # Species B: 行列演算（量子的）
-├── evolution/             # 進化エンジン
-│   ├── mutation.py       # AST構造変異
-│   ├── selection.py      # 選択メカニズム
-│   └── population.py     # 集団管理
-├── tasks/                 # タスク定義
-│   └── graph_walk.py     # グラフ探索タスク
-├── experiments/           # 実験スクリプト
-│   └── quantum_dawn.py   # Phase 25実験
-└── tests/                 # テストスイート
+├── core/                  # Foundation classes
+│   ├── dsl.py            # DSL abstract class
+│   ├── localhost.py      # Parent universe (resource management)
+│   ├── container.py      # Child universe (DSL + phenomena)
+│   └── fitness.py        # Fitness evaluation
+├── dsl/                   # DSL implementations
+│   ├── scalar.py         # Species A: Classical scalar operations
+│   └── matrix.py         # Species B: Matrix operations (quantum-like)
+├── evolution/             # Evolution engine
+│   ├── mutation.py       # AST structural mutation
+│   ├── selection.py      # Selection mechanisms
+│   └── population.py     # Population management
+├── tasks/                 # Task definitions
+│   └── graph_walk.py     # Graph traversal task
+├── experiments/           # Experiment scripts
+│   └── quantum_dawn.py   # Phase 25 experiment
+└── tests/                 # Test suite
 ```
 
-## 主要な概念
+## Key Concepts
 
-### Localhost（親宇宙）
+### Localhost (Parent Universe)
 
-計算リソースを提供する「メタ宇宙」。目的論的意図なく、効率的なプロセスにリソースを配分します。
+A "meta-universe" that provides computational resources. It allocates resources to efficient processes without teleological intent.
 
-### Container（子宇宙）
+### Container (Child Universe)
 
-独自のDSL（物理法則）と現象（プログラム）を持つ「子宇宙」。インフレーション速度 V_inf ∝ 1/(K × T) でリソースを獲得します。
+A "child universe" with its own DSL (physical laws) and phenomena (programs). It acquires resources at an inflation rate V_inf ∝ 1/(K × T).
 
-### ホログラフィック制約
+### Holographic Constraint
 
-記述長 K に上限を設けることで、効率的な記述を進化的に選択する圧力を生み出します。
+By imposing an upper limit on description length K, we create evolutionary pressure that selects for efficient descriptions.
 
-## 実験結果
+## Experimental Results
 
 ### Phase 25: "The Quantum Dawn"
 
 ```
-Task: 5ノードグラフで、ノード0→4への3ステップ経路数を計算
-Target: 2（正解）
+Task: Calculate the number of 3-step paths from node 0 to node 4 in a 5-node graph
+Target: 2 (correct answer)
 
 Initial: 80% Scalar, 20% Matrix
 Final:   0% Scalar, 100% Matrix
 
-→ Matrix DSL (A1) が進化的に支配！
+→ Matrix DSL (A1) dominates evolutionarily!
 ```
 
-## 次のフェーズ
+## Related Work
 
-- **Phase 26**: "Evolution of Operators" - 非行列DSLから行列操作の自発的創発を観測
-- **Phase 27**: 理論統合と論文執筆
+- Paper: "Artificial Physics: Evolutionary Emergence of Quantum Structures"
+- [PhilPapers](https://philpapers.org/rec/KOHAPE)
 
-## 参考文献
-
-- Research Plan v5: `docs/research_plan_v5.md`
-- Artificial Physics Proposal: `docs/Research_Proposal_Artificial_Physics.md`
-
-## ライセンス
+## License
 
 MIT License
-
