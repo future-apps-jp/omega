@@ -92,5 +92,6 @@ This research is made available for academic purposes. Please cite appropriately
 ## Contact
 
 Hiroshi Kohashiguchi  
-Independent Researcher, Tokyo, Japan
+Independent Researcher, Tokyo, Japan  
+hiroshi.kohashiguchi@future-apps.jp
 
