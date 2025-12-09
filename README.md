@@ -1,16 +1,24 @@
-# Minimal Axioms for Quantum Structure: What Computation Cannot Derive
+# Omega Project: Computational Foundations of Quantum Structure
 
-This repository contains the source code, formal verification files, and research documentation for the paper **"Minimal Axioms for Quantum Structure: What Computation Cannot Derive"** by Hiroshi Kohashiguchi.
+This repository contains the source code, formal verification files, and research documentation for a series of papers investigating **whether quantum structure can be derived from computation**.
 
-## Abstract
+## Research Overview
 
-Recent developments in quantum foundations have strengthened the necessity of identifying the minimal departure point between classical and quantum theories. Through systematic analysis of multiple computational models—SK combinatory logic, reversible logic gates, reversible cellular automata, and lambda calculus—we establish that no form of computation can generate quantum structure without the superposition axiom A1.
+The Omega Project addresses a fundamental question in the foundations of physics and computer science:
 
-Our main contributions are:
+> **Can the distinctive features of quantum mechanics—superposition, interference, entanglement—arise from computation alone?**
 
-1. **The No-Go Theorem**: Reversible n-bit gates embed into the symplectic group Sp(2·2ⁿ, ℝ), not the unitary group U(2ⁿ). This theorem has been **formally verified in Coq**.
-2. **Axiom Identification**: Using Generalized Probabilistic Theories (GPTs), we show that A1 (state-space extension/superposition) is the *unique primitive axiom* that cannot be derived from computation.
-3. **Universality**: Results hold across all Turing-complete computation models tested, establishing computation-model independence.
+Through systematic investigation across multiple phases, we have established:
+
+| Phase | Paper | Key Finding |
+|-------|-------|-------------|
+| 1 | SK Combinatory Logic | SK computation is fundamentally classical; no quantum structure emerges |
+| 2 | Reversible Computation | Reversible gates embed into Sp(2N,ℝ), not U(N) — **formally verified in Coq** |
+| 3 | Minimal Axioms | A1 (superposition) is the unique primitive axiom that cannot be derived |
+| 4 | Algorithmic Naturalness | Quantum mechanics has minimal description length on a quantum substrate |
+| 5 | Artificial Physics | Matrix operations confer evolutionary advantage but do not spontaneously emerge |
+
+**Central Conclusion**: Quantum structure cannot be derived from computation, simulation, or classical logic. The superposition axiom A1 must be postulated as a primitive extension of state space.
 
 ## Repository Structure
 
@@ -62,14 +70,20 @@ Theorem no_superposition_from_perm (s : 'S_n) (i : 'I_n) :
 
 ## Related Papers
 
-1. **On the Independence of Quantum Structure from SK Combinatory Logic**  
+1. **On the Independence of Quantum Structure from SK Combinatory Logic** (Phase 1)  
    [PhilPapers](https://philpapers.org/rec/KOHOTI)
 
-2. **On the Limits of Deriving Quantum Structure from Reversible Computation**  
+2. **On the Limits of Deriving Quantum Structure from Reversible Computation** (Phase 2)  
    [PhilPapers](https://philpapers.org/rec/KOHLOD)
 
-3. **Minimal Axioms for Quantum Structure** (this paper)  
+3. **Minimal Axioms for Quantum Structure: What Computation Cannot Derive** (Phase 3)  
    Under review at *Foundations of Physics*
+
+4. **Algorithmic Naturalness on a Quantum Substrate** (Phase 4)  
+   In preparation
+
+5. **Artificial Physics: Evolutionary Emergence of Quantum Structures** (Phase 5)  
+   In preparation
 
 ## License
 
