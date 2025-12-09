@@ -125,3 +125,10 @@ bin/
 lib/
 lib64/
 misc/
+
+# =========================
+# Temporarily hide during review
+# =========================
+# Remove this after paper acceptance
+papers/
+docs/

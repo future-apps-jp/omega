@@ -27,17 +27,8 @@ omega/
 │       └── coq/         # Coq formal verification
 │           └── PermSymplectic.v   # ← Main verification file
 ├── a1/                  # A1 language implementation
-├── papers/              # LaTeX source for papers
-│   ├── minimal-axioms/  # This paper
-│   ├── sk-quantum-independence/
-│   └── computational-quantum-limits/
-├── docs/                # Research plans and documentation
-│   ├── research_plan.md      # Original plan (Phase 0-3)
-│   ├── research_plan_v2.md   # Phase 4-7
-│   ├── research_plan_v3.md   # Phase 8-12
-│   ├── research_plan_v3.1.md # Phase 13-18
-│   ├── research_plan_v4.md   # Phase 19-23
-│   └── research_plan_v5.md   # Current
+├── papers/              # LaTeX source (available after acceptance)
+├── docs/                # Research plans (available after acceptance)
 └── genesis/             # Experimental genesis environment
 ```
 
