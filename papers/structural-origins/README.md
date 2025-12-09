@@ -82,3 +82,4 @@ pdflatex main.tex  # 参照解決のため2回
 *Phase 18 完了 — December 2025*
 
 
+

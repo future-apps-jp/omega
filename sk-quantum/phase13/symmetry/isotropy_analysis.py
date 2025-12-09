@@ -411,3 +411,4 @@ This confirms: A1 cannot be derived from discrete → continuous limit.
 """)
 
 
+
