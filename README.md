@@ -12,11 +12,11 @@ Through systematic investigation across multiple phases, we have established:
 
 | Phase | Paper | Key Finding |
 |-------|-------|-------------|
-| 1 | SK Combinatory Logic | SK computation is fundamentally classical; no quantum structure emerges |
-| 2 | Reversible Computation | Reversible gates embed into Sp(2N,ℝ), not U(N) |
-| 3 | Minimal Axioms | A1 (superposition) is the unique primitive axiom — **No-Go theorem formally verified in Coq** |
-| 4 | Algorithmic Naturalness | Quantum mechanics has minimal description length on a quantum substrate |
-| 5 | Artificial Physics | Matrix operations confer evolutionary advantage but do not spontaneously emerge |
+| 0-3 | SK Combinatory Logic | SK computation is fundamentally classical; no quantum structure emerges |
+| 4-7 | Reversible Computation | Reversible gates embed into Sp(2N,ℝ), not U(N) |
+| 8-18 | Minimal Axioms | A1 (superposition) is the unique primitive axiom — **No-Go theorem formally verified in Coq** |
+| 19-23 | Algorithmic Naturalness | Quantum mechanics has minimal description length on a quantum substrate |
+| genesis | Artificial Physics | Matrix operations confer evolutionary advantage but do not spontaneously emerge |
 
 **Central Conclusion**: Quantum structure cannot be derived from computation, simulation, or classical logic. The superposition axiom A1 must be postulated as a primitive extension of state space.
 
@@ -24,19 +24,42 @@ Through systematic investigation across multiple phases, we have established:
 
 ```
 omega/
-├── sk-quantum/          # Computational experiments and formal verification
-│   ├── phase0/          # SK parser, reduction, multiway graph
-│   ├── phase1/          # Algebraic structure and holonomy analysis
-│   ├── phase2/          # Information-theoretic approach
-│   ├── phase4/          # Reversible gates (Toffoli/Fredkin)
-│   ├── phase5/          # Hamiltonian and quantum walk
-│   ├── phase6/          # RCA and model comparison
-│   └── phase11/
-│       └── coq/         # Coq formal verification
-│           └── PermSymplectic.v   # ← Main verification file
-├── a1/                  # A1 language implementation
-├── genesis/             # Experimental genesis environment
-└── genesis-env/         # Genesis environment configuration
+├── sk-quantum/              # Computational experiments and formal verification
+│   │
+│   │ # Paper 1: SK Combinatory Logic (Phase 0-3)
+│   ├── phase0/              # SK parser, reduction, multiway graph
+│   ├── phase1/              # Algebraic structure and holonomy analysis
+│   ├── phase2/              # Information-theoretic approach
+│   │
+│   │ # Paper 2: Reversible Computation (Phase 4-7)
+│   ├── phase4/              # Reversible gates (Toffoli/Fredkin)
+│   ├── phase5/              # Hamiltonian and quantum walk
+│   ├── phase6/              # RCA and model comparison
+│   ├── phase7/              # Non-commutativity and quantization
+│   │
+│   │ # Paper 3: Minimal Axioms (Phase 8-12)
+│   ├── phase8/              # GPT framework and axiom analysis
+│   ├── phase9/              # Implication structure
+│   ├── phase10/             # Model independence verification
+│   ├── phase11/
+│   │   └── coq/             # Coq formal verification
+│   │       └── PermSymplectic.v   # ← Main verification file
+│   │
+│   │ # Paper 3 Extended: Structural Origins (Phase 13-18)
+│   ├── phase13/             # Symmetry analysis
+│   ├── phase14/             # Contextuality analysis
+│   ├── phase15/             # Causal structure analysis
+│   ├── phase17/             # Additional analysis
+│   │
+│   │ # Paper 4: Algorithmic Naturalness (Phase 19-23)
+│   ├── phase19/             # A1 language design
+│   ├── phase20/             # Complexity metrics
+│   ├── phase21/             # AWS Braket experiments
+│   └── phase22/             # Theoretical deepening
+│
+├── a1/                      # A1 language implementation (Paper 4)
+├── genesis/                 # Evolution simulation (Paper 5: Artificial Physics)
+└── genesis-env/             # Genesis environment configuration
 ```
 
 > **Note**: LaTeX source files and detailed research plans will be made available after paper acceptance.
@@ -70,19 +93,19 @@ Theorem no_superposition_from_perm (s : 'S_n) (i : 'I_n) :
 
 ## Related Papers
 
-1. **On the Independence of Quantum Structure from SK Combinatory Logic** (Phase 1)  
+1. **On the Independence of Quantum Structure from SK Combinatory Logic** (Phase 0-3)  
    [PhilPapers](https://philpapers.org/rec/KOHOTI)
 
-2. **On the Limits of Deriving Quantum Structure from Reversible Computation** (Phase 2)  
+2. **On the Limits of Deriving Quantum Structure from Reversible Computation** (Phase 4-7)  
    [PhilPapers](https://philpapers.org/rec/KOHLOD)
 
-3. **Minimal Axioms for Quantum Structure: What Computation Cannot Derive** (Phase 3)  
+3. **Minimal Axioms for Quantum Structure: What Computation Cannot Derive** (Phase 8-18)  
    [PhilPapers](https://philpapers.org/rec/KOHMAF) | Under review at *Foundations of Physics*
 
-4. **Algorithmic Naturalness on a Quantum Substrate** (Phase 4)  
+4. **Algorithmic Naturalness on a Quantum Substrate** (Phase 19-23)  
    [PhilPapers](https://philpapers.org/rec/KOHANO-8)
 
-5. **Artificial Physics: Evolutionary Emergence of Quantum Structures** (Phase 5)  
+5. **Artificial Physics: Evolutionary Emergence of Quantum Structures** (genesis/)  
    [PhilPapers](https://philpapers.org/rec/KOHAPE)
 
 ## License
