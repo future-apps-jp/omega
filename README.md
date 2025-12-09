@@ -20,6 +20,15 @@ Through systematic investigation across multiple phases, we have established:
 
 **Central Conclusion**: Quantum structure cannot be derived from computation, simulation, or classical logic. The superposition axiom A1 must be postulated as a primitive extension of state space.
 
+## Quick Guide for Reviewers
+
+> **Note for Reviewers of "Minimal Axioms for Quantum Structure"**:  
+> The core results discussed in the paper are located in:
+> - **`sk-quantum/phase11/coq/PermSymplectic.v`** — No-Go Theorem (Coq formal verification)
+> - **`sk-quantum/phase8/`** — GPT framework and axiom analysis
+> 
+> Other directories contain supplementary experiments from related papers and are not essential for reviewing the main claims.
+
 ## Repository Structure
 
 ```
@@ -37,15 +46,15 @@ omega/
 │   ├── phase6/              # RCA and model comparison
 │   ├── phase7/              # Non-commutativity and quantization
 │   │
-│   │ # Paper 3: Minimal Axioms (Phase 8-12)
-│   ├── phase8/              # GPT framework and axiom analysis
+│   │ # Paper 3: Minimal Axioms (Phase 8-18) ← MAIN PAPER UNDER REVIEW
+│   ├── phase8/              # GPT framework and axiom analysis (Main Result)
 │   ├── phase9/              # Implication structure
 │   ├── phase10/             # Model independence verification
 │   ├── phase11/
-│   │   └── coq/             # Coq formal verification
+│   │   └── coq/             # Coq formal verification (Main Result)
 │   │       └── PermSymplectic.v   # ← Main verification file
 │   │
-│   │ # Paper 3 Extended: Structural Origins (Phase 13-18)
+│   │ # Paper 3 Extended: Structural Origins (Phase 13-18) (Supplementary)
 │   ├── phase13/             # Symmetry analysis
 │   ├── phase14/             # Contextuality analysis
 │   ├── phase15/             # Causal structure analysis
@@ -71,6 +80,27 @@ The No-Go Theorem has been formally verified using the Coq Proof Assistant with 
 - **File**: [`sk-quantum/phase11/coq/PermSymplectic.v`](sk-quantum/phase11/coq/PermSymplectic.v)
 - **Requirements**: Coq 8.15+, MathComp 1.14+
 
+### How to Verify the Proofs
+
+To compile and verify the Coq proofs, follow these steps:
+
+1. Install Coq and MathComp (e.g., via opam):
+   ```bash
+   opam install coq-mathcomp-ssreflect
+   ```
+
+2. Navigate to the verification directory:
+   ```bash
+   cd sk-quantum/phase11/coq/
+   ```
+
+3. Compile the proof file:
+   ```bash
+   coqc -Q . PermSymplectic PermSymplectic.v
+   ```
+
+If the command completes without output/error, the proofs are formally verified.
+
 ### Key Verified Theorems
 
 ```coq
@@ -79,6 +109,7 @@ Lemma perm_matrix_orthogonal (s : {perm 'I_n}) :
   (perm_mx s)^T *m (perm_mx s) = 1%:M.
 
 (* Main theorem: orthogonal => symplectic embedding *)
+(* This establishes that reversible computation lives in Sp(2N,ℝ), not U(N) *)
 Theorem embed_orthogonal_is_symplectic (P : 'M_N) :
   P^T *m P = 1%:M -> is_symplectic (embed P).
 
@@ -87,6 +118,9 @@ Corollary perm_embeds_in_Sp (s : 'S_N) :
   is_symplectic (embed (perm_mx s)).
 
 (* No-Go: permutations preserve basis states *)
+(* This theorem corresponds to the negation of Axiom A1 (Superposition):
+   it proves that classical permutation dynamics cannot generate superposition,
+   establishing that A1 must be postulated as a primitive axiom. *)
 Theorem no_superposition_from_perm (s : 'S_n) (i : 'I_n) :
   exists j : 'I_n, perm_mx s *m basis_vec i = basis_vec j.
 ```
