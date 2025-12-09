@@ -47,13 +47,22 @@ Tokyo, Japan}
 %==============================================================================
 \begin{abstract}
 %==============================================================================
-We present a comprehensive investigation into the minimal axioms required to derive quantum structure from classical computation. Through systematic analysis of multiple computational models—SK combinatory logic, reversible logic gates (Toffoli, Fredkin), reversible cellular automata, and lambda calculus—we establish that \textbf{no form of computation, whether irreversible or reversible, can generate quantum structure}. Our main results are:
+Recent developments in quantum foundations have strengthened the necessity of identifying the minimal departure point between classical and quantum theories.
+Work on measurement-based quantum computation shows that graph-state resources enabling quantum speed-up are associated with undecidable classical logic theories, in a Gödelian sense~\cite{vandennest2008mbqc}.
+Independently, recent results on undecidability in physics demonstrate that purely algorithmic theories of everything face fundamental logical limitations~\cite{faizal2025undecidability}.
+These external findings are consistent with the no-go theorems established in our previous work, showing that SK combinatory logic, reversible computation, and all classical Turing-complete frameworks embed only into real or symplectic geometries, never into complex Hilbert space.
+
+In this paper, we unify these results and identify A1 (state-space extension/superposition) as the unique minimal axiom that bridges the gap between classical and quantum theories.
+Through systematic analysis of multiple computational models—SK combinatory logic, reversible logic gates, reversible cellular automata, and lambda calculus—we establish that no form of computation can generate quantum structure without A1.
+Our main contributions are:
 \begin{enumerate}
-    \item \textbf{The No-Go Theorem}: Reversible $n$-bit gates are $2^n \times 2^n$ permutation matrices that embed into the classical symplectic group $\Sp(2 \cdot 2^n, \R)$, not the unitary group $\Un(2^n)$. This theorem has been \textbf{formally verified in Coq}.
-    \item \textbf{Axiom Identification}: Using Generalized Probabilistic Theories (GPTs), we identify A1 (state space extension/superposition) as the \emph{unique primitive axiom} that cannot be derived from computation.
+    \item \textbf{The No-Go Theorem}: Reversible $n$-bit gates embed into the symplectic group $\Sp(2 \cdot 2^n, \R)$, not the unitary group $\Un(2^n)$. This theorem has been \textbf{formally verified in Coq}.
+    \item \textbf{Axiom Identification}: Using Generalized Probabilistic Theories (GPTs), we show that A1 is the \emph{unique primitive axiom} that cannot be derived from computation or from other quantum axioms.
     \item \textbf{Universality}: Results hold across all Turing-complete computation models tested, establishing computation-model independence.
 \end{enumerate}
-These findings definitively answer the question ``Can quantum structure be derived from computation?'' with: \textbf{No, without the superposition axiom A1}. The gap between classical and quantum is precisely A1—and this gap is \emph{mathematically unbridgeable} by computation alone.
+The relationship is analogous to a dimensional hierarchy: no classical real computation can give rise to superposition or phase, just as no amount of lower-dimensional structure can generate higher-dimensional geometry.
+We show that A1 is the only non-derivable axiom and that all remaining quantum properties follow from A1 plus reversible dynamics.
+This situates A1 as the precise mathematical boundary between classical and quantum theories and establishes that quantum structure cannot be derived from computation, simulation, or classical logic, but must instead be postulated as a primitive extension of state space.
 \end{abstract}
 
 %==============================================================================
@@ -63,11 +72,18 @@ These findings definitively answer the question ``Can quantum structure be deriv
 
 A fundamental question in the foundations of physics and computer science is whether quantum mechanics can be derived from more primitive computational principles. The Wolfram Physics Project and related digital physics approaches suggest that physical reality might emerge from computational processes. But can the distinctive features of quantum mechanics—superposition, interference, entanglement—arise from computation alone?
 
-In this paper, we provide a definitive negative answer, supported by:
+Recent literature has strengthened the necessity of identifying the minimal departure point between classical and quantum theories.
+Work on measurement-based quantum computation demonstrates that graph-state resources which enable genuine quantum speed-up are necessarily associated with undecidable classical logic theories on the underlying graphs, in a Gödelian sense~\cite{vandennest2008mbqc}.
+This provides a precise logical-level no-go result: attempting to fully encode quantum computational structure within classical logical frameworks leads to logical incompleteness.
+Independently, recent results on undecidability in physics show that any purely algorithmic theory of everything, formulated as a finite, consistent, and arithmetically expressive formal system, faces fundamental limitations from Gödel's incompleteness theorems, Tarski's undefinability theorem, and Chaitin's information-theoretic bounds~\cite{faizal2025undecidability}.
+These external findings are conceptually aligned with our computational analysis and provide independent support for the conclusion that classical computation and classical logic cannot close the gap to quantum theory without additional non-computational or non-classical structure.
+
+In this paper, we provide strong evidence for a negative answer, supported by:
 \begin{itemize}
     \item Systematic investigation of multiple computation models
     \item A No-Go theorem with formal (Coq) verification
     \item Axiomatic analysis using GPTs to identify the minimal missing ingredient
+    \item Integration with external no-go results from quantum complexity and logical undecidability
 \end{itemize}
 
 \subsection{Summary of Results}
@@ -172,6 +188,30 @@ Level & Model & Structure & Quantum Properties \\
 \end{center}
 
 The critical observation: the transition from Level 1 to Level 2 requires \emph{introducing} the imaginary unit $i$ by hand. It does not emerge from computation.
+
+\subsection{External No-Go Results Supporting the Impossibility of Deriving Quantum Structure}
+
+Our computational analysis establishes that classical computation cannot generate quantum structure at the geometric and dynamical levels.
+Recent external results provide independent no-go theorems at the logical and meta-theoretical levels, reinforcing this conclusion from different directions.
+
+\subsubsection{Quantum Complexity and the Failure of Classical Simulation}
+
+Recent work on undecidability in physics~\cite{faizal2025undecidability} demonstrates that any purely algorithmic theory of everything, formulated as a finite, consistent, and arithmetically expressive formal system $\mathcal{F}_{\text{QG}} = \{L_{\text{QG}}, \Sigma_{\text{QG}}, R_{\text{alg}}\}$, faces fundamental limitations.
+Gödel's incompleteness theorems guarantee that $\text{Th}(\mathcal{F}_{\text{QG}}) \subsetneq \text{True}(\mathcal{F}_{\text{QG}})$, meaning there exist true but unprovable statements within the algorithmic framework.
+Tarski's undefinability theorem bars the construction of an internal truth predicate, and Chaitin's information-theoretic incompleteness establishes a bound $K_{\mathcal{F}_{\text{QG}}}$ beyond which statements become formally undecidable.
+These results place strong constraints on purely algorithmic ``theories of everything'' and on classical simulation hypotheses, showing that any finite computational substrate cannot capture all physically meaningful truths.
+This aligns with our findings that classical reversible gates embed in the real symplectic group $\Sp(2N,\R)$ rather than $\Un(N)$, indicating a fundamental geometric limitation of classical computational models.
+
+\subsubsection{Measurement-Based Quantum Computation and Undecidable Classical Logic}
+
+Van den Nest and Briegel~\cite{vandennest2008mbqc} established a precise connection between measurement-based quantum computation (MBQC) on graph states and classical logic theories on the underlying graphs.
+They showed that for any family of graph states which can yield a genuine computational speed-up over classical computation, the corresponding family of graphs has an undecidable theory in classical monadic second-order logic with modulo-two counting (C$_2$MS).
+Here ``undecidable'' is meant in the Gödelian sense: there exist propositions, expressible in this classical logic, which can neither be proven nor disproven.
+This provides independent evidence that, whenever one attempts to encode full quantum computational structure within a classical logical framework, one is forced into logical incompleteness.
+The result is particularly striking because it shows that the quantum correlations encoded in graph states—which enable quantum speed-up—cannot be fully captured by any decidable classical logical theory on the underlying graph structure.
+
+Together, these external no-go results reinforce the conclusion that no classical computation or classical logical theory can reproduce the minimal quantum axiom A1.
+They complement our computational analysis by showing that the impossibility of deriving quantum structure from classical frameworks manifests not only at the geometric level (symplectic vs unitary groups) and dynamical level (no unitary evolution from computation), but also at the logical level (undecidability) and meta-theoretical level (Gödel–Tarski–Chaitin limitations).
 
 %==============================================================================
 \section{The No-Go Theorem}
@@ -329,6 +369,12 @@ If A1 holds, non-orthogonal states exist. If A3 holds, evolution is unitary. The
 
 \textbf{Key insight}: A1 is the root. Without A1, axioms A4--A6 cannot be meaningfully defined.
 
+The undecidability results from measurement-based quantum computation~\cite{vandennest2008mbqc} show that, for quantum resources exhibiting a genuine speed-up, any classical logical theory that attempts to capture their full structure becomes Gödel-incomplete in a precise sense: there exist expressible propositions about the underlying graph-encoded correlations which can neither be proved nor disproved.
+Conceptually, this supports our claim that in the absence of A1, classical descriptions of quantum behaviour are logically incomplete rather than merely technically inconvenient.
+Similarly, the work of Faizal et al.~\cite{faizal2025undecidability} demonstrates that purely algorithmic formal systems for quantum gravity face Gödel–Tarski–Chaitin limitations, requiring non-algorithmic extensions (a ``Meta-Theory of Everything'') to achieve completeness.
+This is suggestive of the need for A1 as a non-computational extension of classical state spaces: just as their Meta-ToE augments an algorithmic core with an external truth predicate, our axiom A1 augments classical state spaces with genuinely non-classical superposition structure.
+Both lines of work suggest that the mathematical content of physics cannot be reduced to a purely computational or purely classical logical substrate.
+
 \subsection{Sufficiency: A1 + A3 Determines Quantum Structure}
 
 \begin{theorem}[Sufficiency of A1]
@@ -421,17 +467,34 @@ This is the \emph{unique} axiom that:
 
 \subsection{Implications}
 
-The convergence of evidence from multiple approaches—computational analysis, formal verification, GPT framework, and universality testing—leads to conclusions that are \emph{beyond reasonable dispute}:
+The convergence of evidence from multiple approaches—computational analysis, formal verification, GPT framework, universality testing, and external no-go results—leads to strong conclusions:
 
 \begin{enumerate}
-    \item \textbf{For physics}: Quantum mechanics \emph{cannot} be derived from computation. The superposition principle must be \emph{postulated} as a fundamental axiom of nature.
+    \item \textbf{For physics}: Quantum mechanics \emph{cannot} be derived from computation within the frameworks considered here. The superposition principle must be \emph{postulated} as a fundamental axiom of nature.
     
-    \item \textbf{For computer science}: The gap between classical and quantum computing is \emph{precisely} A1. This gap is not engineering difficulty but \emph{mathematical impossibility}.
+    \item \textbf{For computer science}: The gap between classical and quantum computing is \emph{precisely} A1. This gap is not engineering difficulty but reflects a fundamental mathematical limitation of classical computational models.
     
-    \item \textbf{For foundations}: Information-theoretic principles (no-cloning, etc.) are \emph{downstream} of superposition. Attempts to derive quantum mechanics from information alone are fundamentally misguided.
+    \item \textbf{For foundations}: Information-theoretic principles (no-cloning, etc.) are \emph{downstream} of superposition. Attempts to derive quantum mechanics from information alone face fundamental obstacles.
     
-    \item \textbf{For digital physics}: Computational approaches to physics must \emph{postulate} A1 or equivalent; they cannot derive it.
+    \item \textbf{For digital physics}: Computational approaches to physics must \emph{postulate} A1 or equivalent; they cannot derive it from computation alone.
 \end{enumerate}
+
+\subsection{Convergent Evidence from Multiple Levels}
+
+Recent external results in quantum complexity, MBQC-logical undecidability, and algorithmic theories of everything now provide independent empirical–theoretical support for the no-go theorem presented here.
+Together, these results paint a convergent picture that classical models fail to capture quantum structure at multiple levels:
+
+\begin{itemize}
+    \item \textbf{Geometric level}: Our no-go theorem shows that reversible computation embeds in $\Sp(2N,\R)$, not $\Un(N)$. Classical computational dynamics operate in real or symplectic geometries, never in complex Hilbert space.
+    
+    \item \textbf{Dynamical level}: The transition from discrete reversible computation to continuous-time quantum evolution requires introducing the imaginary unit $i$ by hand, as in $e^{-iHt}$. This unitary evolution does not emerge from computation itself.
+    
+    \item \textbf{Logical level}: Van den Nest and Briegel~\cite{vandennest2008mbqc} show that graph-state resources enabling quantum speed-up in MBQC are necessarily associated with undecidable classical logic theories on the underlying graphs, in a Gödelian sense.
+    Faizal et al.~\cite{faizal2025undecidability} demonstrate that purely algorithmic theories of everything face Gödel–Tarski–Chaitin limitations, requiring non-algorithmic extensions to achieve completeness.
+\end{itemize}
+
+This triangulation of evidence—from geometry, dynamics, and logic—reinforces our central conclusion that the superposition axiom A1 is the sole mathematically irreducible ingredient distinguishing classical from quantum theory.
+No amount of classical computation, classical logic, or classical geometry can bridge this gap; A1 must be postulated as a primitive extension of state space.
 
 \subsection{The Quantization Diagram}
 
@@ -442,9 +505,9 @@ The convergence of evidence from multiple approaches—computational analysis, f
     box/.style={rectangle, draw, thick, minimum width=3cm, minimum height=1.2cm, align=center},
     arrow/.style={-{Stealth}, thick}
 ]
-    \node[box] (CC) at (-4,0) {Classical\\Computation};
+    \node[box] (CC) at (-4.8,0) {Classical\\Computation};
     \node[box] (CM) at (0,0) {Classical\\Mechanics};
-    \node[box] (QM) at (4,0) {Quantum\\Mechanics};
+    \node[box] (QM) at (4.8,0) {Quantum\\Mechanics};
     
     \draw[arrow] (CC) -- node[above] {embed} (CM);
     \draw[arrow, dashed, red] (CM) -- node[above] {$+\hbar$} (QM);
@@ -463,7 +526,7 @@ The convergence of evidence from multiple approaches—computational analysis, f
 \label{sec:conclusion}
 %==============================================================================
 
-We have presented a comprehensive investigation into the minimal axioms required to derive quantum structure from computation. Our findings are \emph{conclusive}:
+We have presented a comprehensive investigation into the minimal axioms required to derive quantum structure from computation. Our results provide strong evidence that:
 
 \begin{enumerate}
     \item \textbf{No-Go Theorem}: Reversible computation embeds in $\Sp(2N,\R)$, not $\Un(N)$. This is a \emph{proven theorem}, formally verified in Coq.
@@ -472,15 +535,16 @@ We have presented a comprehensive investigation into the minimal axioms required
     
     \item \textbf{Universal}: Results hold for SK, reversible gates, RCA, and lambda calculus. The result is \emph{computation-model independent}.
     
-    \item \textbf{Formally Verified}: Core theorems are \emph{machine-checked}, leaving no room for error.
+    \item \textbf{Formally Verified}: Core theorems are \emph{machine-checked}, providing mathematical certainty.
 \end{enumerate}
 
-The question ``Can quantum structure be derived from computation?'' now has a \textbf{definitive answer}:
+The question ``Can quantum structure be derived from computation?'' has a clear answer within the computational and logical frameworks considered here:
 
 \begin{center}
 \fbox{\textbf{No, without the superposition axiom A1.}}
 \end{center}
 
+The new results on quantum complexity, MBQC-logical undecidability, and algorithmic theories of everything further strengthen the position that A1 is not merely sufficient but logically indispensable, and that quantum theory cannot be recovered from any known form of computation, simulation, or classical reasoning.
 The ``quantum leap'' from classical to quantum is \emph{precisely and exclusively} the addition of A1. This is the minimal—and necessary—axiom for quantum mechanics. Quantum mechanics must be \emph{postulated}, not derived.
 
 %==============================================================================
@@ -503,11 +567,13 @@ The author wishes to express gratitude to the foundational works that motivated 
 H. Kohashiguchi,
 ``On the Independence of Quantum Structure from SK Combinatory Logic,''
 PhilArchive, 2025.
+\url{https://philpapers.org/rec/KOHOTI}.
 
 \bibitem{kohashiguchi2024limits}
 H. Kohashiguchi,
 ``On the Limits of Deriving Quantum Structure from Reversible Computation: Symplectic Embedding of Reversible Gates and the Hierarchy of Quantum Resources,''
 PhilArchive, 2025.
+\url{https://philpapers.org/rec/KOHLOD}.
 
 \bibitem{chiribella2011}
 G. Chiribella, G. M. D'Ariano, and P. Perinotti,
@@ -548,6 +614,19 @@ Wolfram Media, 2020.
 H. B. Curry and R. Feys,
 \emph{Combinatory Logic}, vol.~1,
 North-Holland, 1958.
+
+\bibitem{vandennest2008mbqc}
+M.~Van den Nest and H.~J.~Briegel,
+``Measurement-based quantum computation and undecidable logic,''
+\emph{Foundations of Physics}, vol.~38, pp.~448--457, 2008.
+doi:10.1007/s10701-008-9212-6.
+See also arXiv:quant-ph/0610040.
+
+\bibitem{faizal2025undecidability}
+M.~Faizal, L.~M.~Krauss, A.~Shabir, and F.~Marino,
+``Consequences of undecidability in physics on the theory of everything,''
+\emph{Journal of Holography Applications in Physics}, vol.~5, no.~2, pp.~10--21, 2025.
+doi:10.22128/jhap.2025.1024.1118.
 
 \end{thebibliography}
 
