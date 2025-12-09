@@ -350,10 +350,11 @@ Current status: **96 tests passing** ✅
 
 ---
 
-## Author
+## Contact
 
-**Hiroshi Kohashiguchi**  
-December 2025
+Hiroshi Kohashiguchi  
+Independent Researcher, Tokyo, Japan  
+hiroshi.kohashiguchi@future-apps.jp
 
 ---
 
