@@ -99,7 +99,7 @@ To compile and verify the Coq proofs, follow these steps:
    coqc -Q . PermSymplectic PermSymplectic.v
    ```
 
-If the command completes without output/error, the proofs are formally verified.
+If the command completes with exit code 0, the proofs are formally verified. Note: MathComp may produce notation/coercion warnings (e.g., `[notation-overridden]`, `[ambiguous-paths]`), which are normal and do not indicate errors.
 
 ### Key Verified Theorems
 
