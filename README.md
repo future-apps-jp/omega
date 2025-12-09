@@ -13,8 +13,8 @@ Through systematic investigation across multiple phases, we have established:
 | Phase | Paper | Key Finding |
 |-------|-------|-------------|
 | 1 | SK Combinatory Logic | SK computation is fundamentally classical; no quantum structure emerges |
-| 2 | Reversible Computation | Reversible gates embed into Sp(2N,ℝ), not U(N) — **formally verified in Coq** |
-| 3 | Minimal Axioms | A1 (superposition) is the unique primitive axiom that cannot be derived |
+| 2 | Reversible Computation | Reversible gates embed into Sp(2N,ℝ), not U(N) |
+| 3 | Minimal Axioms | A1 (superposition) is the unique primitive axiom — **No-Go theorem formally verified in Coq** |
 | 4 | Algorithmic Naturalness | Quantum mechanics has minimal description length on a quantum substrate |
 | 5 | Artificial Physics | Matrix operations confer evolutionary advantage but do not spontaneously emerge |
 
