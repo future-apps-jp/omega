@@ -334,11 +334,18 @@ Current status: **96 tests passing** ✅
 
 ---
 
+## Related Work
+
+- **Algorithmic Naturalness on a Quantum Substrate** (Phase 19-23)  
+  [PhilPapers](https://philpapers.org/rec/KOHANO-8)
+
+- **Minimal Axioms for Quantum Structure: What Computation Cannot Derive** (Phase 8-18)  
+  [PhilPapers](https://philpapers.org/rec/KOHMAF)
+
+---
+
 ## References
 
-- [Research Plan v4](../docs/research_plan_v4.md)
-- [Phase 20 Results](../sk-quantum/phase20/experiments/RESULTS_020_complexity.md)
-- [Phase 21 Results](../sk-quantum/phase21/experiments/RESULTS_021_aws.md)
 - [AWS Braket Documentation](https://docs.aws.amazon.com/braket/)
 
 ---
