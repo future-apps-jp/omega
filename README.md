@@ -77,13 +77,13 @@ Theorem no_superposition_from_perm (s : 'S_n) (i : 'I_n) :
    [PhilPapers](https://philpapers.org/rec/KOHLOD)
 
 3. **Minimal Axioms for Quantum Structure: What Computation Cannot Derive** (Phase 3)  
-   Under review at *Foundations of Physics*
+   [PhilPapers](https://philpapers.org/rec/KOHMAF) | Under review at *Foundations of Physics*
 
 4. **Algorithmic Naturalness on a Quantum Substrate** (Phase 4)  
-   In preparation
+   [PhilPapers](https://philpapers.org/rec/KOHANO-8)
 
 5. **Artificial Physics: Evolutionary Emergence of Quantum Structures** (Phase 5)  
-   In preparation
+   [PhilPapers](https://philpapers.org/rec/KOHAPE)
 
 ## License
 
